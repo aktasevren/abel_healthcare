@@ -1,0 +1,38 @@
+{
+  "slider": {
+    "ekg": {
+      "title": "ECG Device",
+      "description": "ECG Device provides high-resolution electrocardiogram recording to monitor patient cardiovascular health quickly and reliably."
+    },
+    "ultrasound": {
+      "title": "Ultrasound Systems",
+      "description": "We offer high-resolution imaging and precise diagnosis with our modern ultrasound systems."
+    },
+    "mri": {
+      "title": "MRI Systems",
+      "description": "We provide detailed and clear imaging with our latest technology MRI systems."
+    }
+  },
+  "services": {
+    "medical_devices": {
+      "title": "Medical Device Sales",
+      "description": "High-quality medical devices with after-sales services."
+    },
+    "technical_service": {
+      "title": "Technical Service",
+      "description": "Brand-independent technical service, maintenance and repair."
+    },
+    "spare_parts": {
+      "title": "Spare Parts",
+      "description": "All your spare parts needs with a wide range of products."
+    }
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "technical_service": "Technical Service",
+    "corporate": "Corporate",
+    "contact": "Contact",
+    "menu": "Open main menu"
+  }
+} 

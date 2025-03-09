@@ -1,0 +1,38 @@
+{
+  "slider": {
+    "ekg": {
+      "title": "EKG Cihazı",
+      "description": "EKG Cihazı, hasta kardiyovasküler sağlığını hızlı ve güvenilir şekilde izlemek için yüksek çözünürlükte elektrokardiogram kaydı sağlar."
+    },
+    "ultrasound": {
+      "title": "Ultrason Sistemleri",
+      "description": "Modern ultrason sistemlerimiz ile yüksek çözünürlüklü görüntüleme ve hassas teşhis imkanı sunuyoruz."
+    },
+    "mri": {
+      "title": "MR Sistemleri",
+      "description": "En son teknoloji MR sistemlerimiz ile detaylı ve net görüntüleme sağlıyoruz."
+    }
+  },
+  "services": {
+    "medical_devices": {
+      "title": "Tıbbi Cihaz Satışı",
+      "description": "Satış sonrası hizmetleri ile birlikte en kaliteli tıbbi cihazlar."
+    },
+    "technical_service": {
+      "title": "Teknik Servis",
+      "description": "Marka bağımsız teknik servis hizmeti, bakım ve onarım."
+    },
+    "spare_parts": {
+      "title": "Yedek Parça",
+      "description": "Geniş ürün yelpazesi ile tüm yedek parça ihtiyaçlarınız."
+    }
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "products": "Ürünler",
+    "technical_service": "Teknik Servis",
+    "corporate": "Kurumsal",
+    "contact": "İletişim",
+    "menu": "Ana menüyü aç"
+  }
+} 
