@@ -6,28 +6,38 @@ import en from '@/translations/en.json';
 import ar from '@/translations/ar.json';
 
 type Language = 'tr' | 'en' | 'ar';
-type TranslationKey = string;
+
+/**
+ * JSON çeviri dosyalarının yapısına uygun tip belirleme.
+ * Çeviri dosyaları hem string değerler hem de iç içe nesneler içerebilir.
+ */
+type TranslationObject = { [key: string]: string | TranslationObject };
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: TranslationKey) => string;
+  t: (key: string) => string;
 }
 
-const translations: Record<Language, Record<string, any>> = { tr, en, ar };
+// Çeviri nesnesi için tip belirleme
+const translations: Record<Language, TranslationObject> = { tr, en, ar };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>('tr');
 
-  const t = (key: TranslationKey): string => {
+  const t = (key: string): string => {
     const keys = key.split('.');
-    let value: Record<string, any> | string | undefined = translations[language];
+    let value: TranslationObject | string | undefined = translations[language];
 
     for (const k of keys) {
-      if (typeof value !== 'object' || value === null) return key;
-      value = value[k];
+      if (typeof value === 'string') return value; // Eğer string'e ulaşıldıysa döndür
+      if (typeof value === 'object' && value !== null && k in value) {
+        value = value[k] as TranslationObject | string; // İç içe nesneye eriş
+      } else {
+        return key; // Eğer anahtar yoksa key'in kendisini döndür
+      }
     }
 
     return typeof value === 'string' ? value : key;
