@@ -14,7 +14,7 @@ interface LanguageContextType {
   t: (key: TranslationKey) => string;
 }
 
-const translations = { tr, en, ar };
+const translations: Record<Language, Record<string, any>> = { tr, en, ar };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -23,14 +23,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const t = (key: TranslationKey): string => {
     const keys = key.split('.');
-    let value: any = translations[language];
-    
+    let value: Record<string, any> | string | undefined = translations[language];
+
     for (const k of keys) {
-      if (value === undefined) return key;
+      if (typeof value !== 'object' || value === null) return key;
       value = value[k];
     }
-    
-    return value || key;
+
+    return typeof value === 'string' ? value : key;
   };
 
   return (
@@ -48,4 +48,4 @@ export function useLanguage() {
   return context;
 }
 
-export default LanguageContext; 
+export default LanguageContext;
