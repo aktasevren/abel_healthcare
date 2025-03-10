@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { useLanguage } from '@/context/LanguageContext';
 
 type SubCategory = {
   id: string;

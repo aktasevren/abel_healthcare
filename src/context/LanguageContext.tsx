@@ -6,31 +6,34 @@ import en from '@/translations/en.json';
 import ar from '@/translations/ar.json';
 
 type Language = 'tr' | 'en' | 'ar';
-type TranslationKey = string;
+type Translations = Record<string, string | Translations>; // İç içe çeviri desteği için
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: TranslationKey) => string;
+  t: (key: string) => string;
 }
 
-const translations = { tr, en, ar };
+const translations: Record<Language, Translations> = { tr, en, ar };
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
   const [language, setLanguage] = useState<Language>('tr');
 
-  const t = (key: TranslationKey): string => {
+  const t = (key: string): string => {
     const keys = key.split('.');
-    let value: any = translations[language];
-    
+    let value: Translations | string | undefined = translations[language];
+
     for (const k of keys) {
-      if (value === undefined) return key;
-      value = value[k];
+      if (typeof value === 'object' && value !== null && k in value) {
+        value = value[k] as Translations | string;
+      } else {
+        return key; // Eğer çeviri bulunamazsa anahtar döndürülür
+      }
     }
-    
-    return value || key;
+
+    return typeof value === 'string' ? value : key;
   };
 
   return (
@@ -42,10 +45,10 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
 export function useLanguage() {
   const context = useContext(LanguageContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error('useLanguage must be used within a LanguageProvider');
   }
   return context;
 }
 
-export default LanguageContext; 
+export default LanguageContext;
