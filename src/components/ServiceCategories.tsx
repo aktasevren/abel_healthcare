@@ -103,7 +103,6 @@ const categories: Category[] = [
 
 const ServiceCategories = () => {
   const [openCategories, setOpenCategories] = useState<string[]>([]);
-  const { t } = useLanguage();
 
   const toggleCategory = (categoryId: string) => {
     setOpenCategories((prev) =>

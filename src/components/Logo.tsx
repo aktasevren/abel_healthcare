@@ -1,15 +1,20 @@
 'use client';
 
+import Image from 'next/image';
+
 const Logo = () => {
   return (
     <div>
-      <img 
+      <Image 
         src="/media/logo-text.png" 
         alt="Logo" 
+        width={200} 
+        height={96} 
         className="h-24 w-auto"
+        priority
       />
     </div>
   );
 };
 
-export default Logo; 
+export default Logo;
