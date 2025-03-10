@@ -7,8 +7,6 @@ import ar from '@/translations/ar.json';
 
 type Language = 'tr' | 'en' | 'ar';
 type TranslationKey = string;
-type TranslationValue = string | Record<string, unknown>;
-type TranslationRecord = Record<string, TranslationValue>;
 
 interface LanguageContextType {
   language: Language;
@@ -25,14 +23,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const t = (key: TranslationKey): string => {
     const keys = key.split('.');
-    let value: TranslationValue = translations[language];
+    let value: any = translations[language];
     
     for (const k of keys) {
       if (value === undefined) return key;
-      value = (value as TranslationRecord)[k];
+      value = value[k];
     }
     
-    return typeof value === 'string' ? value : key;
+    return value || key;
   };
 
   return (

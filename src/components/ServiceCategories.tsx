@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 type SubCategory = {
   id: string;
@@ -101,10 +102,15 @@ const categories: Category[] = [
 ];
 
 const ServiceCategories = () => {
-  const [openCategory, setOpenCategory] = useState<string | null>(null);
+  const [openCategories, setOpenCategories] = useState<string[]>([]);
+  const { t } = useLanguage();
 
   const toggleCategory = (categoryId: string) => {
-    setOpenCategory(openCategory === categoryId ? null : categoryId);
+    setOpenCategories((prev) =>
+      prev.includes(categoryId)
+        ? prev.filter((id) => id !== categoryId)
+        : [...prev, categoryId]
+    );
   };
 
   return (
@@ -128,7 +134,7 @@ const ServiceCategories = () => {
                 </h3>
                 <svg
                   className={`w-5 h-5 transform transition-transform ${
-                    openCategory === category.id ? 'rotate-180' : ''
+                    openCategories.includes(category.id) ? 'rotate-180' : ''
                   }`}
                   fill="none"
                   stroke="currentColor"
@@ -142,7 +148,7 @@ const ServiceCategories = () => {
                   />
                 </svg>
               </button>
-              {openCategory === category.id && category.subCategories && (
+              {openCategories.includes(category.id) && category.subCategories && (
                 <div className="px-4 py-3">
                   <ul className="space-y-2">
                     {category.subCategories.map((subCategory) => (
