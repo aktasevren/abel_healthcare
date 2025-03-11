@@ -11,7 +11,7 @@ interface Product {
 }
 
 function getProductsData(): Product[] {
-  const filePath = path.join(process.cwd(), 'public/testdata/abel-healthcare-medikal/data/datagrup.csv');
+  const filePath = path.join(process.cwd(), 'public/data/datagrup1.csv');
   const fileContent = fs.readFileSync(filePath, 'utf8');
   const lines = fileContent.split('\n');
   return lines.slice(1).map((line) => {
