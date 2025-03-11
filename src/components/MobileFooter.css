@@ -7,6 +7,12 @@
   box-sizing: border-box;
 }
 
+.whatsapp-button, .offer-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .whatsapp-button {
   background-color: green;
   flex: 1;
@@ -28,7 +34,8 @@
 }
 
 .whatsapp-button img {
-  vertical-align: middle;
+  width: 24px;
+  height: 24px;
   margin-right: 8px;
 }
 

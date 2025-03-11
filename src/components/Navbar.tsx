@@ -27,7 +27,7 @@ const Navbar = () => {
   ];
 
   const getLinkClassName = (isActive: boolean, isMobile: boolean = false) => {
-    const baseClasses = 'text-sm font-semibold transition-colors';
+    const baseClasses = 'text-sm font-semibold transition-colors uppercase';
     const mobileClasses = isMobile ? 'px-4 py-2 rounded-md' : 'px-1 py-2 relative';
     
     if (isActive) {

@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import { LanguageProvider } from "@/context/LanguageContext";
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import MobileFooter from "@/components/MobileFooter";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +28,7 @@ export default function RootLayout({
               <TopBar />
               <Navbar />
               <main className="flex-grow">{children}</main>
-              <Footer />
+              <MobileFooter />
             </div>
           </LanguageProvider>
         </ThemeProvider>

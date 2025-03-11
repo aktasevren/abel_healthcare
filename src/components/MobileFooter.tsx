@@ -1,13 +1,12 @@
 import React from 'react';
-import './Footer.css'; // CSS dosyasını import ediyorum
+import './MobileFooter.css'; // CSS dosyasını import ediyorum
 
-const Footer = () => {
+const MobileFooter = () => {
   return (
     <footer>
-      FOOTER
       <div className="mobile-buttons">
         <a href="https://wa.me/1234567890?text=Merhaba" className="whatsapp-button">
-          <img src="/path/to/whatsapp-icon.png" alt="WhatsApp" />
+          <img src="/media/whatsapp.png" alt="WhatsApp" /> WhatsApp
         </a>
         <a href="#" className="offer-button">Teklif Al</a>
       </div>
@@ -15,4 +14,4 @@ const Footer = () => {
   );
 };
 
-export default Footer; 
+export default MobileFooter; 
