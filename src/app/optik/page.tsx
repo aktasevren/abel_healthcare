@@ -3,6 +3,7 @@ import path from 'path';
 import fs from 'fs';
 import '../ventilator/VentilatorPage.css';
 import Link from 'next/link';
+import ProductCard from '../../components/ProductCard';
 
 interface SubProduct {
   product_id: string;
@@ -38,11 +39,13 @@ const OptikPage: React.FC = () => {
       </nav>
       <div className="sub-product-list">
         {subProducts.map((subProduct) => (
-          <div key={subProduct.product_id} className="product-card">
-            <img src={subProduct.img_path} alt={subProduct.product_title} className="product-image" />
-            <h2>{subProduct.product_title}</h2>
-            <p>{subProduct.product_description}</p>
-          </div>
+          <ProductCard 
+            key={subProduct.product_id} 
+            productId={subProduct.product_id} 
+            imgSrc={subProduct.img_path} 
+            title={subProduct.product_title} 
+            href={`/product-detail/${subProduct.product_id}`}
+          />
         ))}
       </div>
     </div>

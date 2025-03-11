@@ -3,6 +3,8 @@ import path from 'path';
 import fs from 'fs';
 import './ProductsPage.css';
 import Link from 'next/link';
+import ProductCard from '../../components/ProductCard';
+
 interface Product {
   id: string;
   img_src: string;
@@ -39,13 +41,13 @@ const ProductsPage: React.FC = () => {
       </nav>
       <div className="product-list">
         {products.map((product) => (
-          <div key={product.id} className="product-card">
-            <a href={`/${product.description}`}>
-              <img src={product.img_src} alt={product.card_title} className="product-image" />
-              <h2>{product.card_title}</h2>
-              <p className="product-slug">{product.slug}</p>
-            </a>
-          </div>
+          <ProductCard 
+            key={product.id} 
+            productId={product.id} 
+            imgSrc={product.img_src} 
+            title={product.card_title} 
+            href={`/${product.description}`}
+          />
         ))}
       </div>
     </div>
