@@ -1,0 +1,73 @@
+.products-container {
+  padding: 20px 40px; /* Sağdan soldan boşluk eklendi */
+  margin: 0 auto; /* Sayfayı ortalamak için margin eklendi */
+  max-width: 1200px; /* Maksimum genişlik ayarlandı */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Masaüstünde 4 kart */
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 15px;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 150px; /* Resimleri küçülttüm */
+  object-fit: cover;
+}
+
+.product-description {
+  font-size: 0.85em; /* Daha küçük font boyutu */
+  color: #777;
+  padding: 5px 10px;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    grid-template-columns: 1fr; /* Mobilde tek sütun */
+  }
+
+  .product-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px; /* Satır yüksekliği azaltıldı */
+  }
+
+  .product-image {
+    width: 60px; /* Resim boyutu küçültüldü */
+    height: 60px;
+    margin-right: 10px;
+  }
+
+  .product-description {
+    display: none; /* Description gizlendi */
+  }
+
+  h2 {
+    font-size: 1em; /* Başlık boyutu mobilde küçültüldü */
+  }
+} 

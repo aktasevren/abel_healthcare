@@ -20,7 +20,7 @@ const Navbar = () => {
 
   const menuItems: MenuItem[] = [
     { href: '/', labelKey: 'nav.home' },
-    { href: '/urunler', labelKey: 'nav.products' },
+    { href: '/products', labelKey: 'nav.products' },
     { href: '/teknik-servis', labelKey: 'nav.technical_service' },
     { href: '/kurumsal', labelKey: 'nav.corporate' },
     { href: '/iletisim', labelKey: 'nav.contact' },
