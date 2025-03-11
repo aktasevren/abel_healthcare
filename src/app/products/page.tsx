@@ -2,7 +2,7 @@ import React from 'react';
 import path from 'path';
 import fs from 'fs';
 import './ProductsPage.css';
-
+import Link from 'next/link';
 interface Product {
   id: string;
   img_src: string;
@@ -35,7 +35,7 @@ const ProductsPage: React.FC = () => {
     <div className="products-container">
       <h1 className="products-title">Ürünler</h1>
       <nav className="breadcrumb">
-        <a href="/">Anasayfa</a> &gt; <span>Ürünler</span>
+        <Link href="/">Anasayfa</Link> &gt; <span>Ürünler</span>
       </nav>
       <div className="product-list">
         {products.map((product) => (

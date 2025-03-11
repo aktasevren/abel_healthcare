@@ -2,6 +2,7 @@ import React from 'react';
 import path from 'path';
 import fs from 'fs';
 import '../ventilator/VentilatorPage.css';
+import Link from 'next/link';
 
 interface SubProduct {
   product_id: string;
@@ -33,7 +34,7 @@ const TasiyiciPage: React.FC = () => {
     <div className="sub-products-container">
       <h1 className="sub-products-title">Taşıyıcı</h1>
       <nav className="breadcrumb">
-        <a href="/">Anasayfa</a> &gt; <a href="/products">Ürünler</a> &gt; <span>Taşıyıcı</span>
+        <Link href="/">Anasayfa</Link> &gt; <Link href="/products">Ürünler</Link> &gt; <span>Taşıyıcı</span>
       </nav>
       <div className="sub-product-list">
         {subProducts.map((subProduct) => (
