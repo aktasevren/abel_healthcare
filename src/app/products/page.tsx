@@ -8,6 +8,7 @@ interface Product {
   img_src: string;
   card_title: string;
   description: string;
+  slug: string;
 }
 
 function getProductsData(): Product[] {
@@ -22,6 +23,7 @@ function getProductsData(): Product[] {
       img_src: `/media/urun-resimleri/${values[1].split('/').pop()}`,
       card_title: values[2],
       description: values[3],
+      slug: values[4],
     };
   }).filter(product => product !== null);
 }
@@ -38,9 +40,11 @@ const ProductsPage: React.FC = () => {
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product-card">
-            <img src={product.img_src} alt={product.card_title} className="product-image" />
-            <h2>{product.card_title}</h2>
-            <p className="product-description">{product.description}</p>
+            <a href={`/${product.description}`}>
+              <img src={product.img_src} alt={product.card_title} className="product-image" />
+              <h2>{product.card_title}</h2>
+              <p className="product-slug">{product.slug}</p>
+            </a>
           </div>
         ))}
       </div>
