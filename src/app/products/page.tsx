@@ -31,7 +31,10 @@ const ProductsPage: React.FC = () => {
 
   return (
     <div className="products-container">
-      <h1>Ürünler</h1>
+      <h1 className="products-title">Ürünler</h1>
+      <nav className="breadcrumb">
+        <a href="/">Anasayfa</a> &gt; <span>Ürünler</span>
+      </nav>
       <div className="product-list">
         {products.map((product) => (
           <div key={product.id} className="product-card">

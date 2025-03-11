@@ -6,6 +6,7 @@ import { LanguageProvider } from "@/context/LanguageContext";
 import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import MobileFooter from "@/components/MobileFooter";
+import Footer from '@/components/Footer';
 
 const inter = Inter({ subsets: ["latin"] });
 
