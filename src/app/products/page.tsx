@@ -4,7 +4,7 @@ import './ProductsPage.css';
 
 const ProductsPage = () => {
   return (
-    <div className="product-list">
+    <div className="products-container">
       <h1>Ürün Grupları</h1>
       <div className="product-cards">
         {urunGruplari.map((urun) => (
