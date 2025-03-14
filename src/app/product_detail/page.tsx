@@ -4,16 +4,19 @@ import React, { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import urunDetaylari from '../../../public/data/urun-detaylari.json';
 import styles from './ProductDetail.module.css';
+import Image from 'next/image';
 
 const ProductDetailPage = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
-  const [product, setProduct] = useState<any>(null);
+  const [product, setProduct] = useState<{ [key: string]: string | undefined } | null>(null);
 
   useEffect(() => {
     if (id) {
       const foundProduct = urunDetaylari.find(item => item.product_id === id);
-      setProduct(foundProduct);
+      if (foundProduct) {
+        setProduct(foundProduct);
+      }
     }
   }, [id]);
 
@@ -22,7 +25,7 @@ const ProductDetailPage = () => {
   return (
     <div className={styles.productDetailContainer}>
       <div className={styles.productImageContainer}>
-        <img src={product.img_path} alt={product.product_title} className={styles.productImage} />
+        <Image src={product.img_path?.startsWith('http') ? product.img_path : '/default-image.png'} alt={product.product_title || 'Ürün Resmi'} className={styles.productImage} width={500} height={500} />
       </div>
       <div className={styles.productAttributes}>
         <h2>{product.product_title}</h2>
