@@ -1,0 +1,142 @@
+[
+  {
+    "id": "1",
+    "img_src": "../urun-resimleri/ventilator.png",
+    "card_title": "Ventilatör Yedek Parça ve Aksesuar",
+    "slug": "ventilator",
+    "description": "Ventilatör cihazlarınız için kaliteli yedek parça ve aksesuarlar. Dayanıklı ve güvenilir çözümlerle cihazlarınızın performansını artırın."
+  },
+  {
+    "id": "2",
+    "img_src": "../urun-resimleri/elektrokoter.png",
+    "card_title": "Elektrokoter Yedek Parça ve Aksesuar",
+    "slug": "elektrokoter",
+    "description": "Elektrokoter cihazlarınız için gerekli tüm yedek parçalar ve aksesuarlar. Yüksek kaliteli ürünlerle operasyonlarınızı güvenle gerçekleştirin."
+  },
+  {
+    "id": "3",
+    "img_src": "../urun-resimleri/monitor.png",
+    "card_title": "Hastabaşı Monitor Yedek Parça ve Aksesuar",
+    "slug": "hastabasimonitor",
+    "description": "Hastabaşı monitörleriniz için yedek parçalar ve aksesuarlar. Kesintisiz ve güvenilir hasta takibi için ihtiyacınız olan her şey."
+  },
+  {
+    "id": "4",
+    "img_src": "../urun-resimleri/ekg.png",
+    "card_title": "EKG Cihazları ve Aksesuarları",
+    "slug": "ekgcihazi",
+    "description": "EKG cihazlarınız için geniş aksesuar ve yedek parça seçenekleri. Kaliteli ürünlerle doğru ve güvenilir ölçümler yapın."
+  },
+  {
+    "id": "5",
+    "img_src": "../urun-resimleri/aspirator.png",
+    "card_title": "Cerrahi ve Portable Aspiratörler",
+    "slug": "medikalaspirator",
+    "description": "Cerrahi ve taşınabilir aspiratörler için yedek parçalar ve aksesuarlar. Etkili ve güvenilir aspirasyon işlemleri için ideal çözümler."
+  },
+  {
+    "id": "6",
+    "img_src": "../urun-resimleri/nts.png",
+    "card_title": "Yeni Doğan Grubu ve Yedek Parçaları",
+    "slug": "medikalurun",
+    "description": "Yeni doğan bakım cihazları ve yedek parçaları. Bebeklerinizin sağlığı ve güvenliği için en kaliteli ürünleri sunuyoruz."
+  },
+  {
+    "id": "7",
+    "img_src": "../urun-resimleri/flowmetre.png",
+    "card_title": "Oksijen Flowmetreleri ve Negatif Basınç Ölçerler",
+    "slug": "flowmetre",
+    "description": "Oksijen flowmetreleri ve negatif basınç ölçerler için güvenilir yedek parçalar. Hassas ölçümler için kaliteli ürünler."
+  },
+  {
+    "id": "8",
+    "img_src": "../urun-resimleri/veterinermasa.png",
+    "card_title": "Veteriner Grubu",
+    "slug": "veteriner",
+    "description": "Veterinerlik ekipmanları ve aksesuarlar. Hayvan sağlığı için kaliteli ve dayanıklı ürünler."
+  },
+  {
+    "id": "9",
+    "img_src": "../urun-resimleri/acilaraba1.png",
+    "card_title": "Paslanmaz Grubu",
+    "slug": "paslanmaz",
+    "description": "Paslanmaz çelik medikal ürünler ve aksesuarlar. Dayanıklı ve hijyenik çözümlerle uzun ömürlü kullanım."
+  },
+  {
+    "id": "10",
+    "img_src": "../urun-resimleri/pensetkablo.png",
+    "card_title": "Bipolar Monopolar ve Nötr Plak Koter Kabloları",
+    "slug": "koterkablo",
+    "description": "Bipolar ve monopolar koter kabloları. Cerrahi operasyonlarda güvenilir ve yüksek performanslı kablolar."
+  },
+  {
+    "id": "11",
+    "img_src": "../urun-resimleri/soketforceps.png",
+    "card_title": "Bipolar Kama Soket Forceps",
+    "slug": "kamasoketforceps",
+    "description": "Bipolar kama soket forceps. Hassas ve güvenilir cerrahi işlemler için yüksek kaliteli forcepsler."
+  },
+  {
+    "id": "12",
+    "img_src": "../urun-resimleri/soketforceps3.png",
+    "card_title": "Bipolar İğne Soket Forceps",
+    "slug": "ignesoketforceps",
+    "description": "Bipolar iğne soket forceps. Cerrahi işlemlerinizde güvenle kullanabileceğiniz dayanıklı ve kaliteli ürünler."
+  },
+  {
+    "id": "13",
+    "img_src": "../urun-resimleri/lset1.png",
+    "card_title": "Laringoskop Setleri",
+    "slug": "laringoskop",
+    "description": "Laringoskop setleri. Güvenilir ve kaliteli ürünlerle etkili ve güvenli entübasyon işlemleri."
+  },
+  {
+    "id": "14",
+    "img_src": "../urun-resimleri/otoskop.png",
+    "card_title": "Duvara Monte ve El Tipi Otoskop/Oftalmoskop Seti",
+    "slug": "otoskop",
+    "description": "Duvara monte ve el tipi otoskop/oftalmoskop setleri. Doğru ve güvenilir tanı için yüksek kaliteli cihazlar."
+  },
+  {
+    "id": "15",
+    "img_src": "../urun-resimleri/terazi1.png",
+    "card_title": "Dijital Yetişkin ve Bebek Terazi/Boy Ölçerler",
+    "slug": "terazi",
+    "description": "Dijital yetişkin ve bebek terazileri. Hassas ölçümler için güvenilir ve kaliteli ölçüm cihazları."
+  },
+  {
+    "id": "16",
+    "img_src": "../urun-resimleri/tasiyici1.png",
+    "card_title": "Medikal Taşıyıcılar",
+    "slug": "tasiyici",
+    "description": "Medikal taşıyıcılar. Dayanıklı ve kullanışlı ürünlerle güvenli ve kolay taşıma çözümleri."
+  },
+  {
+    "id": "17",
+    "img_src": "../urun-resimleri/optik1.png",
+    "card_title": "Optik ve Aleti Grubu",
+    "slug": "optik",
+    "description": "Optik ve alet grubu ürünleri. Hassas ve güvenilir optik cihazlar ve aletler."
+  },
+  {
+    "id": "18",
+    "img_src": "../urun-resimleri/medikalampul.png",
+    "card_title": "Medikal Ampuller",
+    "slug": "medikalampul",
+    "description": "Medikal ampuller. Yüksek kaliteli ve dayanıklı ampullerle doğru ve güvenilir aydınlatma."
+  },
+  {
+    "id": "19",
+    "img_src": "../urun-resimleri/masaped.png",
+    "card_title": "Pozisyon Jel Pedleri",
+    "slug": "medicalped",
+    "description": "Pozisyon jel pedleri. Rahat ve güvenli pozisyonlandırma için kaliteli ve dayanıklı pedler."
+  },
+  {
+    "id": "20",
+    "img_src": "../urun-resimleri/tansiyonaleti.png",
+    "card_title": "Poliklinik Ürünleri",
+    "slug": "poliklinik",
+    "description": "Poliklinik ürünleri. Polikliniklerde kullanılan kaliteli ve güvenilir medikal cihazlar ve aksesuarlar."
+  }
+]

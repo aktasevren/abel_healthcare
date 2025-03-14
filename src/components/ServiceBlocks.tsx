@@ -52,16 +52,21 @@ const ServiceBlocks = () => {
             href={block.href}
             className="group bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-1"
           >
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-start text-left">
               <div className="text-blue-600 dark:text-blue-400 mb-4 group-hover:scale-110 transition-transform duration-200">
                 {block.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
                 {t(block.titleKey)}
               </h3>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-gray-600 dark:text-gray-300 mb-8">
                 {t(block.descriptionKey)}
               </p>
+              <div className="flex justify-start w-full">
+                <button className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors">
+                  Detaylı Bilgi
+                </button>
+              </div>
             </div>
           </Link>
         ))}

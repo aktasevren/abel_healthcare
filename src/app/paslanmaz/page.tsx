@@ -13,19 +13,18 @@ interface SubProduct {
 }
 
 function getSubProductsData(): SubProduct[] {
-  const filePath = path.join(process.cwd(), 'public/data/grupdata.csv');
+  const filePath = path.join(process.cwd(), 'public/data/urun-detaylari.json');
   const fileContent = fs.readFileSync(filePath, 'utf8');
-  const lines = fileContent.split('\n');
-  return lines.slice(1).map((line) => {
-    const values = line.split(',').map(value => value.trim());
-    if (values.length < 5 || values[1] !== '9') return null;
-    return {
-      product_id: values[0],
-      img_path: `/media/urun-resimleri/${values[3].split('/').pop()}`,
-      product_title: values[4],
-      product_description: values[5],
-    };
-  }).filter(subProduct => subProduct !== null);
+  const products = JSON.parse(fileContent);
+  
+  return products
+    .filter((product: any) => product.group_id === '9')
+    .map((product: any) => ({
+      product_id: product.product_id,
+      img_path: product.img_path.replace('../', '/media/'),
+      product_title: product.product_title,
+      product_description: product.product_description
+    }));
 }
 
 const PaslanmazPage: React.FC = () => {

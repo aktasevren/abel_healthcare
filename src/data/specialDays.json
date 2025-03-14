@@ -1,0 +1,17 @@
+[
+  {
+    "date": "04-14",
+    "image": "/media/special_days/14mart.webp",
+    "message": "Dünya Tıp Günü Kutlu Olsun!"
+  },
+  {
+    "date": "12-25",
+    "image": "/media/special_days/christmas.jpg",
+    "message": "Mutlu Noeller!"
+  },
+  {
+    "date": "01-01",
+    "image": "/media/special_days/new-year.jpg",
+    "message": "Mutlu Yıllar!"
+  }
+] 

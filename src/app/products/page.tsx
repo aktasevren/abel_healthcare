@@ -9,25 +9,22 @@ interface Product {
   id: string;
   img_src: string;
   card_title: string;
-  description: string;
   slug: string;
+  description: string;
 }
 
 function getProductsData(): Product[] {
-  const filePath = path.join(process.cwd(), 'public/data/datagrup1.csv');
+  const filePath = path.join(process.cwd(), 'public/data/urun-gruplari.json');
   const fileContent = fs.readFileSync(filePath, 'utf8');
-  const lines = fileContent.split('\n');
-  return lines.slice(1).map((line) => {
-    const values = line.split(',').map(value => value.trim());
-    if (values.length < 4) return null;
-    return {
-      id: values[0],
-      img_src: `/media/urun-resimleri/${values[1].split('/').pop()}`,
-      card_title: values[2],
-      description: values[3],
-      slug: values[4],
-    };
-  }).filter(product => product !== null);
+  const products = JSON.parse(fileContent);
+  
+  return products.map((product: any) => ({
+    id: product.id,
+    img_src: product.img_src.replace('../', '/media/'),
+    card_title: product.card_title,
+    slug: product.slug,
+    description: product.description
+  }));
 }
 
 const ProductsPage: React.FC = () => {
@@ -46,7 +43,7 @@ const ProductsPage: React.FC = () => {
             productId={product.id} 
             imgSrc={product.img_src} 
             title={product.card_title} 
-            href={`/${product.description}`}
+            href={`/${product.slug}`}
           />
         ))}
       </div>

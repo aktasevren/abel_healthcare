@@ -2,21 +2,21 @@
   "slider": {
     "ekg": {
       "title": "EKG Cihazı",
-      "description": "EKG Cihazı, hasta kardiyovasküler sağlığını hızlı ve güvenilir şekilde izlemek için yüksek çözünürlükte elektrokardiogram kaydı sağlar."
+      "description": "EKG Cihazı, hasta kardiyovasküler sağlığını hızlı ve güvenilir şekilde izlemek için yüksek çözünürlükte elektrokardiyogram kaydı sağlar. 3 kanal ve 12 kanal seçenekleri ile esnek kullanım imkanı sunarak, klinik ortamlarda doğru teşhis ve tedaviye destek olur."
     },
     "ultrasound": {
-      "title": "Ultrason Sistemleri",
-      "description": "Modern ultrason sistemlerimiz ile yüksek çözünürlüklü görüntüleme ve hassas teşhis imkanı sunuyoruz."
+      "title": "Medikal Taşıyıcılar",
+      "description": "Sağlık malzemelerinin güvenli ve hızlı taşınması için dayanıklı medikal taşıyıcılar. Farklı ihtiyaçlara yönelik çeşitli modeller ile her ortamda yüksek performans sunar."
     },
     "mri": {
-      "title": "MR Sistemleri",
-      "description": "En son teknoloji MR sistemlerimiz ile detaylı ve net görüntüleme sağlıyoruz."
+      "title": "Medikal Ürünler",
+      "description": "Bebeklerin güvenli ve konforlu bakımını sağlamak için özel tasarlanmış küvözler ve taşıyıcılar. İleri teknoloji ve ergonomik dizayn ile bebeklerinizi her koşulda güvenle taşıyın."
     }
   },
   "services": {
     "medical_devices": {
       "title": "Tıbbi Cihaz Satışı",
-      "description": "Satış sonrası hizmetleri ile birlikte en kaliteli tıbbi cihazlar."
+      "description": "Satış sonrası hizmetleri"
     },
     "technical_service": {
       "title": "Teknik Servis",
