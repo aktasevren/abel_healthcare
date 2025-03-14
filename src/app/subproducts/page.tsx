@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image"; // Image bileşeni eklendi
 import urunDetaylari from "../../../public/data/urun-detaylari.json";
@@ -16,6 +16,14 @@ interface SubProduct {
 }
 
 const SubProductsPage: React.FC = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SubProductsContent />
+    </Suspense>
+  );
+};
+
+const SubProductsContent: React.FC = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
   const [subProducts, setSubProducts] = useState<SubProduct[]>([]); // `any[]` yerine SubProduct tipini kullandık
