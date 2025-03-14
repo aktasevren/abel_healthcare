@@ -1,17 +1,57 @@
 [
   {
-    "date": "04-14",
-    "image": "/media/special_days/14mart.webp",
-    "message": "Dünya Tıp Günü Kutlu Olsun!"
-  },
-  {
-    "date": "12-25",
-    "image": "/media/special_days/christmas.jpg",
-    "message": "Mutlu Noeller!"
+    "date": "03-15",
+    "image": "/media/special_days/hayirli.png",
+    "message": "Hayırlı Cumalar"
   },
   {
     "date": "01-01",
-    "image": "/media/special_days/new-year.jpg",
-    "message": "Mutlu Yıllar!"
+    "image": "/media/special_days/yeni_yil.jpg",
+    "message": "Mutlu Yıllar! Sağlık dolu bir yıl dileriz."
+  },
+  {
+    "date": "04-07",
+    "image": "/media/special_days/dunya_saglik_gunu.jpg",
+    "message": "7 Nisan Dünya Sağlık Günü Kutlu Olsun!"
+  },
+  {
+    "date": "04-14",
+    "image": "/media/special_days/tip_bayrami.jpg",
+    "message": "14 Mart Tıp Bayramı Kutlu Olsun!"
+  },
+  {
+    "date": "04-23",
+    "image": "/media/special_days/23_nisan.jpg",
+    "message": "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı Kutlu Olsun!"
+  },
+  {
+    "date": "05-01",
+    "image": "/media/special_days/1_mayis.jpg",
+    "message": "1 Mayıs Emek ve Dayanışma Günü Kutlu Olsun!"
+  },
+  {
+    "date": "05-19",
+    "image": "/media/special_days/19_mayis.jpg",
+    "message": "19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı Kutlu Olsun!"
+  },
+  {
+    "date": "08-30",
+    "image": "/media/special_days/30_agustos.jpg",
+    "message": "30 Ağustos Zafer Bayramı Kutlu Olsun!"
+  },
+  {
+    "date": "10-29",
+    "image": "/media/special_days/29_ekim.jpg",
+    "message": "29 Ekim Cumhuriyet Bayramı Kutlu Olsun!"
+  },
+  {
+    "date": "11-14",
+    "image": "/media/special_days/dunya_diabetes_gunu.jpg",
+    "message": "14 Kasım Dünya Diyabet Günü: Sağlığınıza dikkat edin!"
+  },
+  {
+    "date": "12-25",
+    "image": "/media/special_days/yilbasi.jpg",
+    "message": "Mutlu Noeller!"
   }
-] 
+]
