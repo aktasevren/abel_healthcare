@@ -1,12 +1,20 @@
 "use client";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import urunDetaylari from '../../../public/data/urun-detaylari.json';
 import styles from './ProductDetail.module.css';
 import Image from 'next/image';
 
 const ProductDetailPage = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProductDetailContent />
+    </Suspense>
+  );
+};
+
+const ProductDetailContent = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
   const [product, setProduct] = useState<{ [key: string]: string | undefined } | null>(null);
