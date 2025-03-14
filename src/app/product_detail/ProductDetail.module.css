@@ -1,0 +1,43 @@
+/* ProductDetail.module.css */
+
+.productDetailContainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.productImageContainer {
+  flex: 1;
+  padding: 20px;
+}
+
+.productImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.productAttributes {
+  flex: 2;
+  padding: 20px;
+}
+
+.productAttributes h2 {
+  margin-bottom: 10px;
+}
+
+.productAttributes p {
+  margin-bottom: 20px;
+}
+
+.productAttributes ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.productAttributes li {
+  margin-bottom: 5px;
+} 

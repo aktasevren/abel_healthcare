@@ -1,0 +1,41 @@
+/* ProductCard.module.css */
+
+.productList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0 auto; /* Sayfayı ortalamak için margin eklendi */
+  max-width: 1200px; /* Maksimum genişlik ayarlandı */
+  padding: 20px 40px; /* Sağdan soldan boşluk eklendi */
+}
+
+.productCard {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 10px;
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.productCard:hover {
+  transform: scale(1.05);
+}
+
+.productImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.productTitle {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.productDescription {
+  font-size: 0.9em;
+  color: #666;
+} 

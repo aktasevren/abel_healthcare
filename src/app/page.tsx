@@ -3,7 +3,6 @@
 import Slider from '@/components/Slider';
 import ServiceBlocks from '@/components/ServiceBlocks';
 import ServiceCategories from '@/components/ServiceCategories';
-import Footer from '@/components/Footer';
 import SpecialDaysPopup from '@/components/SpecialDaysPopup';
 
 export default function Home() {
