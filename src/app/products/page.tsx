@@ -1,50 +1,20 @@
 import React from 'react';
-import path from 'path';
-import fs from 'fs';
+import urunGruplari from '../../../public/data/urun-gruplari.json';
 import './ProductsPage.css';
-import Link from 'next/link';
-import ProductCard from '../../components/ProductCard';
 
-interface Product {
-  id: string;
-  img_src: string;
-  card_title: string;
-  slug: string;
-  description: string;
-}
-
-function getProductsData(): Product[] {
-  const filePath = path.join(process.cwd(), 'public/data/urun-gruplari.json');
-  const fileContent = fs.readFileSync(filePath, 'utf8');
-  const products = JSON.parse(fileContent);
-  
-  return products.map((product: any) => ({
-    id: product.id,
-    img_src: product.img_src.replace('../', '/media/'),
-    card_title: product.card_title,
-    slug: product.slug,
-    description: product.description
-  }));
-}
-
-const ProductsPage: React.FC = () => {
-  const products = getProductsData();
-
+const ProductsPage = () => {
   return (
-    <div className="products-container">
-      <h1 className="products-title">Ürünler</h1>
-      <nav className="breadcrumb">
-        <Link href="/">Anasayfa</Link> &gt; <span>Ürünler</span>
-      </nav>
-      <div className="product-list">
-        {products.map((product) => (
-          <ProductCard 
-            key={product.id} 
-            productId={product.id} 
-            imgSrc={product.img_src} 
-            title={product.card_title} 
-            href={`/${product.slug}`}
-          />
+    <div className="product-list">
+      <h1>Ürün Grupları</h1>
+      <div className="product-cards">
+        {urunGruplari.map((urun) => (
+          <div key={urun.id} className="product-card">
+            <img src={urun.img_src} alt={urun.card_title} className="product-image" />
+            <div className="product-info">
+              <h2>{urun.card_title}</h2>
+              <p>{urun.description}</p>
+            </div>
+          </div>
         ))}
       </div>
     </div>

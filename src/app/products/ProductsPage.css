@@ -10,22 +10,50 @@
 }
 
 .product-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Masaüstünde 4 kart */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
-  width: 100%;
 }
 
 .product-card {
-  border-radius: 12px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
-  padding: 15px;
-  text-align: center;
-  color: var(--foreground);
-  background-color: var(--background);
-  border: 1px solid rgba(128, 128, 128, 0.2);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  max-width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-info h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+}
+
+.product-info p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
 }
 
 .dark .product-card {
@@ -39,12 +67,6 @@
 
 .dark .product-card:hover {
   box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
-}
-
-.product-image {
-  width: 100%;
-  height: 150px; /* Resimleri küçülttüm */
-  object-fit: cover;
 }
 
 .product-description {

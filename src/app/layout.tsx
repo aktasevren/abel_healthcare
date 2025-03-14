@@ -11,8 +11,8 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your Company Name",
-  description: "Your company description",
+  title: "Abel Healthcare Medical",
+  description: "Abel Healthcare Medical - Sağlık ve Medikal Çözümler",
 };
 
 export default function RootLayout({
@@ -22,6 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/media/logo-text.png" type="image/png" />
+      </head>
       <body className={inter.className}>
         <ThemeProvider>
           <LanguageProvider>
@@ -31,6 +34,15 @@ export default function RootLayout({
               <main className="flex-grow">{children}</main>
               <Footer />
               <MobileFooter />
+              <a
+                href="https://wa.me/1234567890" // Buraya kendi WhatsApp numaranızı ekleyin
+                className="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors flex flex-col items-center hidden md:flex"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img src="/media/whatsapp.png" alt="WhatsApp" className="w-8 h-8 mb-1" />
+                <span className="text-sm">Canlı Destek</span>
+              </a>
             </div>
           </LanguageProvider>
         </ThemeProvider>
