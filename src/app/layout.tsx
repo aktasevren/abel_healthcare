@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Image from "next/image"; // Image import edildi
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -40,7 +41,13 @@ export default function RootLayout({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="/media/whatsapp.png" alt="WhatsApp" className="w-8 h-8 mb-1" />
+                <Image
+                  src="/media/whatsapp.png"
+                  alt="WhatsApp Canlı Destek"
+                  width={32} // Boyutları optimize ettim
+                  height={32}
+                  className="mb-1"
+                />
                 <span className="text-sm">Canlı Destek</span>
               </a>
             </div>
