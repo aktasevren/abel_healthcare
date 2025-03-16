@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { FaBoxOpen, FaStethoscope, FaTools, FaCogs, FaLightbulb, FaHandshake, FaHeadset, FaChartLine, FaGithub } from 'react-icons/fa';
+import { FaBoxOpen, FaStethoscope, FaTools, FaCogs, FaLightbulb, FaHandshake, FaHeadset, FaChartLine } from 'react-icons/fa';
 import styles from './About.module.css';
 
 const AboutPage = () => {
@@ -16,9 +16,9 @@ const AboutPage = () => {
       <section className={styles.mainSection}>
         <h2 className={styles.companyName}>Abel Health Care Medikal</h2>
         <div className={styles.mainContent}>
-          <p className={styles.description}>
-            Abel Health Care Medikal 2022 yılında İstanbul'da kurulmuştur. Şirketimizin kurucuları sağlık sektöründeki iş deneyimlerinin tamamını enerjik, yenilikçi, metamorfoza uğrayan tıp bilimi ve medikal sektörde uyumu yakalamak için sınırsız bilgi erişimi genişletmeye adamış teknik ve mühendis kadrosuyla kaliteli hizmet anlayışını benimsemiştir. Her zaman gaye ve çabamız yurtiçi ve yurtdışında doğru pazarlama ve satış politikasını güvenilir ve sağlam adımlarla ilerletebilmek bu şirket çizgimizde devam edebilmektir.
-          </p>
+          <div className={styles.description}>
+            {`Abel Health Care Medikal, 2022 yılında kurulmuş olup, cerrahi medikal sarf malzemeleri ve tıbbi cihaz satışı konusunda faaliyet göstermektedir.`}
+          </div>
         </div>
       </section>
 

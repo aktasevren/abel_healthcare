@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import { FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import styles from './Contact.module.css';
 
@@ -12,7 +13,7 @@ export default function Contact() {
         <div className={styles.container}>
           <h1>İLETİŞİM</h1>
           <div className={styles.breadcrumbLinks}>
-            <a href="/">ANASAYFA</a> / İLETİŞİM
+            <Link href="/">ANASAYFA</Link> / İLETİŞİM
           </div>
         </div>
       </div>
