@@ -9,6 +9,19 @@ import Image from 'next/image';
 import Breadcrumb from '@/components/Breadcrumb';
 
 const ProductDetailPage = () => {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ProductHeader />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <ProductDetailContent />
+      </Suspense>
+    </div>
+  );
+};
+
+const ProductHeader = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
   const product = urunDetaylari.find(item => item.product_id === id);
@@ -19,7 +32,7 @@ const ProductDetailPage = () => {
   const parentGroupName = parentGroup?.card_title || 'Alt Ürünler';
 
   return (
-    <div>
+    <>
       <div style={{ textAlign: 'center', margin: '0 auto', padding: '10px', backgroundColor: '#f8d7da', borderRadius: '8px', maxWidth: '1200px' }}>
         <h1 style={{ fontSize: '2em' }}>{productName}</h1>
       </div>
@@ -29,10 +42,7 @@ const ProductDetailPage = () => {
         { name: parentGroupName, href: `/subproducts?id=${product?.group_id}` }, 
         { name: productName, href: `/product_detail?id=${id}` }
       ]} />
-      <Suspense fallback={<div>Loading...</div>}>
-        <ProductDetailContent />
-      </Suspense>
-    </div>
+    </>
   );
 };
 
