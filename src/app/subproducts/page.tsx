@@ -17,20 +17,30 @@ interface SubProduct {
 }
 
 const SubProductsPage: React.FC = () => {
+  return (
+    <div>
+      <Suspense fallback={<div>Loading...</div>}>
+        <SubProductsHeader />
+      </Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        <SubProductsContent />
+      </Suspense>
+    </div>
+  );
+};
+
+const SubProductsHeader: React.FC = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
   const groupName = urunDetaylari.find((product: SubProduct) => product.group_id === id)?.product_title || "Alt Ürünler";
 
   return (
-    <div>
+    <>
       <div style={{ textAlign: 'center', margin: '0 auto', padding: '10px', backgroundColor: '#f8d7da', borderRadius: '8px', maxWidth: '1200px' }}>
         <h1 style={{ fontSize: '2em' }}>{groupName}</h1>
       </div>
       <Breadcrumb items={[{ name: 'Anasayfa', href: '/' }, { name: 'Ürünler', href: '/products' }, { name: groupName, href: '/subproducts' }]} />
-      <Suspense fallback={<div>Loading...</div>}>
-        <SubProductsContent />
-      </Suspense>
-    </div>
+    </>
   );
 };
 
@@ -49,7 +59,7 @@ const SubProductsContent: React.FC = () => {
     }
   }, [id]);
 
-  const handleSubProductClick = (productId: string) => {
+  const handleProductClick = (productId: string) => {
     router.push(`/product_detail?id=${productId}`);
   };
 
@@ -59,19 +69,21 @@ const SubProductsContent: React.FC = () => {
         <div
           key={product.product_id}
           className={styles.productCard}
-          onClick={() => handleSubProductClick(product.product_id)}
+          onClick={() => handleProductClick(product.product_id)}
         >
-          <Image
-            src={product.img_path}
-            alt={product.product_title}
-            width={300} // Gerekli genişlik ayarlandı
-            height={200} // Gerekli yükseklik ayarlandı
-            className={styles.productImage}
-          />
-          <h3 className={styles.productTitle}>{product.product_title}</h3>
-          <p className={styles.productDescription}>
-            {product.product_description}
-          </p>
+          <div className={styles.productImageContainer}>
+            <Image
+              src={product.img_path}
+              alt={product.product_title}
+              width={200}
+              height={200}
+              className={styles.productImage}
+            />
+          </div>
+          <div className={styles.productInfo}>
+            <h3>{product.product_title}</h3>
+            <p>{product.product_description}</p>
+          </div>
         </div>
       ))}
     </div>
