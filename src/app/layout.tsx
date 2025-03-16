@@ -12,27 +12,27 @@ import Footer from '@/components/Footer';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Abel Healthcare Medical",
-  description: "Abel Healthcare Medical - Sağlık ve Medikal Çözümler",
+  title: "Abel Health Care Medikal",
+  description: "Abel Health Care Medikal - Tıbbi Cihaz ve Sarf Malzemeleri",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="tr" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/media/logo-text.png" type="image/png" />
       </head>
-      <body className={inter.className}>
+      <body className={inter.className} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <ThemeProvider>
           <LanguageProvider>
             <div className="flex flex-col min-h-screen">
               <TopBar />
               <Navbar />
-              <main className="flex-grow">{children}</main>
+              <main style={{ flex: 1 }}>{children}</main>
               <Footer />
               <MobileFooter />
               <a

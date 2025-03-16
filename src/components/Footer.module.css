@@ -1,0 +1,76 @@
+.footer {
+  width: 100%;
+  padding: 1rem 0;
+  background-color: #f8f9fa;
+  border-top: 1px solid #eaeaea;
+  margin-top: auto;
+  padding-bottom: 80px; /* Mobil butonlar için ekstra padding */
+}
+
+.footerContent {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.copyright {
+  color: #666;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.signature {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.heartIcon {
+  color: #dc3545;
+  animation: pulse 1.5s ease infinite;
+}
+
+.developerLink {
+  color: #333;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.developerLink:hover {
+  color: #dc3545;
+}
+
+.githubLink {
+  display: inline-flex;
+  align-items: center;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s ease;
+}
+
+.githubLink:hover {
+  color: #dc3545;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding-bottom: 1rem; /* Desktop görünümde normal padding */
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+} 
