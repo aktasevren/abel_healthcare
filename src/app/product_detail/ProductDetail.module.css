@@ -40,4 +40,19 @@
 
 .productAttributes li {
   margin-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+  .productDetailContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productImageContainer {
+    padding: 10px;
+  }
+
+  .productAttributes {
+    padding: 10px;
+  }
 } 

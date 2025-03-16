@@ -1,12 +1,12 @@
 /* ProductCard.module.css */
 
 .productList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin: 0 auto; /* Sayfayı ortalamak için margin eklendi */
-  max-width: 1200px; /* Maksimum genişlik ayarlandı */
-  padding: 20px 40px; /* Sağdan soldan boşluk eklendi */
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .productCard {
@@ -38,4 +38,21 @@
 .productDescription {
   font-size: 0.9em;
   color: #666;
+}
+
+@media (max-width: 768px) {
+  .productList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+    margin: 0 20px;
+  }
+  
+  .productCard {
+    width: 100%;
+  }
+  
+  .productImage {
+    height: 150px;
+  }
 } 

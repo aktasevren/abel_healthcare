@@ -5,6 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image"; // Image bileşeni eklendi
 import urunDetaylari from "../../../public/data/urun-detaylari.json";
 import styles from "../products/ProductCard.module.css"; // Ürünler sayfasındaki CSS dosyasını kullanıyoruz
+import Breadcrumb from '@/components/Breadcrumb';
 
 // JSON verisi için TypeScript tipi belirlendi
 interface SubProduct {
@@ -16,10 +17,20 @@ interface SubProduct {
 }
 
 const SubProductsPage: React.FC = () => {
+  const searchParams = useSearchParams();
+  const id = searchParams.get("id");
+  const groupName = urunDetaylari.find((product: SubProduct) => product.group_id === id)?.product_title || "Alt Ürünler";
+
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <SubProductsContent />
-    </Suspense>
+    <div>
+      <div style={{ textAlign: 'center', margin: '0 auto', padding: '10px', backgroundColor: '#f8d7da', borderRadius: '8px', maxWidth: '1200px' }}>
+        <h1 style={{ fontSize: '2em' }}>{groupName}</h1>
+      </div>
+      <Breadcrumb items={[{ name: 'Anasayfa', href: '/' }, { name: 'Ürünler', href: '/products' }, { name: groupName, href: '/subproducts' }]} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <SubProductsContent />
+      </Suspense>
+    </div>
   );
 };
 

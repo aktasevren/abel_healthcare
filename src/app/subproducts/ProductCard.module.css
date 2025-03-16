@@ -35,4 +35,12 @@
 .productDescription {
   font-size: 0.9em;
   color: #666;
+}
+
+@media (max-width: 768px) {
+  .productList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
 } 
