@@ -1,12 +1,14 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import urunGruplari from "../../../public/data/urun-gruplari.json";
 import "./ProductsPage.css";
 import { useRouter } from "next/navigation";
 import PageHeader from '@/components/PageHeader';
 import Link from "next/link";
+import { FaSearch, FaFilter, FaTimes } from 'react-icons/fa';
+import styles from './Urunlerimiz.module.css';
 
 // JSON verisi için TypeScript tipi belirlendi
 interface Urun {

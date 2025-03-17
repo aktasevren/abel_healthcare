@@ -1,8 +1,8 @@
 "use client";
 
 import React from 'react';
-import { FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import styles from './Contact.module.css';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import styles from './Iletisim.module.css';
 import PageHeader from '@/components/PageHeader';
 
 export default function Contact() {

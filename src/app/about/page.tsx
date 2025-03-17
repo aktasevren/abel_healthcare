@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { FaHeart, FaHandshake, FaLightbulb, FaShieldAlt, FaHospital, FaStethoscope, FaHandHoldingHeart, FaTools, FaClock, FaUserMd, FaCheckCircle, FaCertificate } from 'react-icons/fa';
+import { FaHandshake, FaHospital, FaTools, FaClock, FaUserMd, FaCheckCircle, FaCertificate } from 'react-icons/fa';
 import styles from './About.module.css';
 
 const About = () => {
