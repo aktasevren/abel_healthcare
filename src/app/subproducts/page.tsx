@@ -7,7 +7,6 @@ import urunGruplari from '../../../public/data/urun-gruplari.json';
 import urunDetaylari from '../../../public/data/urun-detaylari.json';
 import styles from './Subproducts.module.css';
 import PageHeader from '@/components/PageHeader';
-import { FaSearch, FaFilter, FaTimes } from 'react-icons/fa';
 
 interface Product {
   product_id: string;
