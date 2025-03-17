@@ -5,8 +5,6 @@ import Image from "next/image"; // Image bileşeni eklendi
 import urunGruplari from "../../../public/data/urun-gruplari.json";
 import "./ProductsPage.css";
 import { useRouter } from "next/navigation";
-import Link from 'next/link';
-import styles from './Products.module.css';
 import PageHeader from '@/components/PageHeader';
 
 // JSON verisi için TypeScript tipi belirlendi

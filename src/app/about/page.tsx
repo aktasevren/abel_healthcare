@@ -24,7 +24,7 @@ export default function Hakkimizda() {
             <p>Sağlık sektörüne en kaliteli medikal cihazları ve teknik servis hizmetlerini sunarak, hastaların tedavi süreçlerinde en iyi sonuçların elde edilmesine katkıda bulunmak.</p>
             
             <h2>Vizyonumuz</h2>
-            <p>Türkiye'nin önde gelen medikal cihaz ve teknik servis firması olarak, yenilikçi çözümlerle sağlık sektörüne değer katmak ve global standartlarda hizmet sunmak.</p>
+            <p>Türkiye&apos;nin önde gelen medikal cihaz ve teknik servis firması olarak, yenilikçi çözümlerle sağlık sektörüne değer katmak ve global standartlarda hizmet sunmak.</p>
             
             <h2>Değerlerimiz</h2>
             <ul>
