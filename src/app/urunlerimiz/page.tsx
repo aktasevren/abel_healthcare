@@ -6,6 +6,7 @@ import urunGruplari from "../../../public/data/urun-gruplari.json";
 import "./ProductsPage.css";
 import { useRouter } from "next/navigation";
 import PageHeader from '@/components/PageHeader';
+import Link from "next/link";
 
 // JSON verisi için TypeScript tipi belirlendi
 interface Urun {
@@ -42,13 +43,16 @@ const ProductsPage: React.FC = () => {
               <Image
                 src={urun.img_src}
                 alt={urun.card_title}
-                width={300} // Gerekli genişlik ayarlandı
-                height={200} // Gerekli yükseklik ayarlandı
+                width={300}
+                height={200}
                 className="product-image"
               />
               <div className="product-info">
                 <h2>{urun.card_title}</h2>
                 <p>{urun.description}</p>
+                <Link href={`/urunlerimiz/${urun.id}`} className="view-products-btn">
+                  Ürünleri Gör
+                </Link>
               </div>
             </div>
           ))}

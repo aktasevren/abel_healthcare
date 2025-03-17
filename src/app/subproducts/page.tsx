@@ -56,10 +56,7 @@ const SubproductsContent: React.FC = () => {
       <div className={styles.container}>
         <section className={styles.productsSection}>
           <div className={styles.productsContent}>
-            <div className={styles.groupInfo}>
-              <h2>{group.card_title}</h2>
-              <p>{group.description}</p>
-            </div>
+
 
             <div className={styles.productsGrid}>
               {products.map((product: Product) => (
