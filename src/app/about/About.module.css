@@ -1,72 +1,62 @@
 .about {
-  background-color: #f8f9fa;
+  width: 100%;
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/media/hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  background: linear-gradient(135deg, #1a237e, #0d47a1);
   color: white;
-  padding: 0 1rem;
+  padding: 4rem 2rem;
+  text-align: center;
+  margin-bottom: 3rem;
 }
 
 .heroContent {
   max-width: 800px;
+  margin: 0 auto;
 }
 
 .heroTitle {
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .heroDescription {
   font-size: 1.2rem;
   opacity: 0.9;
-  line-height: 1.6;
 }
 
 /* Stats Section */
 .stats {
-  padding: 4rem 0;
-  background: white;
-  margin-top: -100px;
-  position: relative;
-  z-index: 1;
+  padding: 3rem 2rem;
+  background: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .statsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
 }
 
 .statCard {
-  text-align: center;
-  padding: 2rem;
   background: white;
+  padding: 2rem;
   border-radius: 12px;
+  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.statCard:hover {
-  transform: translateY(-5px);
 }
 
 .statNumber {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #2196F3;
+  color: #1a237e;
   margin-bottom: 0.5rem;
 }
 
@@ -77,14 +67,8 @@
 
 /* About Section */
 .aboutSection {
-  padding: 6rem 0;
-  background: #f8f9fa;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+  padding: 4rem 2rem;
+  background: white;
 }
 
 .aboutGrid {
@@ -99,27 +83,15 @@
 }
 
 .sectionTitle {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #333;
-  margin-bottom: 2rem;
-  position: relative;
-}
-
-.sectionTitle::after {
-  content: '';
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 60px;
-  height: 4px;
-  background: #2196F3;
-  border-radius: 2px;
+  margin-bottom: 1.5rem;
 }
 
 .aboutText {
   font-size: 1.1rem;
-  line-height: 1.8;
   color: #666;
+  line-height: 1.6;
   margin-bottom: 2rem;
 }
 
@@ -131,36 +103,30 @@
 .feature {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
+  color: #666;
 }
 
 .featureIcon {
-  color: #2196F3;
+  color: #1a237e;
   font-size: 1.2rem;
-}
-
-.feature span {
-  font-size: 1.1rem;
-  color: #444;
 }
 
 .aboutImage {
   position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 400px;
 }
 
 .image {
-  width: 100%;
-  height: auto;
-  display: block;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 /* Values Section */
 .values {
-  padding: 6rem 0;
-  background: white;
+  padding: 4rem 2rem;
+  background: #f8f9fa;
 }
 
 .valuesGrid {
@@ -170,22 +136,17 @@
 }
 
 .valueCard {
-  text-align: center;
-  padding: 2rem;
   background: white;
+  padding: 2rem;
   border-radius: 12px;
+  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.valueCard:hover {
-  transform: translateY(-5px);
 }
 
 .valueIconWrapper {
-  width: 80px;
-  height: 80px;
-  background: #f8f9fa;
+  width: 60px;
+  height: 60px;
+  background: #f0f4ff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -194,12 +155,12 @@
 }
 
 .valueIcon {
-  font-size: 2rem;
-  color: #2196F3;
+  font-size: 1.8rem;
+  color: #1a237e;
 }
 
 .valueTitle {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #333;
   margin-bottom: 1rem;
 }
@@ -211,8 +172,8 @@
 
 /* Services Section */
 .services {
-  padding: 6rem 0;
-  background: #f8f9fa;
+  padding: 4rem 2rem;
+  background: white;
 }
 
 .servicesGrid {
@@ -222,10 +183,10 @@
 }
 
 .serviceCard {
-  text-align: center;
-  padding: 2rem;
   background: white;
+  padding: 2rem;
   border-radius: 12px;
+  text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
@@ -235,9 +196,9 @@
 }
 
 .serviceIconWrapper {
-  width: 80px;
-  height: 80px;
-  background: #f8f9fa;
+  width: 60px;
+  height: 60px;
+  background: #f0f4ff;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -246,12 +207,12 @@
 }
 
 .serviceIcon {
-  font-size: 2rem;
-  color: #2196F3;
+  font-size: 1.8rem;
+  color: #1a237e;
 }
 
 .serviceTitle {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #333;
   margin-bottom: 1rem;
 }

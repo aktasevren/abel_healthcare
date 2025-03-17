@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { FaHeart, FaHandshake, FaLightbulb, FaShieldAlt, FaHospital, FaStethoscope, FaHandHoldingHeart, FaTools, FaClock, FaUserMd, FaCheckCircle } from 'react-icons/fa';
-import "./About.css";
+import Image from "next/image";
+import { FaHeart, FaHandshake, FaLightbulb, FaShieldAlt, FaHospital, FaStethoscope, FaHandHoldingHeart, FaTools, FaClock, FaUserMd, FaCheckCircle, FaCertificate } from 'react-icons/fa';
+import styles from './About.module.css';
 
 const About = () => {
   const stats = [
@@ -149,8 +150,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
     </div>
   );
 };
