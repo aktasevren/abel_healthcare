@@ -7,14 +7,6 @@ import ar from '../../messages/ar.json';
 
 type Language = 'tr' | 'en' | 'ar';
 
-/**
- * JSON çeviri dosyalarının yapısına uygun tip belirleme.
- * Çeviri dosyaları hem string değerler hem de iç içe nesneler içerebilir.
- */
-interface TranslationObject {
-  [key: string]: string | TranslationObject;
-}
-
 interface LanguageContextType {
   language: string;
   setLanguage: (lang: string) => void;
@@ -34,7 +26,7 @@ export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ chil
 
   const t = (key: string): string => {
     const keys = key.split('.');
-    let value: Record<string, any> | string = translations[language];
+    let value: Record<string, string | Record<string, string>> | string = translations[language];
 
     for (const k of keys) {
       if (typeof value === 'string') return value;
