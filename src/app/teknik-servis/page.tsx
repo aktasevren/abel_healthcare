@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import PageHeader from '@/components/PageHeader';
 import { FaHospital, FaStethoscope, FaHandHoldingHeart, FaTools, FaClock, FaShieldAlt, FaUserMd, FaCheckCircle } from 'react-icons/fa';
 import "./TeknikServis.css";
 

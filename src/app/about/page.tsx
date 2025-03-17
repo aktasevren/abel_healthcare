@@ -1,22 +1,8 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
-import { 
-  FaHospital, 
-  FaUserMd, 
-  FaTools, 
-  FaCertificate, 
-  FaHandshake, 
-  FaClock,
-  FaCheckCircle,
-  FaUsers,
-  FaChartLine,
-  FaMapMarkerAlt,
-  FaPhone,
-  FaEnvelope
-} from 'react-icons/fa';
-import styles from './About.module.css';
+import React from "react";
+import { FaHeart, FaHandshake, FaLightbulb, FaShieldAlt, FaHospital, FaStethoscope, FaHandHoldingHeart, FaTools, FaClock, FaUserMd, FaCheckCircle } from 'react-icons/fa';
+import "./About.css";
 
 const About = () => {
   const stats = [
