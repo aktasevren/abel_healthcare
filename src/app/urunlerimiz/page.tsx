@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image"; // Image bileşeni eklendi
+import Image from "next/image";
 import urunGruplari from "../../../public/data/urun-gruplari.json";
 import "./ProductsPage.css";
 import { useRouter } from "next/navigation";

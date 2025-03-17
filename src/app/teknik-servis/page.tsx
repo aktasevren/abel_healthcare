@@ -3,26 +3,6 @@
 import React from 'react';
 import PageHeader from '@/components/PageHeader';
 import styles from './TeknikServis.module.css';
-import { FaTools, FaWrench, FaCheckCircle, FaClock } from 'react-icons/fa';
-
-interface ServiceItem {
-  title: string;
-  description: string;
-  image: string;
-}
-
-interface ServiceSection {
-  title: string;
-  items: ServiceItem[];
-}
-
-const serviceSections: ServiceSection[] = [
-  // ... existing sections ...
-];
-
-const handleServiceClick = (sectionIndex: number, itemIndex: number) => {
-  // ... existing code ...
-};
 
 const TeknikServis: React.FC = () => {
   return (
