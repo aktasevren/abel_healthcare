@@ -1,0 +1,42 @@
+.breadcrumbs {
+  background-color: #f8f9fa;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.breadcrumbs h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.breadcrumbLinks {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.breadcrumbLinks a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumbLinks a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .breadcrumbs {
+    padding: 1rem 0;
+  }
+
+  .breadcrumbs h1 {
+    font-size: 1.5rem;
+  }
+} 

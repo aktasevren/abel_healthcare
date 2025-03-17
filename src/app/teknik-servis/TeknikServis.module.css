@@ -1,0 +1,195 @@
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Hero Section */
+.heroSection {
+  text-align: center;
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+  border-radius: 1rem;
+  margin-bottom: 3rem;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.heroDescription {
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Features Section */
+.featuresSection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.featureCard {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  color: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.featureCard h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.featureCard p {
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Services Section */
+.servicesSection {
+  margin-top: 4rem;
+}
+
+.projcardContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.projcard {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.projcard:hover {
+  transform: translateY(-5px);
+}
+
+.projcardInnerbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 2rem;
+}
+
+.projcardTextbox {
+  position: relative;
+  z-index: 1;
+}
+
+.projcardTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.projcardSubtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.projcardBar {
+  width: 50px;
+  height: 3px;
+  background: #dc3545;
+  margin-bottom: 1rem;
+}
+
+.projcardDescription {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.projcardTagbox {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.projcardTag {
+  background: #f8f9fa;
+  color: #666;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.8rem;
+}
+
+/* Card Colors */
+.projcardBlue {
+  border-left: 4px solid #007bff;
+}
+
+.projcardRed {
+  border-left: 4px solid #dc3545;
+}
+
+.projcardGreen {
+  border-left: 4px solid #28a745;
+}
+
+.projcardCustomcolor {
+  border-left: 4px solid var(--projcard-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .heroSection {
+    padding: 2rem 0;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .featuresSection {
+    grid-template-columns: 1fr;
+  }
+
+  .projcardContainer {
+    grid-template-columns: 1fr;
+  }
+} 

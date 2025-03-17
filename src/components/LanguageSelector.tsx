@@ -37,7 +37,7 @@ const LanguageSelector = () => {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center space-x-1  dark:text-black-800 px-2 py-1 rounded-md hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
+        className="flex items-center space-x-1 dark:text-black-800 px-2 py-1 rounded-md hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors"
         aria-label="Dil seçimi"
       >
         <div className="w-5 h-5 relative overflow-hidden rounded-sm">

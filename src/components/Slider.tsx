@@ -9,19 +9,19 @@ const slides = [
     id: 1,
     titleKey: 'slider.ekg.title',
     descriptionKey: 'slider.ekg.description',
-    image: 'https://images.unsplash.com/photo-1583912267550-d6c2f5e83a9c?w=800&auto=format&fit=crop',
+    image: '/media/sliders/ekg.jpg',
   },
   {
     id: 2,
     titleKey: 'slider.ultrasound.title',
     descriptionKey: 'slider.ultrasound.description',
-    image: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=800&auto=format&fit=crop',
+    image: '/media/sliders/carrier.jpg',
   },
   {
     id: 3,
     titleKey: 'slider.mri.title',
     descriptionKey: 'slider.mri.description',
-    image: 'https://images.unsplash.com/photo-1516549655169-df83a0774514?w=800&auto=format&fit=crop',
+    image: '/media/sliders/medical.jpg',
   },
 ];
 

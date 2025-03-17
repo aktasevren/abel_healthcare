@@ -4,19 +4,18 @@ import React from 'react';
 import Link from 'next/link';
 import { FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import styles from './Contact.module.css';
+import PageHeader from '@/components/PageHeader';
 
 export default function Contact() {
   return (
     <div className={styles.contactPage}>
-      {/* Başlık Bölümü */}
-      <div className={styles.breadcrumbs}>
-        <div className={styles.container}>
-          <h1>İLETİŞİM</h1>
-          <div className={styles.breadcrumbLinks}>
-            <Link href="/">ANASAYFA</Link> / İLETİŞİM
-          </div>
-        </div>
-      </div>
+      <PageHeader 
+        title="İLETİŞİM"
+        breadcrumbs={[
+          { name: "ANASAYFA", href: "/" },
+          { name: "İLETİŞİM", href: "/iletisim" }
+        ]}
+      />
 
       {/* İletişim Bilgileri */}
       <section className={styles.contactSection}>

@@ -1,14 +1,14 @@
 "use client";
 
-import React, { useEffect, useState, Suspense } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
-import Image from "next/image"; // Image bileşeni eklendi
+import React, { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
+import Image from "next/image";
 import urunDetaylari from "../../../public/data/urun-detaylari.json";
-import styles from "../products/ProductCard.module.css"; // Ürünler sayfasındaki CSS dosyasını kullanıyoruz
-import Breadcrumb from '@/components/Breadcrumb';
+import urunGruplari from "../../../public/data/urun-gruplari.json";
+import styles from "./Subproducts.module.css";
+import PageHeader from "@/components/PageHeader";
 
-// JSON verisi için TypeScript tipi belirlendi
-interface SubProduct {
+interface Product {
   product_id: string;
   group_id: string;
   img_path: string;
@@ -16,78 +16,90 @@ interface SubProduct {
   product_description: string;
 }
 
-const SubProductsPage: React.FC = () => {
-  return (
-    <div>
-      <Suspense fallback={<div>Loading...</div>}>
-        <SubProductsHeader />
-      </Suspense>
-      <Suspense fallback={<div>Loading...</div>}>
-        <SubProductsContent />
-      </Suspense>
-    </div>
-  );
-};
+interface Group {
+  id: string;
+  img_src: string;
+  card_title: string;
+  slug: string;
+  description: string;
+}
 
-const SubProductsHeader: React.FC = () => {
+const SubproductsPage: React.FC = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
-  const groupName = urunDetaylari.find((product: SubProduct) => product.group_id === id)?.product_title || "Alt Ürünler";
-
-  return (
-    <>
-      <div style={{ textAlign: 'center', margin: '0 auto', padding: '10px', backgroundColor: '#f8d7da', borderRadius: '8px', maxWidth: '1200px' }}>
-        <h1 style={{ fontSize: '2em' }}>{groupName}</h1>
-      </div>
-      <Breadcrumb items={[{ name: 'Anasayfa', href: '/' }, { name: 'Ürünler', href: '/products' }, { name: groupName, href: '/subproducts' }]} />
-    </>
-  );
-};
-
-const SubProductsContent: React.FC = () => {
-  const searchParams = useSearchParams();
-  const id = searchParams.get("id");
-  const [subProducts, setSubProducts] = useState<SubProduct[]>([]); // `any[]` yerine SubProduct tipini kullandık
-  const router = useRouter();
+  const [products, setProducts] = useState<Product[]>([]);
+  const [group, setGroup] = useState<Group | null>(null);
 
   useEffect(() => {
     if (id) {
+      const foundGroup = urunGruplari.find((group: Group) => group.id === id);
+      setGroup(foundGroup || null);
+
       const filteredProducts = urunDetaylari.filter(
-        (product: SubProduct) => product.group_id === id
+        (product: Product) => product.group_id === id
       );
-      setSubProducts(filteredProducts);
+      setProducts(filteredProducts);
     }
   }, [id]);
 
-  const handleProductClick = (productId: string) => {
-    router.push(`/product_detail?id=${productId}`);
-  };
+  if (!group) {
+    return <div>Grup bulunamadı.</div>;
+  }
 
   return (
-    <div className={styles.productList}>
-      {subProducts.map((product) => (
-        <div
-          key={product.product_id}
-          className={styles.productCard}
-          onClick={() => handleProductClick(product.product_id)}
-        >
-          <div className={styles.productImageContainer}>
-            <Image
-              src={product.img_path}
-              alt={product.product_title}
-              width={200}
-              height={200}
-              className={styles.productImage}
-            />
-          </div>
-          <div className={styles.productInfo}>
-            <h3>{product.product_title}</h3>
-            <p>{product.product_description}</p>
-          </div>
+    <div className={styles.container}>
+      <PageHeader 
+        title={group.card_title}
+        breadcrumbs={[
+          { name: 'Anasayfa', href: '/' },
+          { name: 'Ürünlerimiz', href: '/urunlerimiz' },
+          { name: group.card_title, href: '#' }
+        ]}
+      />
+
+      <div className={styles.groupInfo}>
+        <div className={styles.groupImage}>
+          <Image
+            src={group.img_src}
+            alt={group.card_title}
+            width={400}
+            height={300}
+            className={styles.image}
+          />
         </div>
-      ))}
+        <div className={styles.groupDescription}>
+          <h2>{group.card_title}</h2>
+          <p>{group.description}</p>
+        </div>
+      </div>
+
+      <div className={styles.productsGrid}>
+        {products.map((product) => (
+          <div key={product.product_id} className={styles.productCard}>
+            <div className={styles.productImage}>
+              <Image
+                src={product.img_path}
+                alt={product.product_title}
+                width={300}
+                height={200}
+                className={styles.image}
+              />
+            </div>
+            <div className={styles.productInfo}>
+              <h3>{product.product_title}</h3>
+              <p>{product.product_description}</p>
+              <a
+                href={`/product_detail?id=${product.product_id}`}
+                className={styles.detailButton}
+              >
+                Detayları Gör
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
 
-export default SubProductsPage;
+export default SubproductsPage;

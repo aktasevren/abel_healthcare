@@ -1,9 +1,9 @@
 'use client';
 
 import React, { createContext, useContext, useState } from 'react';
-import tr from '@/translations/tr.json';
-import en from '@/translations/en.json';
-import ar from '@/translations/ar.json';
+import tr from '../../messages/tr.json';
+import en from '../../messages/en.json';
+import ar from '../../messages/ar.json';
 
 type Language = 'tr' | 'en' | 'ar';
 
@@ -19,8 +19,11 @@ interface LanguageContextType {
   t: (key: string) => string;
 }
 
-// Çeviri nesnesi için tip belirleme
-const translations: Record<Language, TranslationObject> = { tr, en, ar };
+const translations = {
+  tr,
+  en,
+  ar,
+};
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
@@ -29,14 +32,14 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
 
   const t = (key: string): string => {
     const keys = key.split('.');
-    let value: TranslationObject | string | undefined = translations[language];
+    let value: any = translations[language];
 
     for (const k of keys) {
-      if (typeof value === 'string') return value; // Eğer string'e ulaşıldıysa döndür
+      if (typeof value === 'string') return value;
       if (typeof value === 'object' && value !== null && k in value) {
-        value = value[k] as TranslationObject | string; // İç içe nesneye eriş
+        value = value[k];
       } else {
-        return key; // Eğer anahtar yoksa key'in kendisini döndür
+        return key;
       }
     }
 

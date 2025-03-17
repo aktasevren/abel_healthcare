@@ -5,7 +5,9 @@ import Image from "next/image"; // Image bileşeni eklendi
 import urunGruplari from "../../../public/data/urun-gruplari.json";
 import "./ProductsPage.css";
 import { useRouter } from "next/navigation";
-import Breadcrumb from '@/components/Breadcrumb';
+import Link from 'next/link';
+import styles from './Products.module.css';
+import PageHeader from '@/components/PageHeader';
 
 // JSON verisi için TypeScript tipi belirlendi
 interface Urun {
@@ -24,10 +26,13 @@ const ProductsPage: React.FC = () => {
 
   return (
     <div>
-      <div style={{ textAlign: 'center', margin: '0 auto', padding: '10px', backgroundColor: '#f8d7da', borderRadius: '8px', maxWidth: '1200px' }}>
-        <h1 style={{ fontSize: '2em' }}>Ürünler</h1>
-      </div>
-      <Breadcrumb items={[{ name: 'Anasayfa', href: '/' }, { name: 'Ürünler', href: '/products' }]} />
+      <PageHeader 
+        title="ÜRÜNLERİMİZ"
+        breadcrumbs={[
+          { name: "ANASAYFA", href: "/" },
+          { name: "ÜRÜNLERİMİZ", href: "/urunlerimiz" }
+        ]}
+      />
       <div className="products-container">
         <div className="product-cards">
           {urunGruplari.map((urun: Urun) => (

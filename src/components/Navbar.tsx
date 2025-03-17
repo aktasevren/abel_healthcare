@@ -22,16 +22,17 @@ const Navbar = () => {
 
   const menuItems: MenuItem[] = [
     { href: '/', labelKey: 'nav.home' },
-    { href: '/products', labelKey: 'nav.products' },
-    { href: '/teknik-servis', labelKey: 'nav.technical_service' },
     {
       href: '#',
-      labelKey: 'nav.corporate',
+      labelKey: 'KURUMSAL',
       subItems: [
         { href: '/about', labelKey: 'HAKKIMIZDA' },
         { href: '/certificates', labelKey: 'SERTİFİKALARIMIZ' }
       ]
     },
+    { href: '/urunlerimiz', labelKey: 'nav.products' },
+    { href: '/teknik-servis', labelKey: 'nav.technical_service' },
+    
     { href: '/iletisim', labelKey: 'nav.contact' },
   ];
 

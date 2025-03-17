@@ -7,7 +7,7 @@ const MobileFooter = () => {
     <footer>
       <div className="mobile-buttons">
         <a
-          href="https://wa.me/1234567890?text=Merhaba"
+          href="https://wa.me/+905335228791?text=Merhaba"
           className="whatsapp-button"
           target="_blank"
           rel="noopener noreferrer"

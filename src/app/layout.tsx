@@ -33,10 +33,10 @@ export default function RootLayout({
               <TopBar />
               <Navbar />
               <main style={{ flex: 1 }}>{children}</main>
-              <Footer />
               <MobileFooter />
+              <Footer />
               <a
-                href="https://wa.me/1234567890" // Buraya kendi WhatsApp numaranızı ekleyin
+                href="https://wa.me/+905335228791" // Buraya kendi WhatsApp numaranızı ekleyin
                 className="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors flex flex-col items-center hidden md:flex"
                 target="_blank"
                 rel="noopener noreferrer"

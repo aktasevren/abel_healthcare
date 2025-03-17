@@ -4,15 +4,21 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaSearch } from 'react-icons/fa';
 import styles from './Certificates.module.css';
+import PageHeader from '@/components/PageHeader';
 
 const CertificatesPage = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <div>
-      <div style={{ textAlign: 'center', margin: '0 auto', padding: '10px', backgroundColor: '#f8d7da', borderRadius: '8px', maxWidth: '1200px' }}>
-        <h1 style={{ fontSize: '2em' }}>Sertifikalarımız</h1>
-      </div>
+      <PageHeader 
+        title="SERTİFİKALARIMIZ"
+        breadcrumbs={[
+          { name: "ANASAYFA", href: "/" },
+          { name: "SERTİFİKALARIMIZ", href: "/certificates" }
+        ]}
+      />
+
 
       <div className={styles.certificatesContainer}>
         <div className={styles.certificateCard}>

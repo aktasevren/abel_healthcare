@@ -1,86 +1,42 @@
-"use client";
+'use client';
 
 import React from 'react';
-import { FaBoxOpen, FaStethoscope, FaTools, FaCogs, FaLightbulb, FaHandshake, FaHeadset, FaChartLine } from 'react-icons/fa';
-import styles from './About.module.css';
+import PageHeader from '@/components/PageHeader';
+import styles from './Hakkimizda.module.css';
 
-const AboutPage = () => {
+export default function Hakkimizda() {
   return (
-    <div className={styles.container}>
-      {/* Başlık */}
-      <div style={{ textAlign: 'center', margin: '0 auto', padding: '10px', backgroundColor: '#f8d7da', borderRadius: '8px', maxWidth: '1200px' }}>
-        <h1 style={{ fontSize: '2em' }}>HAKKIMIZDA</h1>
+    <div>
+      <PageHeader 
+        title="HAKKIMIZDA"
+        breadcrumbs={[
+          { name: "ANASAYFA", href: "/" },
+          { name: "HAKKIMIZDA", href: "/hakkimizda" }
+        ]}
+      />
+      <div className={styles.container}>
+        <section className={styles.aboutSection}>
+          <div className={styles.aboutContent}>
+            <h2>Biz Kimiz?</h2>
+            <p>Abel Health Care Medikal olarak, 2010 yılından bu yana medikal cihaz sektöründe faaliyet göstermekteyiz. Firmamız, biyomedikal teknik servis hizmetleri ve medikal cihaz satışı konusunda uzmanlaşmış bir kuruluştur.</p>
+            
+            <h2>Misyonumuz</h2>
+            <p>Sağlık sektörüne en kaliteli medikal cihazları ve teknik servis hizmetlerini sunarak, hastaların tedavi süreçlerinde en iyi sonuçların elde edilmesine katkıda bulunmak.</p>
+            
+            <h2>Vizyonumuz</h2>
+            <p>Türkiye'nin önde gelen medikal cihaz ve teknik servis firması olarak, yenilikçi çözümlerle sağlık sektörüne değer katmak ve global standartlarda hizmet sunmak.</p>
+            
+            <h2>Değerlerimiz</h2>
+            <ul>
+              <li>Kalite ve Güvenilirlik</li>
+              <li>Müşteri Memnuniyeti</li>
+              <li>Yenilikçilik</li>
+              <li>Profesyonellik</li>
+              <li>Sürdürülebilirlik</li>
+            </ul>
+          </div>
+        </section>
       </div>
-
-      {/* Ana Bölüm */}
-      <section className={styles.mainSection}>
-        <h2 className={styles.companyName}>Abel Health Care Medikal</h2>
-        <div className={styles.mainContent}>
-          <div className={styles.description}>
-            {`Abel Health Care Medikal, 2022 yılında kurulmuş olup, cerrahi medikal sarf malzemeleri ve tıbbi cihaz satışı konusunda faaliyet göstermektedir.`}
-          </div>
-        </div>
-      </section>
-
-      {/* Hizmetler */}
-      <section className={styles.servicesSection}>
-        <div className={styles.serviceGrid}>
-          <div className={styles.serviceCard}>
-            <FaStethoscope className={styles.icon} />
-            <p>Yüksek kalite cerrahi tıbbi sarf malzeme</p>
-          </div>
-          <div className={styles.serviceCard}>
-            <FaBoxOpen className={styles.icon} />
-            <p>Tıbbi cihaz satışı</p>
-          </div>
-          <div className={styles.serviceCard}>
-            <FaTools className={styles.icon} />
-            <p>Marka model farketmeksizin teknik servis hizmeti</p>
-          </div>
-          <div className={styles.serviceCard}>
-            <FaCogs className={styles.icon} />
-            <p>Geniş yedek parça yelpazesi</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Neden Biz */}
-      <section className={styles.whyUsSection}>
-        <h2>Neden Bizi Seçmelisiniz</h2>
-        <p className={styles.whyUsContent}>
-          Şirketimiz, mevcut ürünlerimize ek olarak yeni nesil tedavi şekillerini de takip etmekte olup kullanılabilecek yeni ürün gruplarını ülkemizdeki sağlık sistemimin içine adapte etmektedir. Profesyonel yatırımlarla, piyasada kalite ve güven esasına dayalı hizmet vermeye her zaman tarafımızda devam edilecektir.
-        </p>
-      </section>
-
-      {/* Özellikler */}
-      <section className={styles.featuresSection}>
-        <div className={styles.featureGrid}>
-          <div className={styles.featureCard}>
-            <FaChartLine className={styles.icon} />
-            <h3>Yeni Ürün Grupları</h3>
-          </div>
-          <div className={styles.featureCard}>
-            <FaLightbulb className={styles.icon} />
-            <h3>Enerjik ve Yenilikçi</h3>
-          </div>
-          <div className={styles.featureCard}>
-            <FaHandshake className={styles.icon} />
-            <h3>Danışmanlık</h3>
-          </div>
-          <div className={styles.featureCard}>
-            <FaHeadset className={styles.icon} />
-            <h3>Destek</h3>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className={styles.footer}>
-        <div className={styles.footerContent}>
-        </div>
-      </footer>
     </div>
   );
-};
-
-export default AboutPage; 
+} 

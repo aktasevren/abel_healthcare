@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "about": "Hakkımızda",
+    "products": "Ürünler",
+    "technical_service": "Teknik Servis",
+    "contact": "İletişim"
+  },
+  "slider": {
+    "ekg": {
+      "title": "EKG Cihazları",
+      "description": "En son teknoloji EKG cihazları"
+    },
+    "ultrasound": {
+      "title": "Ultrason Cihazları",
+      "description": "Profesyonel ultrason cihazları"
+    },
+    "mri": {
+      "title": "MR Cihazları",
+      "description": "Yüksek çözünürlüklü MR cihazları"
+    }
+  },
+  "home": {
+    "hero": {
+      "title": "Medikal Cihaz Çözümleri",
+      "subtitle": "Kaliteli ve Güvenilir Medikal Ekipmanlar"
+    },
+    "features": {
+      "title": "Neden Bizi Seçmelisiniz?",
+      "quality": "Kaliteli Ürünler",
+      "service": "Profesyonel Hizmet",
+      "support": "7/24 Destek"
+    }
+  },
+  "about": {
+    "title": "Hakkımızda",
+    "description": "20 yılı aşkın tecrübemizle medikal cihaz sektöründe hizmet veriyoruz."
+  },
+  "products": {
+    "title": "Ürünlerimiz",
+    "description": "En son teknoloji medikal cihazlar"
+  },
+  "contact": {
+    "title": "İletişim",
+    "description": "Bizimle iletişime geçin",
+    "form": {
+      "name": "Adınız",
+      "email": "E-posta Adresiniz",
+      "message": "Mesajınız",
+      "send": "Gönder"
+    }
+  },
+  "services": {
+    "title": "Hizmetlerimiz",
+    "learn_more": "Detaylı Bilgi",
+    "medical_devices": {
+      "title": "Tıbbi Cihaz Satışı",
+      "description": "En son teknoloji medikal cihazlar"
+    },
+    "technical_service": {
+      "title": "Teknik Servis",
+      "description": "Profesyonel teknik servis hizmeti"
+    },
+    "spare_parts": {
+      "title": "Yedek Parça",
+      "description": "Geniş yedek parça yelpazesi"
+    }
+  },
+  "footer": {
+    "contact": {
+      "title": "İletişim Bilgileri",
+      "phone": "Telefon",
+      "address": "Adres"
+    },
+    "links": {
+      "title": "Hızlı Bağlantılar",
+      "home": "Ana Sayfa",
+      "about": "Hakkımızda",
+      "products": "Ürünler",
+      "technical_service": "Teknik Servis",
+      "contact": "İletişim"
+    },
+    "services": {
+      "title": "Hizmetlerimiz",
+      "sales": "Tıbbi Cihaz Satışı",
+      "service": "Teknik Servis",
+      "parts": "Yedek Parça"
+    },
+    "copyright": "© 2024 Tüm hakları saklıdır.",
+    "developer": "Tasarım: Evren Aktaş"
+  }
+} 

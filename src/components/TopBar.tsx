@@ -27,7 +27,7 @@ const TopBar = () => {
 
             {/* Telefon */}
             <a 
-              href="tel:+901234567890" 
+              href="tel:+905335228791" 
               className="flex items-center text-gray-800 dark:text-gray-200 hover:text-primary dark:hover:text-primary transition-colors"
               style={{ color: 'var(--topbar-text)' }}
               title={t('phone')}
