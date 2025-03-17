@@ -1,0 +1,212 @@
+.whatsappSupport {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 350px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.header {
+  background: #25D366;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.whatsappIcon {
+  font-size: 24px;
+}
+
+.headerText {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.minimizeButton {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.minimizeButton:hover {
+  transform: scale(1.1);
+}
+
+.content {
+  padding: 20px;
+}
+
+.welcomeMessage {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.welcomeMessage h3 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.welcomeMessage p {
+  color: #666;
+  font-size: 14px;
+}
+
+.contactOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.whatsappButton,
+.aiButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.whatsappButton {
+  background: #25D366;
+  color: white;
+}
+
+.aiButton {
+  background: #6c5ce7;
+  color: white;
+}
+
+.buttonIcon {
+  font-size: 18px;
+}
+
+.whatsappButton:hover {
+  background: #128C7E;
+  transform: translateY(-2px);
+}
+
+.aiButton:hover {
+  background: #5b4cc4;
+  transform: translateY(-2px);
+}
+
+.contactInfo {
+  text-align: center;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.availability {
+  color: #25D366;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.phoneNumber {
+  color: #666;
+  font-size: 14px;
+}
+
+.minimized {
+  width: auto;
+  height: auto;
+}
+
+.minimized .content {
+  display: none;
+}
+
+.maximizeButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: #25D366;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+}
+
+.maximizeButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+}
+
+@media (max-width: 768px) {
+  .whatsappSupport {
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    border-radius: 16px 16px 0 0;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .minimized {
+    width: auto;
+    height: auto;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 25px;
+  }
+
+  .content {
+    padding: 15px;
+  }
+
+  .welcomeMessage h3 {
+    font-size: 16px;
+  }
+
+  .welcomeMessage p {
+    font-size: 13px;
+  }
+
+  .whatsappButton,
+  .aiButton {
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  .buttonIcon {
+    font-size: 16px;
+  }
+
+  .availability,
+  .phoneNumber {
+    font-size: 13px;
+  }
+} 

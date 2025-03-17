@@ -57,16 +57,23 @@
   z-index: 1;
 }
 
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
 .iconWrapper {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
   transition: transform 0.3s ease;
+  flex-shrink: 0;
 }
 
 .card:hover .iconWrapper {
@@ -74,15 +81,15 @@
 }
 
 .icon {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: white;
 }
 
 .cardTitle {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
-  margin-bottom: 1rem;
   color: white;
+  margin: 0;
 }
 
 .cardDescription {
@@ -138,8 +145,21 @@
     padding: 1.5rem;
   }
 
-  .cardTitle {
+  .header {
+    gap: 0.8rem;
+  }
+
+  .iconWrapper {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon {
     font-size: 1.3rem;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
   }
 
   .cardDescription {

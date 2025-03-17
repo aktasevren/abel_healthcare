@@ -1,170 +1,236 @@
 'use client';
 
-import { useState } from 'react';
-
-type SubCategory = {
-  id: string;
-  title: string;
-};
-
-type Category = {
-  id: string;
-  title: string;
-  subCategories?: SubCategory[];
-};
-
-const categories: Category[] = [
-  {
-    id: '1',
-    title: 'Ameliyathane',
-    subCategories: [
-      { id: '1-1', title: 'Anestezi Cihazları' },
-      { id: '1-2', title: 'Ameliyat Masaları' },
-      { id: '1-3', title: 'Ameliyat Masası Kumandaları' },
-      { id: '1-4', title: 'Elektrokoter/Ligasure/Radyo Frekans Cihazları' },
-      { id: '1-5', title: 'Aspiratörler' },
-    ],
-  },
-  {
-    id: '1.1',
-    title: 'Endovizyon Sistemleri',
-    subCategories: [
-      { id: '1.1-1', title: 'Medikal Monitörler' },
-      { id: '1.1-2', title: 'Prosesörler' },
-      { id: '1.1-3', title: 'Kameralar' },
-      { id: '1.1-4', title: 'Soğuk Işık Kaynakları' },
-      { id: '1.1-5', title: 'İnsüflatörler' },
-      { id: '1.1-6', title: 'Aspirasyon-İrrigasyon Cihazları' },
-      { id: '1.1-7', title: 'Ameliyat Kafa Lambaları' },
-      { id: '1.1-8', title: 'Isıtıcı/Soğutucular' },
-      { id: '1.1-9', title: 'Turnike Cihazları' },
-    ],
-  },
-  {
-    id: '2',
-    title: 'Erişkin Yoğun Bakım',
-    subCategories: [
-      { id: '2-1', title: 'Yetişkin Ventilatörler' },
-    ],
-  },
-  {
-    id: '3',
-    title: 'Yenidoğan Yoğun Bakım',
-    subCategories: [
-      { id: '3-1', title: 'Bebek Ventilatörleri' },
-      { id: '3-2', title: 'Nemlendiriciler' },
-      { id: '3-3', title: 'Küvözler' },
-      { id: '3-4', title: 'Radyan Isıtıcılar' },
-      { id: '3-5', title: 'Fototerapi Cihazları' },
-    ],
-  },
-  {
-    id: '4',
-    title: 'Acil Servis',
-    subCategories: [
-      { id: '4-1', title: 'Transport Ventilatörler' },
-      { id: '4-2', title: 'Hastabaşı Monitörleri' },
-      { id: '4-3', title: 'Pulseoksimetre Cihazları' },
-      { id: '4-4', title: 'Acil Müdahale Lambaları' },
-      { id: '4-5', title: 'Defibrilatör (Elektroşok Cihazları)' },
-      { id: '4-6', title: 'Tansiyon Aletleri' },
-    ],
-  },
-  {
-    id: '5',
-    title: 'Poliklinik',
-    subCategories: [
-      { id: '5-1', title: 'Otoskop Oftalmoskop Cihazları' },
-    ],
-  },
-  {
-    id: '6',
-    title: 'Cerrahi Motor Sistemleri',
-    subCategories: [
-      { id: '6-1', title: 'Beyin Cerrahi Tur Motoru Tamiri' },
-      { id: '6-2', title: 'Delici Kesici Ortopedi Motor Tamiri' },
-      { id: '6-3', title: 'KBB Tur Motor Tamiri' },
-      { id: '6-4', title: 'Shaver Tamiri' },
-      { id: '6-5', title: 'Sternum Testere Tamiri' },
-    ],
-  },
-  {
-    id: '7',
-    title: 'Flexible Endoskopi Cihazları',
-    subCategories: [
-      { id: '7-1', title: 'Fujinon Endoskopi Tamiri' },
-      { id: '7-2', title: 'Olympus Endoskopi Tamiri' },
-      { id: '7-3', title: 'Pentax Endoskopi Tamiri' },
-      { id: '7-4', title: 'Karl Storz Endovizyon Sistemleri' },
-    ],
-  },
-];
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { useLanguage } from '@/context/LanguageContext';
+import { 
+  FaStethoscope, 
+  FaTools, 
+  FaCogs, 
+  FaWrench, 
+  FaCheckCircle, 
+  FaClock, 
+  FaUserTie, 
+  FaCertificate,
+  FaHospital,
+  FaMicroscope,
+  FaXRay,
+  FaHeartbeat,
+  FaSyringe,
+  FaVial,
+  FaBed,
+  FaProcedures,
+  FaChevronDown,
+  FaChevronUp
+} from 'react-icons/fa';
+import styles from './ServiceCategories.module.css';
 
 const ServiceCategories = () => {
-  const [openCategories, setOpenCategories] = useState<string[]>([]);
+  const { t } = useLanguage();
+  const [expandedCategories, setExpandedCategories] = useState<number[]>([]);
 
-  const toggleCategory = (categoryId: string) => {
-    setOpenCategories((prev) =>
-      prev.includes(categoryId)
-        ? prev.filter((id) => id !== categoryId)
-        : [...prev, categoryId]
+  const toggleCategory = (index: number) => {
+    setExpandedCategories(prev => 
+      prev.includes(index) 
+        ? prev.filter(i => i !== index)
+        : [...prev, index]
     );
   };
 
+  const categories = [
+    {
+      icon: <FaProcedures className={styles.icon} />,
+      title: 'Ameliyathane',
+      description: 'Ameliyathane ekipmanları için profesyonel teknik servis hizmetleri',
+      items: [
+        'Anestezi Cihazları',
+        'Ameliyat Masaları',
+        'Ameliyat Masası Kumandaları',
+        'Elektrokoter/Ligasure/Radyo Frekans Cihazları',
+        'Aspiratörler',
+        'Endovizyon Sistemleri',
+        'Medikal Monitörler',
+        'Prosesörler',
+        'Kameralar',
+        'Soğuk Işık Kaynakları',
+        'İnsüflatörler',
+        'Aspirasyon-İrrigasyon Cihazları',
+        'Ameliyat Kafa Lambaları',
+        'Isıtıcı/Soğutucular',
+        'Turnike Cihazları'
+      ]
+    },
+    {
+      icon: <FaHeartbeat className={styles.icon} />,
+      title: 'Erişkin Yoğun Bakım',
+      description: 'Erişkin yoğun bakım ünitesi cihazları için teknik servis',
+      items: [
+        'Yetişkin Ventilatörler'
+      ]
+    },
+    {
+      icon: <FaBed className={styles.icon} />,
+      title: 'Yenidoğan Yoğun Bakım',
+      description: 'Yenidoğan yoğun bakım ünitesi cihazları için teknik servis',
+      items: [
+        'Bebek Ventilatörleri',
+        'Nemlendiriciler',
+        'Küvözler',
+        'Radyan Isıtıcılar',
+        'Fototerapi Cihazları'
+      ]
+    },
+    {
+      icon: <FaHospital className={styles.icon} />,
+      title: 'Acil Servis',
+      description: 'Acil servis ekipmanları için teknik servis hizmetleri',
+      items: [
+        'Transport Ventilatörler',
+        'Hastabaşı Monitörleri',
+        'Pulseoksimetre Cihazları',
+        'Acil Müdahale Lambaları',
+        'Defibrilatör (Elektroşok Cihazları)',
+        'Tansiyon Aletleri'
+      ]
+    },
+    {
+      icon: <FaStethoscope className={styles.icon} />,
+      title: 'Poliklinik',
+      description: 'Poliklinik ekipmanları için teknik servis hizmetleri',
+      items: [
+        'Otoskop Oftalmoskop Cihazları'
+      ]
+    },
+    {
+      icon: <FaTools className={styles.icon} />,
+      title: 'Cerrahi Motor Sistemleri',
+      description: 'Cerrahi motor sistemleri için teknik servis hizmetleri',
+      items: [
+        'Beyin Cerrahi Tur Motoru Tamiri',
+        'Delici Kesici Ortopedi Motor Tamiri',
+        'KBB Tur Motor Tamiri',
+        'Shaver Tamiri',
+        'Sternum Testere Tamiri'
+      ]
+    },
+    {
+      icon: <FaMicroscope className={styles.icon} />,
+      title: 'Flexible Endoskopi Cihazları',
+      description: 'Endoskopi cihazları için teknik servis hizmetleri',
+      items: [
+        'Fujinon Endoskopi Tamiri',
+        'Olympus Endoskopi Tamiri',
+        'Pentax Endoskopi Tamiri',
+        'Karl Storz Endovizyon Sistemleri'
+      ]
+    }
+  ];
+
+  const features = [
+    {
+      icon: <FaWrench className={styles.featureIcon} />,
+      title: '7/24 Teknik Servis',
+      description: 'Acil durumlarda hızlı müdahale ve teknik destek'
+    },
+    {
+      icon: <FaCheckCircle className={styles.featureIcon} />,
+      title: 'Garantili Hizmet',
+      description: 'Tüm bakım ve onarım işlemlerinde garanti kapsamı'
+    },
+    {
+      icon: <FaClock className={styles.featureIcon} />,
+      title: 'Hızlı Müdahale',
+      description: 'En kısa sürede yerinde teknik servis hizmeti'
+    },
+    {
+      icon: <FaUserTie className={styles.featureIcon} />,
+      title: 'Uzman Ekip',
+      description: 'Deneyimli ve sertifikalı teknik kadro'
+    }
+  ];
+
   return (
-    <div className="bg-gray-50 dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="container mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
-          Teknik Servis Hizmetlerimiz
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {categories.map((category) => (
-            <div
-              key={category.id}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden"
+    <section className={styles.serviceCategories}>
+      <div className={styles.container}>
+        <h2 className={styles.title}>Teknik Servis Hizmetlerimiz</h2>
+        <p className={styles.subtitle}>Biyomedikal cihazlarınız için profesyonel bakım ve onarım hizmetleri</p>
+        
+        <div className={styles.grid}>
+          {categories.map((category, index) => (
+            <div 
+              key={index} 
+              className={styles.categoryCard}
             >
-              <button
-                onClick={() => toggleCategory(category.id)}
-                className="w-full px-4 py-3 flex justify-between items-center bg-blue-50 dark:bg-gray-700 hover:bg-blue-100 dark:hover:bg-gray-600 transition-colors"
-              >
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
-                  {category.title}
-                </h3>
-                <svg
-                  className={`w-5 h-5 transform transition-transform ${
-                    openCategories.includes(category.id) ? 'rotate-180' : ''
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {openCategories.includes(category.id) && category.subCategories && (
-                <div className="px-4 py-3">
-                  <ul className="space-y-2">
-                    {category.subCategories.map((subCategory) => (
-                      <li
-                        key={subCategory.id}
-                        className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors cursor-pointer"
-                      >
-                        {subCategory.title}
-                      </li>
-                    ))}
-                  </ul>
+              <div className={styles.categoryContent}>
+                <div className={styles.header}>
+                  <div className={styles.iconWrapper}>
+                    {category.icon}
+                  </div>
+                  <h3 className={styles.categoryTitle}>{category.title}</h3>
                 </div>
-              )}
+                <p className={styles.categoryDescription}>{category.description}</p>
+                <ul className={styles.itemsList}>
+                  {category.items.slice(0, expandedCategories.includes(index) ? undefined : 2).map((item, itemIndex) => (
+                    <li key={itemIndex} className={styles.item}>
+                      <FaCheckCircle className={styles.checkIcon} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                {category.items.length > 2 && (
+                  <button 
+                    className={styles.showMoreButton}
+                    onClick={() => toggleCategory(index)}
+                  >
+                    {expandedCategories.includes(index) ? (
+                      <>
+                        <span>Daha Az Göster</span>
+                        <FaChevronUp className={styles.chevronIcon} />
+                      </>
+                    ) : (
+                      <>
+                        <span>Tümünü Gör</span>
+                        <FaChevronDown className={styles.chevronIcon} />
+                      </>
+                    )}
+                  </button>
+                )}
+                <div className={styles.buttonWrapper}>
+                  <span className={styles.buttonText}>Detaylı Bilgi</span>
+                  <svg 
+                    className={styles.arrowIcon} 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  >
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </div>
+              </div>
             </div>
           ))}
         </div>
+
+        <div className={styles.featuresSection}>
+          <h3 className={styles.featuresTitle}>Neden Bizi Seçmelisiniz?</h3>
+          <div className={styles.featuresGrid}>
+            {features.map((feature, index) => (
+              <div key={index} className={styles.featureCard}>
+                <div className={styles.featureIconWrapper}>
+                  {feature.icon}
+                </div>
+                <h4 className={styles.featureTitle}>{feature.title}</h4>
+                <p className={styles.featureDescription}>{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

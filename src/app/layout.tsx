@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import Image from "next/image"; // Image import edildi
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { LanguageProvider } from "@/context/LanguageContext";
@@ -8,6 +7,7 @@ import TopBar from "@/components/TopBar";
 import Navbar from "@/components/Navbar";
 import MobileFooter from "@/components/MobileFooter";
 import Footer from '@/components/Footer';
+import WhatsAppSupport from '@/components/WhatsAppSupport';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -35,21 +35,7 @@ export default function RootLayout({
               <main style={{ flex: 1 }}>{children}</main>
               <MobileFooter />
               <Footer />
-              <a
-                href="https://wa.me/+905335228791" // Buraya kendi WhatsApp numaranızı ekleyin
-                className="fixed bottom-4 right-4 bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-colors flex flex-col items-center hidden md:flex"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/media/whatsapp.png"
-                  alt="WhatsApp Canlı Destek"
-                  width={32} // Boyutları optimize ettim
-                  height={32}
-                  className="mb-1"
-                />
-                <span className="text-sm">Canlı Destek</span>
-              </a>
+              <WhatsAppSupport />
             </div>
           </LanguageProvider>
         </ThemeProvider>
