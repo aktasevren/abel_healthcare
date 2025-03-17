@@ -18,7 +18,7 @@ export default function Hakkimizda() {
         <section className={styles.aboutSection}>
           <div className={styles.aboutContent}>
             <h2>Biz Kimiz?</h2>
-            <p>Abel Health Care Medikal olarak, 2010 yılından bu yana medikal cihaz sektöründe faaliyet göstermekteyiz. Firmamız, biyomedikal teknik servis hizmetleri ve medikal cihaz satışı konusunda uzmanlaşmış bir kuruluştur.</p>
+            <p>Abel Health Care Medikal, sağlık sektöründe yenilikçi ve güvenilir çözümler sunan öncü bir kuruluştur. Müşterilerimizin ihtiyaçlarını en iyi şekilde karşılamak için sürekli gelişim ve yenilikçilik ilkesiyle çalışıyoruz.</p>
             
             <h2>Misyonumuz</h2>
             <p>Sağlık sektörüne en kaliteli medikal cihazları ve teknik servis hizmetlerini sunarak, hastaların tedavi süreçlerinde en iyi sonuçların elde edilmesine katkıda bulunmak.</p>

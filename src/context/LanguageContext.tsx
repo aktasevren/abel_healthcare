@@ -11,11 +11,13 @@ type Language = 'tr' | 'en' | 'ar';
  * JSON çeviri dosyalarının yapısına uygun tip belirleme.
  * Çeviri dosyaları hem string değerler hem de iç içe nesneler içerebilir.
  */
-type TranslationObject = { [key: string]: string | TranslationObject };
+interface TranslationObject {
+  [key: string]: string | TranslationObject;
+}
 
 interface LanguageContextType {
-  language: Language;
-  setLanguage: (lang: Language) => void;
+  language: string;
+  setLanguage: (lang: string) => void;
   t: (key: string) => string;
 }
 
@@ -27,8 +29,8 @@ const translations = {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguage] = useState<Language>('tr');
+export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [language, setLanguage] = useState('tr');
 
   const t = (key: string): string => {
     const keys = key.split('.');
@@ -51,15 +53,15 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
       {children}
     </LanguageContext.Provider>
   );
-}
+};
 
-export function useLanguage() {
+export const useLanguage = () => {
   const context = useContext(LanguageContext);
   if (context === undefined) {
     throw new Error('useLanguage must be used within a LanguageProvider');
   }
   return context;
-}
+};
 
 export default LanguageContext;
 
