@@ -1,23 +1,16 @@
 'use client';
 
 import React, { useState } from 'react';
-import Link from 'next/link';
-import { useLanguage } from '@/context/LanguageContext';
 import { 
   FaStethoscope, 
   FaTools, 
-  FaCogs, 
   FaWrench, 
   FaCheckCircle, 
   FaClock, 
-  FaUserTie, 
-  FaCertificate,
+  FaUserTie,
   FaHospital,
   FaMicroscope,
-  FaXRay,
   FaHeartbeat,
-  FaSyringe,
-  FaVial,
   FaBed,
   FaProcedures,
   FaChevronDown,
@@ -26,7 +19,6 @@ import {
 import styles from './ServiceCategories.module.css';
 
 const ServiceCategories = () => {
-  const { t } = useLanguage();
   const [expandedCategories, setExpandedCategories] = useState<number[]>([]);
 
   const toggleCategory = (index: number) => {
