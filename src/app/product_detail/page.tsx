@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import urunDetaylari from "../../../public/data/urun-detaylari.json";
@@ -32,7 +32,7 @@ interface Group {
   slug: string;
 }
 
-const ProductDetailPage: React.FC = () => {
+const ProductDetailContent: React.FC = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
   const [product, setProduct] = useState<Product | null>(null);
@@ -130,4 +130,12 @@ const ProductDetailPage: React.FC = () => {
   );
 };
 
-export default ProductDetailPage; 
+const ProductDetail: React.FC = () => {
+  return (
+    <Suspense fallback={<div>Yükleniyor...</div>}>
+      <ProductDetailContent />
+    </Suspense>
+  );
+};
+
+export default ProductDetail; 
