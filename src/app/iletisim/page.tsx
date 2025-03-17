@@ -1,7 +1,7 @@
 "use client";
 
 import React from 'react';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
 import styles from './Iletisim.module.css';
 import PageHeader from '@/components/PageHeader';
 

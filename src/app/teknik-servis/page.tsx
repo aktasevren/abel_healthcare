@@ -2,7 +2,7 @@
 
 import React from "react";
 import { FaHospital, FaStethoscope, FaHandHoldingHeart, FaTools, FaClock, FaShieldAlt, FaUserMd, FaCheckCircle } from 'react-icons/fa';
-import styles from './TeknikServis.module.css';
+import "./TeknikServis.css";
 
 const TeknikServisPage: React.FC = () => {
   return (
