@@ -10,18 +10,36 @@ const slides = [
     titleKey: 'slider.ekg.title',
     descriptionKey: 'slider.ekg.description',
     image: '/media/sliders/ekg.jpg',
+    specs: {
+      resolution: '12-bit',
+      samplingRate: '1000 Hz',
+      channels: '12',
+      display: '12.1" TFT'
+    }
   },
   {
     id: 2,
     titleKey: 'slider.ultrasound.title',
     descriptionKey: 'slider.ultrasound.description',
     image: '/media/sliders/carrier.jpg',
+    specs: {
+      frequency: '2-18 MHz',
+      probes: '4',
+      depth: '30 cm',
+      display: '15" LED'
+    }
   },
   {
     id: 3,
     titleKey: 'slider.mri.title',
     descriptionKey: 'slider.mri.description',
     image: '/media/sliders/medical.jpg',
+    specs: {
+      fieldStrength: '1.5T',
+      boreSize: '70cm',
+      gradientStrength: '45mT/m',
+      display: '32" 4K'
+    }
   },
 ];
 
@@ -45,8 +63,21 @@ const Slider = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  const getDeviceType = (id: number) => {
+    switch (id) {
+      case 1:
+        return 'ekg';
+      case 2:
+        return 'ultrasound';
+      case 3:
+        return 'mri';
+      default:
+        return 'ekg';
+    }
+  };
+
   return (
-    <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+    <div className="relative w-full h-[500px] md:h-[600px] lg:h-[700px] overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -63,14 +94,36 @@ const Slider = () => {
                 src={slide.image}
                 alt={t(slide.titleKey)}
                 fill
-                className="object-cover opacity-50"
+                className="object-cover opacity-40"
                 priority
               />
             </div>
             <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8">
-              <div className="max-w-2xl text-white mx-12">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">{t(slide.titleKey)}</h2>
-                <p className="text-lg md:text-xl opacity-90">{t(slide.descriptionKey)}</p>
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-black/60 backdrop-blur-sm p-8 rounded-lg border border-white/10">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
+                    {t(slide.titleKey)}
+                  </h2>
+                  <p className="text-xl md:text-2xl text-gray-200 mb-8">
+                    {t(slide.descriptionKey)}
+                  </p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    {Object.entries(slide.specs).map(([key, value]) => {
+                      const deviceType = getDeviceType(slide.id);
+                      const translationKey = `slider.${deviceType}.specs.${key}`;
+                      return (
+                        <div key={key} className="bg-white/10 p-4 rounded-lg">
+                          <div className="text-sm text-gray-400 uppercase tracking-wider mb-1">
+                            {t(translationKey)}
+                          </div>
+                          <div className="text-lg font-semibold text-white">
+                            {value}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -80,7 +133,7 @@ const Slider = () => {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg z-20"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full shadow-lg z-20 transition-colors duration-200"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -88,7 +141,7 @@ const Slider = () => {
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 p-2 rounded-full shadow-lg z-20"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-3 rounded-full shadow-lg z-20 transition-colors duration-200"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

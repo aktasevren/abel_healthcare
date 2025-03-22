@@ -26,13 +26,12 @@ const Navbar = () => {
       href: '#',
       labelKey: 'KURUMSAL',
       subItems: [
-        { href: '/about', labelKey: 'HAKKIMIZDA' },
+        { href: '/hakkimizda', labelKey: 'HAKKIMIZDA' },
         { href: '/certificates', labelKey: 'SERTİFİKALARIMIZ' }
       ]
     },
     { href: '/urunlerimiz', labelKey: 'nav.products' },
     { href: '/teknik-servis', labelKey: 'nav.technical_service' },
-    
     { href: '/iletisim', labelKey: 'nav.contact' },
   ];
 
@@ -47,18 +46,18 @@ const Navbar = () => {
   };
 
   const getLinkClassName = (isActive: boolean, isMobile: boolean = false) => {
-    const baseClasses = 'text-sm font-semibold transition-colors uppercase';
+    const baseClasses = 'text-sm font-semibold transition-colors duration-200 uppercase';
     const mobileClasses = isMobile ? 'px-4 py-2 rounded-md' : 'px-1 py-2 relative';
     
     if (isActive) {
-      return `${baseClasses} ${mobileClasses} text-blue-600`;
+      return `${baseClasses} ${mobileClasses} text-blue-600 font-bold`;
     }
     
-    return `${baseClasses} ${mobileClasses} text-black-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-500`;
+    return `${baseClasses} ${mobileClasses} text-foreground hover:text-blue-600`;
   };
 
   return (
-    <nav className="bg-background shadow-sm mb-6 md:mb-8 lg:mb-10">
+    <nav className="bg-card border-b border-border transition-colors duration-200">
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20 md:h-24">
           <div className="flex-shrink-0 py-2 md:py-3">
@@ -70,11 +69,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className={`inline-flex items-center justify-center p-2 rounded-md focus:outline-none ${
-                theme === 'light'
-                  ? 'text-gray-700 hover:text-gray-900 hover:bg-gray-100'
-                  : 'text-gray-200 hover:text-white hover:bg-gray-700'
-              }`}
+              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary hover:bg-secondary focus:outline-none transition-colors duration-200"
               aria-expanded="false"
             >
               <span className="sr-only">{t('nav.menu')}</span>
@@ -107,7 +102,7 @@ const Navbar = () => {
                     <span className={`${getLinkClassName(pathname === item.href)} flex items-center`}>
                       {t(item.labelKey)}
                       <svg
-                        className="inline-block ml-1 w-4 h-4"
+                        className="inline-block ml-1 w-4 h-4 transition-transform duration-200 group-hover:rotate-180"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -122,7 +117,7 @@ const Navbar = () => {
                       </svg>
                     </span>
                     <div 
-                      className={`absolute left-0 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 z-50 transition-opacity duration-150 ${
+                      className={`absolute left-0 w-48 rounded-md shadow-lg bg-background border border-border z-50 transition-all duration-200 ${
                         activeDropdown === item.href ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none -translate-y-1'
                       }`}
                       style={{ top: 'calc(100% - 5px)' }}
@@ -134,7 +129,9 @@ const Navbar = () => {
                           <Link
                             key={subItem.href}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                            className={`block px-4 py-2 text-sm text-foreground hover:bg-blue-50 hover:text-blue-600 transition-colors duration-200 ${
+                              pathname === subItem.href ? 'bg-blue-50 text-blue-600 font-bold' : ''
+                            }`}
                           >
                             {subItem.labelKey}
                           </Link>
@@ -149,7 +146,7 @@ const Navbar = () => {
                   >
                     {t(item.labelKey)}
                     {pathname === item.href && (
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"></span>
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600 transition-colors duration-200"></span>
                     )}
                   </Link>
                 )}
@@ -165,16 +162,18 @@ const Navbar = () => {
         >
           <div className="flex flex-col space-y-2 mx-2">
             {menuItems.map((item) => (
-              <>
+              <div key={item.href}>
                 {item.subItems ? (
-                  <div key={item.href}>
+                  <div>
                     <div
                       className={`${getLinkClassName(false, true)} cursor-pointer flex items-center justify-between`}
                       onClick={() => setActiveDropdown(activeDropdown === item.href ? null : item.href)}
                     >
                       {t(item.labelKey)}
                       <svg
-                        className="w-4 h-4 ml-2"
+                        className={`w-4 h-4 ml-2 transition-transform duration-200 ${
+                          activeDropdown === item.href ? 'rotate-180' : ''
+                        }`}
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -189,12 +188,14 @@ const Navbar = () => {
                       </svg>
                     </div>
                     {activeDropdown === item.href && (
-                      <div className="ml-4 mt-2 space-y-2">
+                      <div className="ml-4 mt-2 space-y-2 border-l-2 border-border pl-4">
                         {item.subItems.map((subItem) => (
                           <Link
                             key={subItem.href}
                             href={subItem.href}
-                            className={getLinkClassName(pathname === subItem.href, true)}
+                            className={`${getLinkClassName(pathname === subItem.href, true)} ${
+                              pathname === subItem.href ? 'bg-blue-50 text-blue-600 font-bold' : ''
+                            }`}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {subItem.labelKey}
@@ -205,19 +206,16 @@ const Navbar = () => {
                   </div>
                 ) : (
                   <Link
-                    key={item.href}
                     href={item.href}
                     className={`${getLinkClassName(pathname === item.href, true)} ${
-                      pathname === item.href
-                        ? theme === 'light' ? 'bg-gray-50' : 'bg-gray-700'
-                        : ''
+                      pathname === item.href ? 'bg-blue-50 text-blue-600 font-bold' : ''
                     }`}
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {t(item.labelKey)}
                   </Link>
                 )}
-              </>
+              </div>
             ))}
           </div>
         </div>

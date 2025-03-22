@@ -1,0 +1,34 @@
+{
+  "slider": {
+    "ekg": {
+      "title": "12-Lead ECG Device",
+      "description": "Advanced ECG technology for high-resolution and precise measurements",
+      "specs": {
+        "resolution": "Resolution",
+        "samplingRate": "Sampling Rate",
+        "channels": "Channels",
+        "display": "Display"
+      }
+    },
+    "ultrasound": {
+      "title": "Ultrasound Device",
+      "description": "Professional ultrasound solution with wide probe options and high image quality",
+      "specs": {
+        "frequency": "Frequency Range",
+        "probes": "Probes",
+        "depth": "Depth",
+        "display": "Display"
+      }
+    },
+    "mri": {
+      "title": "1.5T MRI Scanner",
+      "description": "Superior imaging performance with high field strength and wide bore size",
+      "specs": {
+        "fieldStrength": "Field Strength",
+        "boreSize": "Bore Size",
+        "gradientStrength": "Gradient Strength",
+        "display": "Display"
+      }
+    }
+  }
+} 

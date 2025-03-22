@@ -1,0 +1,473 @@
+.about {
+  width: 100%;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  background: linear-gradient(135deg, #1a237e, #0d47a1);
+  color: white;
+  padding: 6rem 2rem;
+  text-align: center;
+  margin-bottom: 0;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  position: relative;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.heroTitle {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.heroDescription {
+  font-size: 1.25rem;
+  opacity: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* About Section */
+.aboutSection {
+  padding: 6rem 0;
+  background-color: var(--background);
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.aboutContent {
+  padding-right: 2rem;
+}
+
+.sectionTitle {
+  font-size: 2.5rem;
+  color: var(--foreground);
+  margin-bottom: 2rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary);
+  border-radius: 2px;
+}
+
+.aboutText {
+  font-size: 1.1rem;
+  color: var(--muted-foreground);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.aboutImage {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.aboutImage:hover .image {
+  transform: scale(1.05);
+}
+
+/* Values Section */
+.values {
+  padding: 6rem 0;
+  background-color: var(--secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.valueCard {
+  background-color: var(--card);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid var(--border);
+}
+
+.valueCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.valueIconWrapper {
+  width: 80px;
+  height: 80px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  transition: transform 0.3s ease;
+}
+
+.valueIcon {
+  font-size: 2rem;
+  color: var(--primary-foreground);
+}
+
+.valueCard:hover .valueIconWrapper {
+  transform: rotateY(180deg);
+}
+
+.valueTitle {
+  font-size: 1.5rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.valueDescription {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+/* Features Section */
+.features {
+  padding: 6rem 0;
+  background-color: var(--background);
+  position: relative;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.featureCard {
+  background-color: var(--card);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.featureCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.featureCard:hover::before {
+  opacity: 0.1;
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.featureIconWrapper {
+  width: 70px;
+  height: 70px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.featureIcon {
+  font-size: 1.8rem;
+  color: var(--primary-foreground);
+}
+
+.featureTitle {
+  font-size: 1.5rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.featureDescription {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Vision Section */
+.vision {
+  padding: 6rem 0;
+  background-color: var(--secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+.visionContent {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.visionContent::before {
+  content: '"';
+  position: absolute;
+  top: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 8rem;
+  color: var(--primary);
+  opacity: 0.1;
+  font-family: serif;
+}
+
+.visionText {
+  font-size: 1.2rem;
+  color: var(--muted-foreground);
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+/* Services Section */
+.services {
+  padding: 6rem 0;
+  background-color: var(--background);
+  position: relative;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.serviceCard {
+  background-color: var(--card);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.serviceCard:hover::after {
+  transform: scaleX(1);
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.serviceIconWrapper {
+  width: 70px;
+  height: 70px;
+  background: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  position: relative;
+}
+
+.serviceIcon {
+  font-size: 1.8rem;
+  color: var(--primary-foreground);
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  color: var(--foreground);
+  margin-bottom: 1rem;
+  font-weight: 600;
+  position: relative;
+}
+
+.serviceDescription {
+  color: var(--muted-foreground);
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+
+  .aboutGrid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .aboutContent {
+    padding-right: 0;
+  }
+
+  .aboutImage {
+    height: 400px;
+  }
+
+  .sectionTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .heroDescription {
+    font-size: 1.1rem;
+  }
+
+  .aboutSection,
+  .values,
+  .features,
+  .vision,
+  .services {
+    padding: 4rem 0;
+  }
+
+  .aboutImage {
+    height: 300px;
+  }
+
+  .valueCard,
+  .featureCard,
+  .serviceCard {
+    padding: 2rem;
+  }
+
+  .valueIconWrapper,
+  .featureIconWrapper,
+  .serviceIconWrapper {
+    width: 60px;
+    height: 60px;
+  }
+
+  .valueIcon,
+  .featureIcon,
+  .serviceIcon {
+    font-size: 1.5rem;
+  }
+
+  .valueTitle,
+  .featureTitle,
+  .serviceTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroDescription {
+    font-size: 1rem;
+  }
+
+  .aboutImage {
+    height: 250px;
+  }
+
+  .sectionTitle {
+    font-size: 1.8rem;
+  }
+} 

@@ -8,16 +8,34 @@
   },
   "slider": {
     "ekg": {
-      "title": "EKG Cihazları",
-      "description": "En son teknoloji EKG cihazları"
+      "title": "12 Kanal EKG Cihazı",
+      "description": "Yüksek çözünürlüklü ve hassas ölçümler için gelişmiş EKG teknolojisi",
+      "specs": {
+        "resolution": "Çözünürlük",
+        "samplingRate": "Örnekleme Hızı",
+        "channels": "Kanal Sayısı",
+        "display": "Ekran"
+      }
     },
     "ultrasound": {
-      "title": "Ultrason Cihazları",
-      "description": "Profesyonel ultrason cihazları"
+      "title": "Ultrason Cihazı",
+      "description": "Geniş prob seçenekleri ve yüksek görüntü kalitesi ile profesyonel ultrason çözümü",
+      "specs": {
+        "frequency": "Frekans Aralığı",
+        "probes": "Prob Sayısı",
+        "depth": "Derinlik",
+        "display": "Ekran"
+      }
     },
     "mri": {
-      "title": "MR Cihazları",
-      "description": "Yüksek çözünürlüklü MR cihazları"
+      "title": "1.5T MRI Cihazı",
+      "description": "Yüksek alan gücü ve geniş tüp çapı ile üstün görüntüleme performansı",
+      "specs": {
+        "fieldStrength": "Alan Gücü",
+        "boreSize": "Tüp Çapı",
+        "gradientStrength": "Gradyan Gücü",
+        "display": "Ekran"
+      }
     }
   },
   "home": {

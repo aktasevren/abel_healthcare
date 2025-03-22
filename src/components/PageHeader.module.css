@@ -1,67 +1,74 @@
 .header {
-  background: #e3f2fd;
-  padding: 40px 0;
-  margin-bottom: 40px;
-  border-radius: 8px;
+  background-color: var(--secondary);
+  padding: 2.5rem 0;
+  margin-bottom: 2.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease;
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 1.25rem;
 }
 
 .title {
-  color: #1976d2;
-  font-size: 32px;
+  color: var(--primary);
+  font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
   text-align: center;
+  transition: color 0.3s ease;
 }
 
 .breadcrumbs {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
 .breadcrumbItem {
   display: flex;
   align-items: center;
-  gap: 8px;
-  color: #666;
-  font-size: 13px;
+  gap: 0.5rem;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .breadcrumbItem:hover {
-  color: #1976d2;
+  color: var(--primary);
 }
 
 .breadcrumbItem:last-child {
-  color: #1976d2;
+  color: var(--primary);
   font-weight: 500;
 }
 
 .separator {
-  color: #999;
-  font-size: 12px;
+  color: var(--muted-foreground);
+  font-size: 0.75rem;
 }
 
 @media (max-width: 768px) {
   .header {
-    padding: 30px 0;
-    margin-bottom: 30px;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
   }
 
   .title {
-    font-size: 24px;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
   }
 
   .breadcrumbItem {
-    font-size: 12px;
+    font-size: 0.75rem;
+  }
+
+  .separator {
+    font-size: 0.625rem;
   }
 } 

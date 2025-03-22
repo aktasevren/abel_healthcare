@@ -1,212 +1,167 @@
 .whatsappSupport {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 350px;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 50;
   transition: all 0.3s ease;
+}
+
+.content {
+  width: 320px;
+  background-color: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   overflow: hidden;
+  transition: all 0.3s ease;
 }
 
 .header {
-  background: #25D366;
-  padding: 15px 20px;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  padding: 1rem;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  color: white;
+  align-items: center;
 }
 
 .headerContent {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.5rem;
 }
 
 .whatsappIcon {
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .headerText {
-  font-size: 16px;
   font-weight: 600;
 }
 
 .minimizeButton {
   background: none;
   border: none;
-  color: white;
+  color: var(--primary-foreground);
   cursor: pointer;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.2s ease;
+  padding: 0.25rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s ease;
 }
 
 .minimizeButton:hover {
-  transform: scale(1.1);
-}
-
-.content {
-  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .welcomeMessage {
+  padding: 1.5rem;
   text-align: center;
-  margin-bottom: 20px;
+  background-color: var(--card);
+  color: var(--card-foreground);
 }
 
 .welcomeMessage h3 {
-  font-size: 18px;
-  color: #333;
-  margin-bottom: 5px;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .welcomeMessage p {
-  color: #666;
-  font-size: 14px;
+  color: var(--muted-foreground);
 }
 
 .contactOptions {
+  padding: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 20px;
+  gap: 0.75rem;
 }
 
 .whatsappButton,
 .aiButton {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 14px;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
   font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
+  border: 1px solid var(--border);
+  width: 100%;
+  justify-content: center;
 }
 
 .whatsappButton {
-  background: #25D366;
+  background-color: #25D366;
   color: white;
-}
-
-.aiButton {
-  background: #6c5ce7;
-  color: white;
-}
-
-.buttonIcon {
-  font-size: 18px;
 }
 
 .whatsappButton:hover {
-  background: #128C7E;
-  transform: translateY(-2px);
+  background-color: #22c55e;
+}
+
+.aiButton {
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
 }
 
 .aiButton:hover {
-  background: #5b4cc4;
-  transform: translateY(-2px);
+  background-color: var(--muted);
+}
+
+.buttonIcon {
+  font-size: 1.25rem;
 }
 
 .contactInfo {
+  padding: 1rem;
   text-align: center;
-  padding-top: 15px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--border);
 }
 
 .availability {
-  color: #25D366;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 5px;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
 }
 
 .phoneNumber {
-  color: #666;
-  font-size: 14px;
-}
-
-.minimized {
-  width: auto;
-  height: auto;
-}
-
-.minimized .content {
-  display: none;
+  color: var(--primary);
+  font-weight: 600;
 }
 
 .maximizeButton {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  background: #25D366;
-  color: white;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
   border: none;
-  border-radius: 25px;
-  font-size: 14px;
+  border-radius: 9999px;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
 .maximizeButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 6px 8px -1px rgba(0, 0, 0, 0.1), 0 3px 6px -1px rgba(0, 0, 0, 0.06);
 }
 
-@media (max-width: 768px) {
-  .whatsappSupport {
-    width: 100%;
-    bottom: 0;
-    right: 0;
-    border-radius: 16px 16px 0 0;
-    max-height: 80vh;
-    overflow-y: auto;
-  }
+.minimized {
+  transform: translateY(0);
+}
 
-  .minimized {
-    width: auto;
-    height: auto;
-    bottom: 20px;
-    right: 20px;
-    border-radius: 25px;
+@media (max-width: 640px) {
+  .whatsappSupport {
+    bottom: 1rem;
+    right: 1rem;
   }
 
   .content {
-    padding: 15px;
-  }
-
-  .welcomeMessage h3 {
-    font-size: 16px;
-  }
-
-  .welcomeMessage p {
-    font-size: 13px;
-  }
-
-  .whatsappButton,
-  .aiButton {
-    padding: 10px;
-    font-size: 13px;
-  }
-
-  .buttonIcon {
-    font-size: 16px;
-  }
-
-  .availability,
-  .phoneNumber {
-    font-size: 13px;
+    width: calc(100vw - 2rem);
+    max-width: 320px;
   }
 } 

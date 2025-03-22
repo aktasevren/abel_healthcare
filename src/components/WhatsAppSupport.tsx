@@ -3,10 +3,12 @@
 import React, { useState, useEffect } from 'react';
 import { FaWhatsapp, FaTimes, FaComments, FaRobot } from 'react-icons/fa';
 import styles from './WhatsAppSupport.module.css';
+import AIChat from './AIChat';
 
 const WhatsAppSupport = () => {
   const [isMinimized, setIsMinimized] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [showAIChat, setShowAIChat] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -24,15 +26,14 @@ const WhatsAppSupport = () => {
   };
 
   const handleAIClick = () => {
-    // AI destek bağlantısı burada yapılacak
-    console.log('AI destek başlatılıyor...');
+    setShowAIChat(true);
   };
 
   if (isMobile) return null;
 
   return (
     <div className={`${styles.whatsappSupport} ${isMinimized ? styles.minimized : ''}`}>
-      {!isMinimized && (
+      {!isMinimized && !showAIChat && (
         <div className={styles.content}>
           <div className={styles.header}>
             <div className={styles.headerContent}>
@@ -77,7 +78,25 @@ const WhatsAppSupport = () => {
         </div>
       )}
 
-      {isMinimized && (
+      {showAIChat && (
+        <div className={styles.content}>
+          <div className={styles.header}>
+            <div className={styles.headerContent}>
+              <FaRobot className={styles.whatsappIcon} />
+              <span className={styles.headerText}>AI Destek</span>
+            </div>
+            <button 
+              className={styles.minimizeButton}
+              onClick={() => setShowAIChat(false)}
+            >
+              <FaTimes />
+            </button>
+          </div>
+          <AIChat />
+        </div>
+      )}
+
+      {isMinimized && !showAIChat && (
         <button 
           className={styles.maximizeButton}
           onClick={() => setIsMinimized(false)}
