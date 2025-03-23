@@ -51,10 +51,10 @@ const Navbar = () => {
     const mobileClasses = isMobile ? 'px-4 py-2 rounded-md' : 'px-1 py-2 relative';
     
     if (isActive) {
-      return `${baseClasses} ${mobileClasses} text-blue-600`;
+      return `${baseClasses} ${mobileClasses} text-red-600`;
     }
     
-    return `${baseClasses} ${mobileClasses} text-black-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-500`;
+    return `${baseClasses} ${mobileClasses} text-red-600 dark:text-red-600 hover:text-red-700 dark:hover:text-red-700`;
   };
 
   return (
@@ -137,7 +137,7 @@ const Navbar = () => {
                           <Link
                             key={subItem.href}
                             href={subItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
+                            className="block px-4 py-2 text-sm text-red-600 dark:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
                           >
                             {subItem.labelKey}
                           </Link>
@@ -152,7 +152,7 @@ const Navbar = () => {
                   >
                     {t(item.labelKey)}
                     {pathname === item.href && (
-                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-blue-600"></span>
+                      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-red-600"></span>
                     )}
                   </Link>
                 )}
@@ -197,7 +197,11 @@ const Navbar = () => {
                           <Link
                             key={subItem.href}
                             href={subItem.href}
-                            className={getLinkClassName(pathname === subItem.href, true)}
+                            className={`${getLinkClassName(pathname === subItem.href, true)} ${
+                              pathname === subItem.href
+                                ? theme === 'light' ? 'bg-red-50' : 'bg-red-900/20'
+                                : ''
+                            }`}
                             onClick={() => setIsMenuOpen(false)}
                           >
                             {subItem.labelKey}
@@ -212,7 +216,7 @@ const Navbar = () => {
                     href={item.href}
                     className={`${getLinkClassName(pathname === item.href, true)} ${
                       pathname === item.href
-                        ? theme === 'light' ? 'bg-gray-50' : 'bg-gray-700'
+                        ? theme === 'light' ? 'bg-red-50' : 'bg-red-900/20'
                         : ''
                     }`}
                     onClick={() => setIsMenuOpen(false)}
