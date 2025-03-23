@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FaSearch } from 'react-icons/fa';
-import styles from './Certificates.module.css';
+import styles from './Sertifikalarimiz.module.css';
 import PageHeader from '@/components/PageHeader';
 
-const CertificatesPage = () => {
+const SertifikalarimizPage = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
@@ -15,10 +15,9 @@ const CertificatesPage = () => {
         title="SERTİFİKALARIMIZ"
         breadcrumbs={[
           { name: "ANASAYFA", href: "/" },
-          { name: "SERTİFİKALARIMIZ", href: "/certificates" }
+          { name: "SERTİFİKALARIMIZ", href: "/sertifikalarimiz" }
         ]}
       />
-
 
       <div className={styles.certificatesContainer}>
         <div className={styles.certificateCard}>
@@ -57,4 +56,4 @@ const CertificatesPage = () => {
   );
 };
 
-export default CertificatesPage; 
+export default SertifikalarimizPage; 

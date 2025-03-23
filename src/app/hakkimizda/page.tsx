@@ -3,9 +3,9 @@
 import React from "react";
 import Image from "next/image";
 import { FaHandshake, FaHospital, FaTools, FaClock, FaUserMd, FaCheckCircle, FaCertificate } from 'react-icons/fa';
-import styles from './About.module.css';
+import styles from './Hakkimizda.module.css';
 
-const About = () => {
+const Hakkimizda = () => {
   const stats = [
     { number: '15+', text: 'Yıllık Deneyim' },
     { number: '1000+', text: 'Tamamlanan Servis' },
@@ -154,4 +154,4 @@ const About = () => {
   );
 };
 
-export default About; 
+export default Hakkimizda; 

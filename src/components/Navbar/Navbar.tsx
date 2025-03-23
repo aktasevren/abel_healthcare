@@ -26,8 +26,8 @@ const Navbar = () => {
       href: '#',
       labelKey: 'KURUMSAL',
       subItems: [
-        { href: '/about', labelKey: 'HAKKIMIZDA' },
-        { href: '/certificates', labelKey: 'SERTİFİKALARIMIZ' }
+        { href: '/hakkimizda', labelKey: 'HAKKIMIZDA' },
+        { href: '/sertifikalarimiz', labelKey: 'SERTİFİKALARIMIZ' }
       ]
     },
     { href: '/urunlerimiz', labelKey: 'nav.products' },
@@ -104,7 +104,10 @@ const Navbar = () => {
               >
                 {item.subItems ? (
                   <div className="cursor-pointer relative group">
-                    <span className={`${getLinkClassName(pathname === item.href)} flex items-center`}>
+                    <Link
+                      href={item.href}
+                      className={`${getLinkClassName(pathname === item.href)} flex items-center`}
+                    >
                       {t(item.labelKey)}
                       <svg
                         className="inline-block ml-1 w-4 h-4"
@@ -120,7 +123,7 @@ const Navbar = () => {
                           d="M19 9l-7 7-7-7"
                         />
                       </svg>
-                    </span>
+                    </Link>
                     <div 
                       className={`absolute left-0 w-48 rounded-md shadow-lg bg-white dark:bg-gray-800 z-50 transition-opacity duration-150 ${
                         activeDropdown === item.href ? 'opacity-100 translate-y-0' : 'opacity-0 pointer-events-none -translate-y-1'
