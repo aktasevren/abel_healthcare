@@ -21,19 +21,18 @@ const Navbar = () => {
   const { theme } = useTheme();
 
   const menuItems: MenuItem[] = [
-    { href: '/', labelKey: 'nav.home' },
+    { href: '/', labelKey: 'home' },
     {
       href: '#',
-      labelKey: 'KURUMSAL',
+      labelKey: 'corporate',
       subItems: [
-        { href: '/hakkimizda', labelKey: 'HAKKIMIZDA' },
-        { href: '/sertifikalarimiz', labelKey: 'SERTİFİKALARIMIZ' }
+        { href: '/hakkimizda', labelKey: 'about' },
+        { href: '/sertifikalarimiz', labelKey: 'certificates' }
       ]
     },
-    { href: '/urunlerimiz', labelKey: 'nav.products' },
-    { href: '/teknik-servis', labelKey: 'nav.technical_service' },
-    
-    { href: '/iletisim', labelKey: 'nav.contact' },
+    { href: '/urunlerimiz', labelKey: 'products' },
+    { href: '/teknik-servis', labelKey: 'technical_service' },
+    { href: '/iletisim', labelKey: 'contact' }
   ];
 
   const handleMouseEnter = (href: string) => {
@@ -139,7 +138,7 @@ const Navbar = () => {
                             href={subItem.href}
                             className="block px-4 py-2 text-sm text-red-600 dark:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/20"
                           >
-                            {subItem.labelKey}
+                            {t(subItem.labelKey)}
                           </Link>
                         ))}
                       </div>
@@ -204,7 +203,7 @@ const Navbar = () => {
                             }`}
                             onClick={() => setIsMenuOpen(false)}
                           >
-                            {subItem.labelKey}
+                            {t(subItem.labelKey)}
                           </Link>
                         ))}
                       </div>

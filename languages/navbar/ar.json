@@ -1,0 +1,14 @@
+{
+  "home": "الرئيسية",
+  "corporate": "الشركة",
+  "about": "من نحن",
+  "certificates": "الشهادات",
+  "products": "المنتجات",
+  "technical_service": "الخدمة الفنية",
+  "contact": "اتصل بنا",
+  "menu": "فتح القائمة",
+  "corporate_sub": {
+    "about": "من نحن",
+    "certificates": "الشهادات"
+  }
+} 

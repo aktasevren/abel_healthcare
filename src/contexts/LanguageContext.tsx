@@ -1,9 +1,12 @@
 'use client';
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import tr from '../../languages/topbar/tr.json';
-import en from '../../languages/topbar/en.json';
-import ar from '../../languages/topbar/ar.json';
+import trTopbar from '../../languages/topbar/tr.json';
+import enTopbar from '../../languages/topbar/en.json';
+import arTopbar from '../../languages/topbar/ar.json';
+import trNavbar from '../../languages/navbar/tr.json';
+import enNavbar from '../../languages/navbar/en.json';
+import arNavbar from '../../languages/navbar/ar.json';
 
 export type Language = 'tr' | 'en' | 'ar';
 
@@ -17,13 +20,16 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const translations = {
   tr: {
-    topbar: tr
+    ...trTopbar,
+    ...trNavbar
   },
   en: {
-    topbar: en
+    ...enTopbar,
+    ...enNavbar
   },
   ar: {
-    topbar: ar
+    ...arTopbar,
+    ...arNavbar
   }
 };
 
