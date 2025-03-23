@@ -1,8 +1,7 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
-import { FaHandshake, FaHospital, FaTools, FaClock, FaUserMd, FaCheckCircle, FaCertificate, FaStethoscope, FaMicroscope, FaHeartbeat } from 'react-icons/fa';
+import { FaHandshake, FaUserMd, FaStethoscope, FaMicroscope, FaHeartbeat } from 'react-icons/fa';
 import styles from './Hakkimizda.module.css';
 import PageHeader from '@/components/PageHeader';
 
