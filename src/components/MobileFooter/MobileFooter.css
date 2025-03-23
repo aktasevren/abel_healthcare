@@ -5,32 +5,39 @@
   bottom: 0;
   width: 100%;
   box-sizing: border-box;
+  background: var(--card-bg);
+  border-top: 1px solid var(--card-border);
+  box-shadow: var(--shadow-lg);
 }
 
 .whatsapp-button, .offer-button {
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .whatsapp-button {
-  background-color: green;
+  background-color: var(--success-color);
   flex: 1;
   text-align: center;
   padding: 15px 0;
   color: white;
-  font-weight: bold;
-  text-decoration: none;
 }
 
 .offer-button {
-  background-color: red;
+  background-color: var(--error-color);
   flex: 1;
   text-align: center;
   padding: 15px 0;
   color: white;
-  font-weight: bold;
-  text-decoration: none;
+}
+
+.whatsapp-button:hover, .offer-button:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
 }
 
 .whatsapp-button img {

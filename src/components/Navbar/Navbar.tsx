@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useLanguage } from '@/context/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
-import Logo from './Logo';
+import Logo from '@/components/Logo';
 
 interface MenuItem {
   href: string;

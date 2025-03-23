@@ -3,16 +3,16 @@
   bottom: 20px;
   right: 20px;
   width: 350px;
-  background: white;
+  background: var(--card-bg);
   border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
   z-index: 1000;
   transition: all 0.3s ease;
   overflow: hidden;
 }
 
 .header {
-  background: #25D366;
+  background: var(--success-color);
   padding: 15px 20px;
   display: flex;
   align-items: center;
@@ -62,12 +62,12 @@
 
 .welcomeMessage h3 {
   font-size: 18px;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 5px;
 }
 
 .welcomeMessage p {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 14px;
 }
 
@@ -94,12 +94,12 @@
 }
 
 .whatsappButton {
-  background: #25D366;
+  background: var(--success-color);
   color: white;
 }
 
 .aiButton {
-  background: #6c5ce7;
+  background: var(--accent-color);
   color: white;
 }
 
@@ -108,30 +108,30 @@
 }
 
 .whatsappButton:hover {
-  background: #128C7E;
+  background: var(--success-color);
   transform: translateY(-2px);
 }
 
 .aiButton:hover {
-  background: #5b4cc4;
+  background: var(--accent-hover);
   transform: translateY(-2px);
 }
 
 .contactInfo {
   text-align: center;
   padding-top: 15px;
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--card-border);
 }
 
 .availability {
-  color: #25D366;
+  color: var(--success-color);
   font-size: 14px;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
 .phoneNumber {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 14px;
 }
 
@@ -149,7 +149,7 @@
   align-items: center;
   gap: 8px;
   padding: 12px 20px;
-  background: #25D366;
+  background: var(--success-color);
   color: white;
   border: none;
   border-radius: 25px;
@@ -157,12 +157,12 @@
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.2);
+  box-shadow: var(--shadow-md);
 }
 
 .maximizeButton:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3);
+  box-shadow: var(--shadow-lg);
 }
 
 @media (max-width: 768px) {

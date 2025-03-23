@@ -1,19 +1,49 @@
 @import "tailwindcss";
 
-
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
-
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --text-primary: #171717;
+  --text-secondary: #4b5563;
+  --accent-color: #3490dc;
+  --accent-hover: #2779bd;
+  --error-color: #e3342f;
+  --success-color: #28a745;
+  --warning-color: #ffc107;
+  --info-color: #17a2b8;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  --primary: #3490dc;
+  --border: #e5e7eb;
+  --text: #171717;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
-  --topbar-bg: #1f2937; /* gray-800 */
-  --topbar-text: #e5e7eb; /* gray-200 */
+  --card-bg: #1f2937;
+  --card-border: #374151;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --accent-color: #60a5fa;
+  --accent-hover: #3b82f6;
+  --error-color: #ef4444;
+  --success-color: #10b981;
+  --warning-color: #f59e0b;
+  --info-color: #3b82f6;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+  --primary: #60a5fa;
+  --border: #374151;
+  --text: #f3f4f6;
 }
 
 @theme inline {
@@ -27,4 +57,99 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Genel stil sınıfları */
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.accent-button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: all 0.3s ease;
+}
+
+.accent-button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* Form elemanları için genel stiller */
+input, textarea, select {
+  background-color: var(--background);
+  color: var(--text-primary);
+  border: 1px solid var(--card-border);
+  border-radius: 0.375rem;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px rgba(52, 144, 220, 0.2);
+}
+
+/* Link stilleri */
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+/* Gölge sınıfları */
+.shadow-sm {
+  box-shadow: var(--shadow-sm);
+}
+
+.shadow-md {
+  box-shadow: var(--shadow-md);
+}
+
+.shadow-lg {
+  box-shadow: var(--shadow-lg);
+}
+
+.shadow-xl {
+  box-shadow: var(--shadow-xl);
+}
+
+/* Geçiş animasyonları */
+.transition-all {
+  transition: all 0.3s ease;
+}
+
+/* Responsive tasarım için yardımcı sınıflar */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
 }

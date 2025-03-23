@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import ThemeToggle from './ThemeToggle';
-import LanguageSelector from './LanguageSelector';
+import ThemeToggle from '@/components/ThemeToggle';
+import LanguageSelector from '@/components/LanguageSelector';
 import { useLanguage } from '@/context/LanguageContext';
 
 const TopBar = () => {
