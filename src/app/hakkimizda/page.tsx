@@ -6,13 +6,6 @@ import { FaHandshake, FaHospital, FaTools, FaClock, FaUserMd, FaCheckCircle, FaC
 import styles from './Hakkimizda.module.css';
 
 const Hakkimizda = () => {
-  const stats = [
-    { number: '15+', text: 'Yıllık Deneyim' },
-    { number: '1000+', text: 'Tamamlanan Servis' },
-    { number: '50+', text: 'Uzman Teknisyen' },
-    { number: '24/7', text: 'Teknik Destek' }
-  ];
-
   const values = [
     {
       icon: <FaCertificate className={styles.valueIcon} />,
