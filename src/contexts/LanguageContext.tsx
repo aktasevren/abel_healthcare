@@ -7,6 +7,9 @@ import arTopbar from '../../languages/topbar/ar.json';
 import trNavbar from '../../languages/navbar/tr.json';
 import enNavbar from '../../languages/navbar/en.json';
 import arNavbar from '../../languages/navbar/ar.json';
+import trSlider from '../../languages/slider/tr.json';
+import enSlider from '../../languages/slider/en.json';
+import arSlider from '../../languages/slider/ar.json';
 
 export type Language = 'tr' | 'en' | 'ar';
 
@@ -21,15 +24,18 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 const translations = {
   tr: {
     ...trTopbar,
-    ...trNavbar
+    ...trNavbar,
+    ...trSlider
   },
   en: {
     ...enTopbar,
-    ...enNavbar
+    ...enNavbar,
+    ...enSlider
   },
   ar: {
     ...arTopbar,
-    ...arNavbar
+    ...arNavbar,
+    ...arSlider
   }
 };
 

@@ -1,0 +1,72 @@
+{
+  "slide1": {
+    "title": "Quality and Reliability",
+    "description": "Over 20 years of experience in industrial solutions",
+    "features": {
+      "tech": {
+        "title": "High Technology",
+        "description": "Latest technology chip sets and processors"
+      },
+      "advanced": {
+        "title": "Advanced Features",
+        "description": "12-channel EKG recording and analysis system"
+      },
+      "precise": {
+        "title": "Precise Measurement",
+        "description": "High-precision signal processing"
+      },
+      "reliable": {
+        "title": "Reliable System",
+        "description": "ISO 13485:2016 certified"
+      }
+    }
+  },
+  "slide2": {
+    "title": "Technological Innovations",
+    "description": "Products manufactured with the latest technology",
+    "features": {
+      "hd": {
+        "title": "HD Imaging",
+        "description": "4K resolution image processing"
+      },
+      "multi": {
+        "title": "Multi-Mode",
+        "description": "B-Mode, M-Mode, Doppler features"
+      },
+      "analysis": {
+        "title": "Advanced Analysis",
+        "description": "AI-powered image analysis"
+      },
+      "quick": {
+        "title": "Quick Start",
+        "description": "System ready in 3 seconds"
+      }
+    }
+  },
+  "slide3": {
+    "title": "Customer Satisfaction",
+    "description": "We provide the best service to our customers",
+    "features": {
+      "field": {
+        "title": "High Field",
+        "description": "3 Tesla magnetic field strength"
+      },
+      "sequence": {
+        "title": "Multi-Sequence",
+        "description": "T1, T2, FLAIR and DWI sequences"
+      },
+      "imaging": {
+        "title": "Precise Imaging",
+        "description": "0.5mm resolution"
+      },
+      "quality": {
+        "title": "Quality Control",
+        "description": "FDA and CE certified"
+      }
+    }
+  },
+  "slide4": {
+    "title": "Global Solutions",
+    "description": "Worldwide service and support"
+  }
+} 

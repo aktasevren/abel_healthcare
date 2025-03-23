@@ -1,0 +1,72 @@
+{
+  "slide1": {
+    "title": "Kalite ve Güvenilirlik",
+    "description": "Endüstriyel çözümlerde 20 yılı aşkın deneyim",
+    "features": {
+      "tech": {
+        "title": "Yüksek Teknoloji",
+        "description": "En son teknoloji çip setleri ve işlemciler"
+      },
+      "advanced": {
+        "title": "Gelişmiş Özellikler",
+        "description": "12 kanal EKG kayıt ve analiz sistemi"
+      },
+      "precise": {
+        "title": "Hassas Ölçüm",
+        "description": "Yüksek hassasiyetli sinyal işleme"
+      },
+      "reliable": {
+        "title": "Güvenilir Sistem",
+        "description": "ISO 13485:2016 sertifikalı"
+      }
+    }
+  },
+  "slide2": {
+    "title": "Teknolojik Yenilikler",
+    "description": "En son teknoloji ile üretilen ürünler",
+    "features": {
+      "hd": {
+        "title": "HD Görüntüleme",
+        "description": "4K çözünürlüklü görüntü işleme"
+      },
+      "multi": {
+        "title": "Çoklu Mod",
+        "description": "B-Mode, M-Mode, Doppler özellikleri"
+      },
+      "analysis": {
+        "title": "Gelişmiş Analiz",
+        "description": "AI destekli görüntü analizi"
+      },
+      "quick": {
+        "title": "Hızlı Başlangıç",
+        "description": "3 saniyede hazır sistem"
+      }
+    }
+  },
+  "slide3": {
+    "title": "Müşteri Memnuniyeti",
+    "description": "Müşterilerimize en iyi hizmeti sunuyoruz",
+    "features": {
+      "field": {
+        "title": "Yüksek Alan",
+        "description": "3 Tesla manyetik alan gücü"
+      },
+      "sequence": {
+        "title": "Çoklu Sekans",
+        "description": "T1, T2, FLAIR ve DWI sekansları"
+      },
+      "imaging": {
+        "title": "Hassas Görüntüleme",
+        "description": "0.5mm çözünürlük"
+      },
+      "quality": {
+        "title": "Kalite Kontrol",
+        "description": "FDA ve CE sertifikalı"
+      }
+    }
+  },
+  "slide4": {
+    "title": "Global Çözümler",
+    "description": "Dünya çapında hizmet ve destek"
+  }
+} 

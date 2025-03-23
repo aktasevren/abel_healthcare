@@ -8,85 +8,85 @@ import { FaMicrochip, FaCogs, FaChartLine, FaShieldAlt, FaClock, FaCheckCircle }
 const slides = [
   {
     id: 1,
-    titleKey: 'slider.ekg.title',
-    descriptionKey: 'slider.ekg.description',
+    titleKey: 'slide1.title',
+    descriptionKey: 'slide1.description',
     image: '/media/sliders/ekg.jpg',
     features: [
       {
         icon: <FaMicrochip className="w-6 h-6" />,
-        title: 'Yüksek Teknoloji',
-        description: 'En son teknoloji çip setleri ve işlemciler'
+        titleKey: 'slide1.features.tech.title',
+        descriptionKey: 'slide1.features.tech.description'
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
-        title: 'Gelişmiş Özellikler',
-        description: '12 kanal EKG kayıt ve analiz sistemi'
+        titleKey: 'slide1.features.advanced.title',
+        descriptionKey: 'slide1.features.advanced.description'
       },
       {
         icon: <FaChartLine className="w-6 h-6" />,
-        title: 'Hassas Ölçüm',
-        description: 'Yüksek hassasiyetli sinyal işleme'
+        titleKey: 'slide1.features.precise.title',
+        descriptionKey: 'slide1.features.precise.description'
       },
       {
         icon: <FaShieldAlt className="w-6 h-6" />,
-        title: 'Güvenilir Sistem',
-        description: 'ISO 13485:2016 sertifikalı'
+        titleKey: 'slide1.features.reliable.title',
+        descriptionKey: 'slide1.features.reliable.description'
       }
     ]
   },
   {
     id: 2,
-    titleKey: 'slider.ultrasound.title',
-    descriptionKey: 'slider.ultrasound.description',
+    titleKey: 'slide2.title',
+    descriptionKey: 'slide2.description',
     image: '/media/sliders/carrier.jpg',
     features: [
       {
         icon: <FaMicrochip className="w-6 h-6" />,
-        title: 'HD Görüntüleme',
-        description: '4K çözünürlüklü görüntü işleme'
+        titleKey: 'slide2.features.hd.title',
+        descriptionKey: 'slide2.features.hd.description'
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
-        title: 'Çoklu Mod',
-        description: 'B-Mode, M-Mode, Doppler özellikleri'
+        titleKey: 'slide2.features.multi.title',
+        descriptionKey: 'slide2.features.multi.description'
       },
       {
         icon: <FaChartLine className="w-6 h-6" />,
-        title: 'Gelişmiş Analiz',
-        description: 'AI destekli görüntü analizi'
+        titleKey: 'slide2.features.analysis.title',
+        descriptionKey: 'slide2.features.analysis.description'
       },
       {
         icon: <FaClock className="w-6 h-6" />,
-        title: 'Hızlı Başlangıç',
-        description: '3 saniyede hazır sistem'
+        titleKey: 'slide2.features.quick.title',
+        descriptionKey: 'slide2.features.quick.description'
       }
     ]
   },
   {
     id: 3,
-    titleKey: 'slider.mri.title',
-    descriptionKey: 'slider.mri.description',
+    titleKey: 'slide3.title',
+    descriptionKey: 'slide3.description',
     image: '/media/sliders/medical.jpg',
     features: [
       {
         icon: <FaMicrochip className="w-6 h-6" />,
-        title: 'Yüksek Alan',
-        description: '3 Tesla manyetik alan gücü'
+        titleKey: 'slide3.features.field.title',
+        descriptionKey: 'slide3.features.field.description'
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
-        title: 'Çoklu Sekans',
-        description: 'T1, T2, FLAIR ve DWI sekansları'
+        titleKey: 'slide3.features.sequence.title',
+        descriptionKey: 'slide3.features.sequence.description'
       },
       {
         icon: <FaChartLine className="w-6 h-6" />,
-        title: 'Hassas Görüntüleme',
-        description: '0.5mm çözünürlük'
+        titleKey: 'slide3.features.imaging.title',
+        descriptionKey: 'slide3.features.imaging.description'
       },
       {
         icon: <FaCheckCircle className="w-6 h-6" />,
-        title: 'Kalite Kontrol',
-        description: 'FDA ve CE sertifikalı'
+        titleKey: 'slide3.features.quality.title',
+        descriptionKey: 'slide3.features.quality.description'
       }
     ]
   },
@@ -151,8 +151,8 @@ const Slider = () => {
                           className="bg-white/10 backdrop-blur-sm rounded-lg p-2 border border-white/20 hover:bg-white/20 transition-all duration-300"
                         >
                           <div className="flex items-center justify-between">
-                            <h3 className="text-sm font-medium text-white">{feature.title}</h3>
-                            <p className="text-xs text-gray-300">{feature.description}</p>
+                            <h3 className="text-sm font-medium text-white">{t(feature.titleKey)}</h3>
+                            <p className="text-xs text-gray-300">{t(feature.descriptionKey)}</p>
                           </div>
                         </div>
                       ))}
@@ -170,8 +170,8 @@ const Slider = () => {
                           <div className="text-blue-400 mb-3">
                             {feature.icon}
                           </div>
-                          <h3 className="text-base font-semibold text-white mb-2">{feature.title}</h3>
-                          <p className="text-sm text-gray-300">{feature.description}</p>
+                          <h3 className="text-base font-semibold text-white mb-2">{t(feature.titleKey)}</h3>
+                          <p className="text-sm text-gray-300">{t(feature.descriptionKey)}</p>
                         </div>
                       ))}
                     </div>

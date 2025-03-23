@@ -1,0 +1,72 @@
+{
+  "slide1": {
+    "title": "الجودة والموثوقية",
+    "description": "أكثر من 20 عامًا من الخبرة في الحلول الصناعية",
+    "features": {
+      "tech": {
+        "title": "تقنية عالية",
+        "description": "أحدث مجموعات الرقائق والمعالجات"
+      },
+      "advanced": {
+        "title": "ميزات متقدمة",
+        "description": "نظام تسجيل وتحليل تخطيط القلب الكهربائي 12 قناة"
+      },
+      "precise": {
+        "title": "قياس دقيق",
+        "description": "معالجة إشارات عالية الدقة"
+      },
+      "reliable": {
+        "title": "نظام موثوق",
+        "description": "معتمد ISO 13485:2016"
+      }
+    }
+  },
+  "slide2": {
+    "title": "الابتكارات التكنولوجية",
+    "description": "منتجات مصنعة بأحدث التقنيات",
+    "features": {
+      "hd": {
+        "title": "تصوير عالي الدقة",
+        "description": "معالجة صور بدقة 4K"
+      },
+      "multi": {
+        "title": "وضع متعدد",
+        "description": "ميزات B-Mode و M-Mode و Doppler"
+      },
+      "analysis": {
+        "title": "تحليل متقدم",
+        "description": "تحليل صور مدعوم بالذكاء الاصطناعي"
+      },
+      "quick": {
+        "title": "بدء سريع",
+        "description": "نظام جاهز في 3 ثوانٍ"
+      }
+    }
+  },
+  "slide3": {
+    "title": "رضا العملاء",
+    "description": "نقدم أفضل خدمة لعملائنا",
+    "features": {
+      "field": {
+        "title": "مجال عالي",
+        "description": "قوة مجال مغناطيسي 3 تسلا"
+      },
+      "sequence": {
+        "title": "تسلسل متعدد",
+        "description": "تسلسلات T1 و T2 و FLAIR و DWI"
+      },
+      "imaging": {
+        "title": "تصوير دقيق",
+        "description": "دقة 0.5 مم"
+      },
+      "quality": {
+        "title": "مراقبة الجودة",
+        "description": "معتمد من FDA و CE"
+      }
+    }
+  },
+  "slide4": {
+    "title": "حلول عالمية",
+    "description": "خدمة ودعم في جميع أنحاء العالم"
+  }
+} 
