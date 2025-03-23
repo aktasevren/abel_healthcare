@@ -35,7 +35,7 @@ const Hakkimizda = () => {
       <section className={styles.heroSection}>
         <div className={styles.heroContent}>
           <h1>Sağlık Sektöründe Güvenilir Çözüm Ortağınız</h1>
-          <p>2022 yılından bu yana İstanbul'da hizmet vermekteyiz</p>
+          <p>2022 yılından bu yana İstanbul&apos;da hizmet vermekteyiz</p>
         </div>
       </section>
 
@@ -46,7 +46,7 @@ const Hakkimizda = () => {
             <div className={styles.aboutText}>
               <h2>Biz Kimiz?</h2>
               <p>
-                Abel Health Care Medikal 2022 yılında İstanbul'da kurulmuştur. Şirketimizin kurucuları sağlık sektöründeki iş deneyimlerinin tamamını enerjik, yenilikçi, metamorfoza uğrayan tıp bilimi ve medikal sektörde uyumu yakalamak için sınırsız bilgi erişimi genişletmeye adamış teknik ve mühendis kadrosuyla kaliteli hizmet anlayışını benimsemiştir.
+                Abel Health Care Medikal 2022 yılında İstanbul&apos;da kurulmuştur. Şirketimizin kurucuları sağlık sektöründeki iş deneyimlerinin tamamını enerjik, yenilikçi, metamorfoza uğrayan tıp bilimi ve medikal sektörde uyumu yakalamak için sınırsız bilgi erişimi genişletmeye adamış teknik ve mühendis kadrosuyla kaliteli hizmet anlayışını benimsemiştir.
               </p>
               <p>
                 Her zaman gaye ve çabamız yurtiçi ve yurtdışında doğru pazarlama ve satış politikasını güvenilir ve sağlam adımlarla ilerletebilmektir.
