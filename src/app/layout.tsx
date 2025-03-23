@@ -12,8 +12,15 @@ import WhatsAppSupport from '@/components/WhatsAppSupport';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Abel Health Care Medikal",
-  description: "Abel Health Care Medikal - Tıbbi Cihaz ve Sarf Malzemeleri",
+  title: 'Abel Health Care Medikal - Biyomedikal Cihaz Satışı ve Teknik Servis',
+  description: 'İstanbul\'da biyomedikal cihaz satışı, teknik servis ve yedek parça temini konusunda uzman firma. 7/24 teknik destek ve profesyonel hizmet.',
+  keywords: 'biyomedikal, tıbbi cihaz, teknik servis, yedek parça, istanbul, medikal cihaz, biyomedikal servis, tıbbi ekipman',
+  openGraph: {
+    title: 'Abel Health Care Medikal - Biyomedikal Cihaz Satışı ve Teknik Servis',
+    description: 'İstanbul\'da biyomedikal cihaz satışı, teknik servis ve yedek parça temini konusunda uzman firma. 7/24 teknik destek ve profesyonel hizmet.',
+    type: 'website',
+    locale: 'tr_TR',
+  }
 };
 
 export default function RootLayout({

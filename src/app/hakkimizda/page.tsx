@@ -51,8 +51,6 @@ const Hakkimizda = () => {
         </div>
       </section>
 
-
-
       {/* About Section */}
       <section className={styles.aboutSection}>
         <div className={styles.container}>
