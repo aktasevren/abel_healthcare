@@ -2,9 +2,10 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaGithub } from 'react-icons/fa';
 import styles from './Footer.module.css';
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
   const { t } = useLanguage();

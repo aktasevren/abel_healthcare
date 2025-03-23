@@ -55,25 +55,10 @@ const Hakkimizda = () => {
       <section className={styles.hero}>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>Biyomedikal Teknolojilerinde Güvenilir Çözüm Ortağınız</h1>
-          <p className={styles.heroDescription}>
-            15 yılı aşkın deneyimimizle, sağlık sektörüne en kaliteli tıbbi cihaz ve teknik servis hizmetlerini sunuyoruz.
-          </p>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className={styles.stats}>
-        <div className={styles.container}>
-          <div className={styles.statsGrid}>
-            {stats.map((stat, index) => (
-              <div key={index} className={styles.statCard}>
-                <div className={styles.statNumber}>{stat.number}</div>
-                <div className={styles.statText}>{stat.text}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
 
       {/* About Section */}
       <section className={styles.aboutSection}>

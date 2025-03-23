@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { useLanguage, Language } from '@/context/LanguageContext';
+import { useLanguage, Language } from '@/contexts/LanguageContext';
 
 const languages = [
   {

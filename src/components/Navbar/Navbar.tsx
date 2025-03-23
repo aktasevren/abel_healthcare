@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useLanguage } from '@/context/LanguageContext';
+import { useLanguage } from '@/contexts/LanguageContext';
 import { useTheme } from '@/context/ThemeContext';
 import Logo from '@/components/Logo';
 
@@ -168,9 +168,9 @@ const Navbar = () => {
         >
           <div className="flex flex-col space-y-2 mx-2">
             {menuItems.map((item) => (
-              <>
+              <div key={item.href}>
                 {item.subItems ? (
-                  <div key={item.href}>
+                  <div>
                     <div
                       className={`${getLinkClassName(false, true)} cursor-pointer flex items-center justify-between`}
                       onClick={() => setActiveDropdown(activeDropdown === item.href ? null : item.href)}
@@ -212,7 +212,6 @@ const Navbar = () => {
                   </div>
                 ) : (
                   <Link
-                    key={item.href}
                     href={item.href}
                     className={`${getLinkClassName(pathname === item.href, true)} ${
                       pathname === item.href
@@ -224,7 +223,7 @@ const Navbar = () => {
                     {t(item.labelKey)}
                   </Link>
                 )}
-              </>
+              </div>
             ))}
           </div>
         </div>
