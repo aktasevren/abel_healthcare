@@ -7,6 +7,7 @@ import styles from './WhatsAppSupport.module.css';
 const WhatsAppSupport = () => {
   const [isMinimized, setIsMinimized] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
+  const [isAIChat, setIsAIChat] = useState(false);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -24,8 +25,11 @@ const WhatsAppSupport = () => {
   };
 
   const handleAIClick = () => {
-    // AI destek bağlantısı burada yapılacak
-    console.log('AI destek başlatılıyor...');
+    setIsAIChat(true);
+  };
+
+  const handleBack = () => {
+    setIsAIChat(false);
   };
 
   if (isMobile) return null;
@@ -34,46 +38,61 @@ const WhatsAppSupport = () => {
     <div className={`${styles.whatsappSupport} ${isMinimized ? styles.minimized : ''}`}>
       {!isMinimized && (
         <div className={styles.content}>
-          <div className={styles.header}>
-            <div className={styles.headerContent}>
-              <FaWhatsapp className={styles.whatsappIcon} />
-              <span className={styles.headerText}>Canlı Destek</span>
+          <button 
+            className={styles.closeButton}
+            onClick={() => setIsMinimized(true)}
+          >
+            <FaTimes />
+          </button>
+
+          {!isAIChat ? (
+            <>
+              <div className={styles.contactOptions}>
+                <button 
+                  className={styles.whatsappButton}
+                  onClick={handleWhatsAppClick}
+                >
+                  <FaWhatsapp className={styles.buttonIcon} />
+                  <span>WhatsApp ile Mesaj Gönder</span>
+                </button>
+
+                <button 
+                  className={styles.aiButton}
+                  onClick={handleAIClick}
+                >
+                  <FaRobot className={styles.buttonIcon} />
+                  <span>AI Robotumuzdan Destek Alın</span>
+                </button>
+              </div>
+
+              <div className={styles.contactInfo}>
+                <p className={styles.availability}>7/24 Hizmetinizdeyiz</p>
+                <p className={styles.phoneNumber}>+90 533 522 87 91</p>
+              </div>
+            </>
+          ) : (
+            <div className={styles.chatContainer}>
+              <button 
+                className={styles.backButton}
+                onClick={handleBack}
+              >
+                ← Geri
+              </button>
+              <div className={styles.chatMessage}>
+                <div className={styles.chatAvatar}>
+                  <FaRobot className={styles.robotIcon} />
+                </div>
+                <div className={styles.chatContent}>
+                  <p className={styles.chatText}>
+                    Merhaba ben AbelAI,
+                  </p>
+                  <p className={styles.chatText}>
+                    Yapay zeka kullanarak kendimi geliştirmeye devam ediyorum. En yakın zamanda sizlere destek olacağım.
+                  </p>
+                </div>
+              </div>
             </div>
-            <button 
-              className={styles.minimizeButton}
-              onClick={() => setIsMinimized(true)}
-            >
-              <FaTimes />
-            </button>
-          </div>
-
-          <div className={styles.welcomeMessage}>
-            <h3>Merhaba! 👋</h3>
-            <p>Size nasıl yardımcı olabiliriz?</p>
-          </div>
-
-          <div className={styles.contactOptions}>
-            <button 
-              className={styles.whatsappButton}
-              onClick={handleWhatsAppClick}
-            >
-              <FaWhatsapp className={styles.buttonIcon} />
-              <span>WhatsApp ile Mesaj Gönder</span>
-            </button>
-
-            <button 
-              className={styles.aiButton}
-              onClick={handleAIClick}
-            >
-              <FaRobot className={styles.buttonIcon} />
-              <span>AI Robotumuzdan Destek Alın</span>
-            </button>
-          </div>
-
-          <div className={styles.contactInfo}>
-            <p className={styles.availability}>7/24 Hizmetinizdeyiz</p>
-            <p className={styles.phoneNumber}>+90 533 522 87 91</p>
-          </div>
+          )}
         </div>
       )}
 

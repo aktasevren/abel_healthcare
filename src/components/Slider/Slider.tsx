@@ -113,7 +113,7 @@ const Slider = () => {
   };
 
   return (
-    <div className="relative w-full h-[600px] md:h-[700px] lg:h-[800px] overflow-hidden">
+    <div className="relative w-full h-[500px] sm:h-[600px] md:h-[700px] overflow-hidden">
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -124,7 +124,7 @@ const Slider = () => {
             transform: `translateX(${(index - currentSlide) * 100}%)`,
           }}
         >
-          <div className="relative w-full h-full flex items-center bg-gray-900">
+          <div className="relative w-full h-full flex flex-col justify-center bg-gray-900">
             <div className="absolute inset-0">
               <Image
                 src={slide.image}
@@ -134,26 +134,48 @@ const Slider = () => {
                 priority
               />
             </div>
-            <div className="relative z-10 container mx-auto px-4 md:px-6 lg:px-8">
+            <div className="relative z-10 container mx-auto px-4">
               <div className="max-w-4xl mx-auto">
-                <div className="text-center mb-12">
-                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4">{t(slide.titleKey)}</h2>
-                  <p className="text-xl md:text-2xl text-gray-200 opacity-90 max-w-3xl mx-auto">{t(slide.descriptionKey)}</p>
+                <div className="text-center mb-4 sm:mb-6">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2">{t(slide.titleKey)}</h2>
+                  <p className="text-sm sm:text-base md:text-lg text-gray-200 opacity-90 max-w-2xl mx-auto">{t(slide.descriptionKey)}</p>
                 </div>
                 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                  {slide.features.map((feature, idx) => (
-                    <div 
-                      key={idx}
-                      className="bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-                    >
-                      <div className="text-blue-400 mb-4">
-                        {feature.icon}
-                      </div>
-                      <h3 className="text-xl font-semibold text-white mb-2">{feature.title}</h3>
-                      <p className="text-gray-300 text-sm">{feature.description}</p>
+                <div className="relative">
+                  {/* Mobil görünüm */}
+                  <div className="md:hidden px-8">
+                    <div className="flex flex-col gap-2">
+                      {slide.features.map((feature, idx) => (
+                        <div 
+                          key={idx}
+                          className="bg-white/10 backdrop-blur-sm rounded-lg p-2 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                        >
+                          <div className="flex items-center justify-between">
+                            <h3 className="text-sm font-medium text-white">{feature.title}</h3>
+                            <p className="text-xs text-gray-300">{feature.description}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
+
+                  {/* Tablet ve masaüstü görünüm */}
+                  <div className="hidden md:block">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                      {slide.features.map((feature, idx) => (
+                        <div 
+                          key={idx}
+                          className="bg-white/10 backdrop-blur-sm rounded-lg p-4 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                        >
+                          <div className="text-blue-400 mb-3">
+                            {feature.icon}
+                          </div>
+                          <h3 className="text-base font-semibold text-white mb-2">{feature.title}</h3>
+                          <p className="text-sm text-gray-300">{feature.description}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -164,28 +186,28 @@ const Slider = () => {
       {/* Navigation Buttons */}
       <button
         onClick={prevSlide}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full shadow-lg z-20 border border-white/20 transition-all duration-300"
+        className="absolute left-2 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-2 rounded-full shadow-lg z-20 border border-white/20 transition-all duration-300"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
       <button
         onClick={nextSlide}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-3 rounded-full shadow-lg z-20 border border-white/20 transition-all duration-300"
+        className="absolute right-2 top-1/2 -translate-y-1/2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white p-2 rounded-full shadow-lg z-20 border border-white/20 transition-all duration-300"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
 
       {/* Dots */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
         {slides.map((_, index) => (
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+            className={`w-2 h-2 rounded-full transition-all duration-300 ${
               index === currentSlide 
                 ? 'bg-blue-400 scale-125' 
                 : 'bg-white/50 hover:bg-white/80'
