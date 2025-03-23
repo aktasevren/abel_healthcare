@@ -355,4 +355,219 @@
   .servicesGrid {
     grid-template-columns: 1fr;
   }
+}
+
+.aboutPage {
+  min-height: 100vh;
+}
+
+.heroSection {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/media/about-hero.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 4rem;
+}
+
+.heroContent {
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.heroContent h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.aboutSection {
+  margin-bottom: 4rem;
+}
+
+.aboutContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aboutText h2 {
+  color: #2563eb;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.aboutText p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.visionSection {
+  background-color: #f8fafc;
+  padding: 4rem 0;
+  margin-bottom: 4rem;
+}
+
+.visionSection h2 {
+  color: #2563eb;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.visionContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.visionContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.productsSection {
+  margin-bottom: 4rem;
+}
+
+.productsSection h2 {
+  color: #2563eb;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.productCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+}
+
+.productIcon {
+  font-size: 2.5rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.productCard h3 {
+  font-size: 1.1rem;
+  color: #1f2937;
+  line-height: 1.4;
+}
+
+.featuresSection {
+  background-color: #f8fafc;
+  padding: 4rem 0;
+}
+
+.featuresSection h2 {
+  color: #2563eb;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.featureGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  color: #2563eb;
+  margin-bottom: 1rem;
+}
+
+.featureCard h3 {
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.featureCard p {
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 300px;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 1rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .aboutText h2,
+  .visionSection h2,
+  .productsSection h2,
+  .featuresSection h2 {
+    font-size: 1.75rem;
+  }
+
+  .aboutText p,
+  .visionContent p {
+    font-size: 1rem;
+  }
+
+  .productGrid,
+  .featureGrid {
+    grid-template-columns: 1fr;
+  }
 } 

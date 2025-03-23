@@ -2,127 +2,119 @@
 
 import React from "react";
 import Image from "next/image";
-import { FaHandshake, FaHospital, FaTools, FaClock, FaUserMd, FaCheckCircle, FaCertificate } from 'react-icons/fa';
+import { FaHandshake, FaHospital, FaTools, FaClock, FaUserMd, FaCheckCircle, FaCertificate, FaStethoscope, FaMicroscope, FaHeartbeat } from 'react-icons/fa';
 import styles from './Hakkimizda.module.css';
+import PageHeader from '@/components/PageHeader';
 
 const Hakkimizda = () => {
-  const values = [
-    {
-      icon: <FaCertificate className={styles.valueIcon} />,
-      title: 'Kalite',
-      description: 'En yüksek kalite standartlarında hizmet sunuyoruz.'
-    },
-    {
-      icon: <FaHandshake className={styles.valueIcon} />,
-      title: 'Güven',
-      description: 'Müşterilerimizle güvene dayalı ilişkiler kuruyoruz.'
-    },
-    {
-      icon: <FaClock className={styles.valueIcon} />,
-      title: 'Hız',
-      description: 'Hızlı ve etkili çözümlerle yanınızdayız.'
-    }
-  ];
-
-  const services = [
-    {
-      icon: <FaHospital className={styles.serviceIcon} />,
-      title: 'Tıbbi Cihaz Satışı',
-      description: 'En son teknoloji tıbbi cihazların satışı ve kurulumu.'
-    },
-    {
-      icon: <FaTools className={styles.serviceIcon} />,
-      title: 'Teknik Servis',
-      description: 'Profesyonel bakım ve onarım hizmetleri.'
-    },
-    {
-      icon: <FaUserMd className={styles.serviceIcon} />,
-      title: 'Eğitim',
-      description: 'Cihaz kullanımı ve bakımı konusunda eğitimler.'
-    }
+  const urunGruplari = [
+    "Ventilatör ve Yedek Parça Aksesuarlar",
+    "Elektrokoter ve Yedek Parça Aksesuarlar",
+    "Hastabaşı Monitör ve Yedek Parça Aksesuarlar",
+    "EKG Cihazları ve Aksesuarları",
+    "Cerrahi ve Portable Aspiratörler",
+    "Yeni Doğan Grubu ve Yedek Parçaları",
+    "Oksijen Flowmetreleri ve Negatif Basınç Ölçerler",
+    "Veteriner Grubu",
+    "Paslanmaz Grubu",
+    "Medikal Taşıyıcılar",
+    "Optik ve Aleti Grubu",
+    "Poliklinik Ürünleri"
   ];
 
   return (
-    <div className={styles.about}>
+    <div className={styles.aboutPage}>
+      <PageHeader 
+        title="HAKKIMIZDA"
+        breadcrumbs={[
+          { name: "ANASAYFA", href: "/" },
+          { name: "HAKKIMIZDA", href: "/hakkimizda" }
+        ]}
+      />
+
       {/* Hero Section */}
-      <section className={styles.hero}>
+      <section className={styles.heroSection}>
         <div className={styles.heroContent}>
-          <h1 className={styles.heroTitle}>Biyomedikal Teknolojilerinde Güvenilir Çözüm Ortağınız</h1>
+          <h1>Sağlık Sektöründe Güvenilir Çözüm Ortağınız</h1>
+          <p>2022 yılından bu yana İstanbul'da hizmet vermekteyiz</p>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Hakkımızda Section */}
       <section className={styles.aboutSection}>
         <div className={styles.container}>
-          <div className={styles.aboutGrid}>
-            <div className={styles.aboutContent}>
-              <h2 className={styles.sectionTitle}>Hakkımızda</h2>
-              <p className={styles.aboutText}>
-                2008 yılından bu yana, biyomedikal sektöründe faaliyet gösteren firmamız, 
-                sağlık kuruluşlarına en kaliteli tıbbi cihaz ve teknik servis hizmetlerini sunmaktadır. 
-                Deneyimli ekibimiz ve modern altyapımızla, müşterilerimizin ihtiyaçlarına en hızlı ve 
-                etkili şekilde çözüm üretiyoruz.
+          <div className={styles.aboutContent}>
+            <div className={styles.aboutText}>
+              <h2>Biz Kimiz?</h2>
+              <p>
+                Abel Health Care Medikal 2022 yılında İstanbul'da kurulmuştur. Şirketimizin kurucuları sağlık sektöründeki iş deneyimlerinin tamamını enerjik, yenilikçi, metamorfoza uğrayan tıp bilimi ve medikal sektörde uyumu yakalamak için sınırsız bilgi erişimi genişletmeye adamış teknik ve mühendis kadrosuyla kaliteli hizmet anlayışını benimsemiştir.
               </p>
-              <div className={styles.features}>
-                <div className={styles.feature}>
-                  <FaCheckCircle className={styles.featureIcon} />
-                  <span>ISO 13485:2016 Sertifikalı</span>
-                </div>
-                <div className={styles.feature}>
-                  <FaCheckCircle className={styles.featureIcon} />
-                  <span>CE Sertifikalı Ürünler</span>
-                </div>
-                <div className={styles.feature}>
-                  <FaCheckCircle className={styles.featureIcon} />
-                  <span>7/24 Teknik Destek</span>
-                </div>
-              </div>
-            </div>
-            <div className={styles.aboutImage}>
-              <Image
-                src="/media/about-image.jpg"
-                alt="Biyomedikal Teknik Servis"
-                width={600}
-                height={400}
-                className={styles.image}
-              />
+              <p>
+                Her zaman gaye ve çabamız yurtiçi ve yurtdışında doğru pazarlama ve satış politikasını güvenilir ve sağlam adımlarla ilerletebilmektir.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
-      <section className={styles.values}>
+      {/* Vizyon Section */}
+      <section className={styles.visionSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Değerlerimiz</h2>
-          <div className={styles.valuesGrid}>
-            {values.map((value, index) => (
-              <div key={index} className={styles.valueCard}>
-                <div className={styles.valueIconWrapper}>
-                  {value.icon}
-                </div>
-                <h3 className={styles.valueTitle}>{value.title}</h3>
-                <p className={styles.valueDescription}>{value.description}</p>
+          <h2>Vizyonumuz</h2>
+          <div className={styles.visionContent}>
+            <p>
+              Abel Health Care Medikal olarak yüksek kalitede cerrahi tıbbi sarf malzeme, tıbbi cihaz satışı ve marka model fark etmeksizin teknik servis hizmeti vermekteyiz.
+            </p>
+            <p>
+              Şirketimiz, mevcut ürünlerimize ek olarak yeni nesil tedavi şekillerini de takip etmekte olup kullanılabilecek yeni ürün gruplarını ülkemizdeki sağlık sisteminin içine adapte edebilmektedir.
+            </p>
+            <p>
+              Profesyonel yatırımlarla, piyasada kalite ve güven esasına dayalı hizmet vermeye her zaman tarafımızca devam edilecektir.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Ürün Grupları Section */}
+      <section className={styles.productsSection}>
+        <div className={styles.container}>
+          <h2>Ürün ve Hizmet Gruplarımız</h2>
+          <div className={styles.productGrid}>
+            {urunGruplari.map((urun, index) => (
+              <div key={index} className={styles.productCard}>
+                <FaStethoscope className={styles.productIcon} />
+                <h3>{urun}</h3>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Services Section */}
-      <section className={styles.services}>
+      {/* Özellikler Section */}
+      <section className={styles.featuresSection}>
         <div className={styles.container}>
-          <h2 className={styles.sectionTitle}>Hizmetlerimiz</h2>
-          <div className={styles.servicesGrid}>
-            {services.map((service, index) => (
-              <div key={index} className={styles.serviceCard}>
-                <div className={styles.serviceIconWrapper}>
-                  {service.icon}
-                </div>
-                <h3 className={styles.serviceTitle}>{service.title}</h3>
-                <p className={styles.serviceDescription}>{service.description}</p>
-              </div>
-            ))}
+          <h2>Neden Biz?</h2>
+          <div className={styles.featureGrid}>
+            <div className={styles.featureCard}>
+              <FaUserMd className={styles.featureIcon} />
+              <h3>Uzman Kadro</h3>
+              <p>Deneyimli teknik ve mühendis kadrosu</p>
+            </div>
+            <div className={styles.featureCard}>
+              <FaHeartbeat className={styles.featureIcon} />
+              <h3>Kaliteli Hizmet</h3>
+              <p>Yüksek kalitede ürün ve servis garantisi</p>
+            </div>
+            <div className={styles.featureCard}>
+              <FaMicroscope className={styles.featureIcon} />
+              <h3>Yenilikçi Yaklaşım</h3>
+              <p>Yeni nesil tedavi şekillerini takip</p>
+            </div>
+            <div className={styles.featureCard}>
+              <FaHandshake className={styles.featureIcon} />
+              <h3>Güvenilir Ortaklık</h3>
+              <p>Sağlam ve güvenilir iş birliği</p>
+            </div>
           </div>
         </div>
       </section>
