@@ -8,85 +8,85 @@ import { FaMicrochip, FaCogs, FaChartLine, FaShieldAlt, FaClock, FaCheckCircle }
 const slides = [
   {
     id: 1,
-    titleKey: 'slide1.title',
-    descriptionKey: 'slide1.description',
+    titleKey: 'slider.slide1.title',
+    descriptionKey: 'slider.slide1.description',
     image: '/media/sliders/ekg.jpg',
     features: [
       {
         icon: <FaMicrochip className="w-6 h-6" />,
-        titleKey: 'slide1.features.tech.title',
-        descriptionKey: 'slide1.features.tech.description'
+        titleKey: 'slider.slide1.features.tech.title',
+        descriptionKey: 'slider.slide1.features.tech.description'
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
-        titleKey: 'slide1.features.advanced.title',
-        descriptionKey: 'slide1.features.advanced.description'
+        titleKey: 'slider.slide1.features.advanced.title',
+        descriptionKey: 'slider.slide1.features.advanced.description'
       },
       {
         icon: <FaChartLine className="w-6 h-6" />,
-        titleKey: 'slide1.features.precise.title',
-        descriptionKey: 'slide1.features.precise.description'
+        titleKey: 'slider.slide1.features.precise.title',
+        descriptionKey: 'slider.slide1.features.precise.description'
       },
       {
         icon: <FaShieldAlt className="w-6 h-6" />,
-        titleKey: 'slide1.features.reliable.title',
-        descriptionKey: 'slide1.features.reliable.description'
+        titleKey: 'slider.slide1.features.reliable.title',
+        descriptionKey: 'slider.slide1.features.reliable.description'
       }
     ]
   },
   {
     id: 2,
-    titleKey: 'slide2.title',
-    descriptionKey: 'slide2.description',
+    titleKey: 'slider.slide2.title',
+    descriptionKey: 'slider.slide2.description',
     image: '/media/sliders/carrier.jpg',
     features: [
       {
         icon: <FaMicrochip className="w-6 h-6" />,
-        titleKey: 'slide2.features.hd.title',
-        descriptionKey: 'slide2.features.hd.description'
+        titleKey: 'slider.slide2.features.hd.title',
+        descriptionKey: 'slider.slide2.features.hd.description'
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
-        titleKey: 'slide2.features.multi.title',
-        descriptionKey: 'slide2.features.multi.description'
+        titleKey: 'slider.slide2.features.multi.title',
+        descriptionKey: 'slider.slide2.features.multi.description'
       },
       {
         icon: <FaChartLine className="w-6 h-6" />,
-        titleKey: 'slide2.features.analysis.title',
-        descriptionKey: 'slide2.features.analysis.description'
+        titleKey: 'slider.slide2.features.analysis.title',
+        descriptionKey: 'slider.slide2.features.analysis.description'
       },
       {
         icon: <FaClock className="w-6 h-6" />,
-        titleKey: 'slide2.features.quick.title',
-        descriptionKey: 'slide2.features.quick.description'
+        titleKey: 'slider.slide2.features.quick.title',
+        descriptionKey: 'slider.slide2.features.quick.description'
       }
     ]
   },
   {
     id: 3,
-    titleKey: 'slide3.title',
-    descriptionKey: 'slide3.description',
+    titleKey: 'slider.slide3.title',
+    descriptionKey: 'slider.slide3.description',
     image: '/media/sliders/medical.jpg',
     features: [
       {
         icon: <FaMicrochip className="w-6 h-6" />,
-        titleKey: 'slide3.features.field.title',
-        descriptionKey: 'slide3.features.field.description'
+        titleKey: 'slider.slide3.features.field.title',
+        descriptionKey: 'slider.slide3.features.field.description'
       },
       {
         icon: <FaCogs className="w-6 h-6" />,
-        titleKey: 'slide3.features.sequence.title',
-        descriptionKey: 'slide3.features.sequence.description'
+        titleKey: 'slider.slide3.features.sequence.title',
+        descriptionKey: 'slider.slide3.features.sequence.description'
       },
       {
         icon: <FaChartLine className="w-6 h-6" />,
-        titleKey: 'slide3.features.imaging.title',
-        descriptionKey: 'slide3.features.imaging.description'
+        titleKey: 'slider.slide3.features.imaging.title',
+        descriptionKey: 'slider.slide3.features.imaging.description'
       },
       {
         icon: <FaCheckCircle className="w-6 h-6" />,
-        titleKey: 'slide3.features.quality.title',
-        descriptionKey: 'slide3.features.quality.description'
+        titleKey: 'slider.slide3.features.quality.title',
+        descriptionKey: 'slider.slide3.features.quality.description'
       }
     ]
   },

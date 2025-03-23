@@ -23,19 +23,19 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 
 const translations = {
   tr: {
-    ...trTopbar,
-    ...trNavbar,
-    ...trSlider
+    topbar: trTopbar,
+    nav: trNavbar,
+    slider: trSlider
   },
   en: {
-    ...enTopbar,
-    ...enNavbar,
-    ...enSlider
+    topbar: enTopbar,
+    nav: enNavbar,
+    slider: enSlider
   },
   ar: {
-    ...arTopbar,
-    ...arNavbar,
-    ...arSlider
+    topbar: arTopbar,
+    nav: arNavbar,
+    slider: arSlider
   }
 };
 
