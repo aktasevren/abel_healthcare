@@ -21,18 +21,18 @@ const Navbar = () => {
   const { theme } = useTheme();
 
   const menuItems: MenuItem[] = [
-    { href: '/', labelKey: 'home' },
+    { href: '/', labelKey: t('nav.home') },
     {
       href: '#',
-      labelKey: 'corporate',
+      labelKey: t('nav.corporate'),
       subItems: [
-        { href: '/hakkimizda', labelKey: 'about' },
-        { href: '/sertifikalarimiz', labelKey: 'certificates' }
+        { href: '/hakkimizda', labelKey: t('nav.about') },
+        { href: '/sertifikalarimiz', labelKey: t('nav.certificates') }
       ]
     },
-    { href: '/urunlerimiz', labelKey: 'products' },
-    { href: '/teknik-servis', labelKey: 'technical_service' },
-    { href: '/iletisim', labelKey: 'contact' }
+    { href: '/urunlerimiz', labelKey: t('nav.products')},
+    { href: '/teknik-servis', labelKey: t('nav.technical_service') },
+    { href: '/iletisim', labelKey: t('nav.contact') }
   ];
 
   const handleMouseEnter = (href: string) => {
@@ -76,7 +76,7 @@ const Navbar = () => {
               }`}
               aria-expanded="false"
             >
-              <span className="sr-only">{t('nav.menu')}</span>
+              <span className="sr-only">{t('navbar.menu')}</span>
               <svg
                 className="h-6 w-6"
                 stroke="currentColor"
