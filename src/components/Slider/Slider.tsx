@@ -4,17 +4,28 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-const slides = [
+interface Feature {
+  titleKey: string;
+  descriptionKey: string;
+  icon?: React.ReactNode;
+}
+
+interface Slide {
+  id: number;
+  titleKey: string;
+  descriptionKey: string;
+  image: string;
+  features: Feature[];
+}
+
+const slides: Slide[] = [
   {
     id: 1,
     titleKey: 'slider.slide1.title',
     descriptionKey: 'slider.slide1.description',
     image: '/media/sliders/ekg.jpg',
-    features: [
-
-    ]
+    features: []
   }
-  
 ];
 
 const Slider = () => {
