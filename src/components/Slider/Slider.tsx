@@ -3,7 +3,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { FaMicrochip, FaCogs, FaChartLine, FaShieldAlt, FaClock, FaCheckCircle } from 'react-icons/fa';
 
 const slides = [
   {

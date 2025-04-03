@@ -7,7 +7,6 @@ import styles from './Footer.module.css';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 const Footer = () => {
-  const { t } = useLanguage();
 
   const footerLinks = [
     { name: 'Anasayfa', href: '/' },
