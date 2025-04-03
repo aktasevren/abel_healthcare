@@ -25,7 +25,7 @@ const Footer = () => {
           <div className={styles.footerContent}>
             {/* İletişim Bilgileri */}
             <div className={styles.footerSection}>
-              <h3>{t('footer.contact.title')}</h3>
+              <h3>İletişim</h3>
               <div className={styles.contactInfo}>
                 <p>
                   <FaPhone className={styles.icon} />
@@ -46,7 +46,7 @@ const Footer = () => {
 
             {/* Hızlı Linkler */}
             <div className={styles.footerSection}>
-              <h3>{t('footer.links.title')}</h3>
+              <h3>Hızlı Linkler</h3>
               <ul className={styles.quickLinks}>
                 {footerLinks.map((link, index) => (
                   <li key={index}><Link href={link.href}>{link.name}</Link></li>
@@ -56,17 +56,17 @@ const Footer = () => {
 
             {/* Hizmetlerimiz */}
             <div className={styles.footerSection}>
-              <h3>{t('footer.services.title')}</h3>
+              <h3>Hizmetlerimiz</h3>
               <ul className={styles.quickLinks}>
-                <li>{t('footer.services.sales')}</li>
-                <li>{t('footer.services.service')}</li>
-                <li>{t('footer.services.parts')}</li>
+                <li>Satış</li>
+                <li>Teknik Servis</li>
+                <li>Yedek Parça</li>
               </ul>
             </div>
 
             {/* Harita */}
             <div className={styles.footerSection}>
-              <h3>{t('footer.contact.address')}</h3>
+              <h3>Adres</h3>
               <div className={styles.map}>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.8673795097837!2d28.878252776117437!3d41.05172127134307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa53e9c6b0f2b%3A0x3c5a9d4f8d8e4b0!2sAbel%20Medikal!5e0!3m2!1str!2str!4v1710700844659!5m2!1str!2str"
@@ -87,11 +87,11 @@ const Footer = () => {
       <div className={styles.signature}>
         <div className={styles.container}>
           <div className={styles.signatureContent}>
-            <span>{t('footer.copyright')}</span>
+            <span>© 2024 Abel Medikal. Tüm hakları saklıdır.</span>
             <span className={styles.separator}>|</span>
-            <span>{t('footer.developer')}</span>
+            <span>Geliştirici: Evren Aktaş</span>
             <a
-              href="https://github.com/aktasevren/abel_cursor"
+              href="https://github.com/aktasevren"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.githubLink}

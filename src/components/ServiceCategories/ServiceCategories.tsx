@@ -122,22 +122,22 @@ const ServiceCategories = () => {
     {
       icon: <FaWrench className={styles.featureIcon} />,
       title: '7/24 Teknik Servis',
-      description: 'Acil durumlarda hızlı müdahale ve teknik destek'
+      description: 'Acil durumlarda hızlı müdahale ve etkin teknik destek ile kesintilerin önüne geçiyoruz.'
     },
     {
       icon: <FaCheckCircle className={styles.featureIcon} />,
       title: 'Garantili Hizmet',
-      description: 'Tüm bakım ve onarım işlemlerinde garanti kapsamı'
+      description: 'Gerçekleştirilen tüm bakım ve onarım hizmetleri, garanti koşulları çerçevesinde güvenceyle sunulmaktadır.'
     },
     {
       icon: <FaClock className={styles.featureIcon} />,
       title: 'Hızlı Müdahale',
-      description: 'En kısa sürede yerinde teknik servis hizmeti'
+      description: 'Minimum sürede müdahale ile yerinde teknik servis hizmeti sağlayarak, operasyonel aksaklıkların önüne geçiyoruz.'
     },
     {
       icon: <FaUserTie className={styles.featureIcon} />,
       title: 'Uzman Ekip',
-      description: 'Deneyimli ve sertifikalı teknik kadro'
+      description: 'Alanında uzman, sertifikalı ve deneyimli teknik ekibimizle, yüksek standartlarda hizmet sunuyoruz.'
     }
   ];
 

@@ -13,19 +13,19 @@ const ServiceBlocks = () => {
     {
       icon: <FaStethoscope className={styles.icon} />,
       title: 'Tıbbi Cihaz Satışı',
-      description: 'Satış sonrası hizmetleri ile birlikte en kaliteli tıbbi cihazlar.',
+      description: 'Satış sonrası hizmet desteğiyle birlikte, en son teknolojiye sahip, alanında öncü markaların cihazlarını sunuyoruz.',
       color: 'linear-gradient(135deg, #cbd5e0, #a0aec0)'
     },
     {
       icon: <FaHospital className={styles.icon} />,
       title: 'Teknik Servis',
-      description: 'Marka bağımsız teknik servis hizmeti, bakım ve onarım.',
+      description: 'Her marka cihaza yönelik teknik servis, bakım ve onarım hizmetlerini, uzman ekibimiz ve yüksek hizmet standartlarımızla sağlıyoruz.',
       color: 'linear-gradient(135deg, #cbd5e0, #a0aec0)'
     },
     {
       icon: <FaHandHoldingHeart className={styles.icon} />,
       title: 'Yedek Parça',
-      description: 'Geniş ürün yelpazesi ile tüm yedek parça ihtiyaçlarınız.',
+      description: 'Farklı marka ve modellere uyumlu geniş yedek parça stoğumuz sayesinde, tüm ihtiyaçlarınıza eksiksiz ve zamanında yanıt veriyoruz.',
       color: 'linear-gradient(135deg, #cbd5e0, #a0aec0)'
     }
   ];

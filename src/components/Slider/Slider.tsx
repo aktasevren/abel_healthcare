@@ -12,84 +12,10 @@ const slides = [
     descriptionKey: 'slider.slide1.description',
     image: '/media/sliders/ekg.jpg',
     features: [
-      {
-        icon: <FaMicrochip className="w-6 h-6" />,
-        titleKey: 'slider.slide1.features.tech.title',
-        descriptionKey: 'slider.slide1.features.tech.description'
-      },
-      {
-        icon: <FaCogs className="w-6 h-6" />,
-        titleKey: 'slider.slide1.features.advanced.title',
-        descriptionKey: 'slider.slide1.features.advanced.description'
-      },
-      {
-        icon: <FaChartLine className="w-6 h-6" />,
-        titleKey: 'slider.slide1.features.precise.title',
-        descriptionKey: 'slider.slide1.features.precise.description'
-      },
-      {
-        icon: <FaShieldAlt className="w-6 h-6" />,
-        titleKey: 'slider.slide1.features.reliable.title',
-        descriptionKey: 'slider.slide1.features.reliable.description'
-      }
+
     ]
-  },
-  {
-    id: 2,
-    titleKey: 'slider.slide2.title',
-    descriptionKey: 'slider.slide2.description',
-    image: '/media/sliders/carrier.jpg',
-    features: [
-      {
-        icon: <FaMicrochip className="w-6 h-6" />,
-        titleKey: 'slider.slide2.features.hd.title',
-        descriptionKey: 'slider.slide2.features.hd.description'
-      },
-      {
-        icon: <FaCogs className="w-6 h-6" />,
-        titleKey: 'slider.slide2.features.multi.title',
-        descriptionKey: 'slider.slide2.features.multi.description'
-      },
-      {
-        icon: <FaChartLine className="w-6 h-6" />,
-        titleKey: 'slider.slide2.features.analysis.title',
-        descriptionKey: 'slider.slide2.features.analysis.description'
-      },
-      {
-        icon: <FaClock className="w-6 h-6" />,
-        titleKey: 'slider.slide2.features.quick.title',
-        descriptionKey: 'slider.slide2.features.quick.description'
-      }
-    ]
-  },
-  {
-    id: 3,
-    titleKey: 'slider.slide3.title',
-    descriptionKey: 'slider.slide3.description',
-    image: '/media/sliders/medical.jpg',
-    features: [
-      {
-        icon: <FaMicrochip className="w-6 h-6" />,
-        titleKey: 'slider.slide3.features.field.title',
-        descriptionKey: 'slider.slide3.features.field.description'
-      },
-      {
-        icon: <FaCogs className="w-6 h-6" />,
-        titleKey: 'slider.slide3.features.sequence.title',
-        descriptionKey: 'slider.slide3.features.sequence.description'
-      },
-      {
-        icon: <FaChartLine className="w-6 h-6" />,
-        titleKey: 'slider.slide3.features.imaging.title',
-        descriptionKey: 'slider.slide3.features.imaging.description'
-      },
-      {
-        icon: <FaCheckCircle className="w-6 h-6" />,
-        titleKey: 'slider.slide3.features.quality.title',
-        descriptionKey: 'slider.slide3.features.quality.description'
-      }
-    ]
-  },
+  }
+  
 ];
 
 const Slider = () => {
