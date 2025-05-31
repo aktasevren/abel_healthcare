@@ -1,5 +1,5 @@
 import React from 'react'
-import { Metadata } from 'next'
+// import { Metadata } from 'next' // Kullanılmıyor, kaldırıldı
 import Image from 'next/image'
 import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
@@ -21,13 +21,7 @@ interface BlogPost {
   tags: string[]
 }
 
-interface Props {
-  params: {
-    slug: string
-  }
-}
-
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }) {
   const post = blogData.posts.find(post => post.slug === params.slug)
   
   if (!post) {
@@ -48,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function BlogPost({ params }: Props) {
+export default function BlogPost({ params }) {
   const post = blogData.posts.find(post => post.slug === params.slug)
 
   if (!post) {
