@@ -13,7 +13,7 @@
 
 .title {
   color: #1976d2;
-  font-size: 32px;
+  font-size: 28px;
   font-weight: 600;
   margin-bottom: 15px;
   text-align: center;
@@ -32,7 +32,7 @@
   align-items: center;
   gap: 8px;
   color: #666;
-  font-size: 13px;
+  font-size: 11px;
   text-decoration: none;
   transition: color 0.3s ease;
 }
@@ -48,7 +48,7 @@
 
 .separator {
   color: #999;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 @media (max-width: 768px) {
@@ -58,10 +58,10 @@
   }
 
   .title {
-    font-size: 24px;
+    font-size: 21px;
   }
 
   .breadcrumbItem {
-    font-size: 12px;
+    font-size: 10px;
   }
 } 

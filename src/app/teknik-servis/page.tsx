@@ -130,7 +130,7 @@ const TeknikServisPage: React.FC = () => {
         <h2>Teknik Servis Talebi</h2>
         <p>7/24 teknik servis hizmetimizden yararlanmak için hemen iletişime geçin</p>
         <div className="contact-buttons">
-          <a href="tel:+902161234567" className="contact-button">
+          <a href="tel:+905335228791" className="contact-button">
             <FaClock /> 7/24 Çağrı Merkezi
           </a>
           <a href="mailto:servis@biomedical.com" className="contact-button">

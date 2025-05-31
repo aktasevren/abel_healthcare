@@ -12,13 +12,13 @@
 }
 
 .service-hero h1 {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
 .service-hero p {
-  font-size: 1.2rem;
+  font-size: 1rem;
   opacity: 0.9;
 }
 
@@ -58,7 +58,7 @@
 
 .feature-card p {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 .service-categories {
@@ -100,14 +100,14 @@
 }
 
 .category-card h3 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #333;
   margin-bottom: 1rem;
 }
 
 .category-card p {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
@@ -119,7 +119,7 @@
 
 .category-card ul li {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   margin-bottom: 0.5rem;
   padding-left: 1.5rem;
   position: relative;
@@ -179,7 +179,7 @@
 
 .step p {
   color: #666;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
 }
 
 .service-contact {
@@ -189,14 +189,14 @@
 }
 
 .service-contact h2 {
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: #333;
   margin-bottom: 1rem;
 }
 
 .service-contact p {
   color: #666;
-  font-size: 1.1rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
 }
 

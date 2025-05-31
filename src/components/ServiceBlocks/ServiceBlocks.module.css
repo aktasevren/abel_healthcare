@@ -11,9 +11,10 @@
 
 .title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
   position: relative;
 }
 
@@ -29,6 +30,13 @@
   border-radius: 2px;
 }
 
+.subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -42,6 +50,9 @@
   box-shadow: var(--shadow-md);
   background-color: var(--card-bg);
   border: 1px solid var(--card-border);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -52,6 +63,9 @@
 .cardContent {
   padding: 2rem;
   color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .header {
@@ -73,7 +87,7 @@
 }
 
 .icon {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--accent-color);
 }
 
@@ -87,6 +101,7 @@
   margin-bottom: 1.5rem;
   line-height: 1.6;
   color: var(--text-secondary);
+  flex: 1;
 }
 
 .buttonWrapper {
@@ -99,6 +114,7 @@
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
+  margin-top: auto;
 }
 
 .buttonWrapper:hover {
@@ -108,7 +124,7 @@
 
 .buttonText {
   color: var(--text-primary);
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   margin-right: 0.5rem;
 }
 
@@ -124,7 +140,7 @@
   }
 
   .title {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .grid {

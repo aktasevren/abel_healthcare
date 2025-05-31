@@ -144,8 +144,8 @@ const ServiceCategories = () => {
   return (
     <section className={styles.serviceCategories}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Teknik Servis Hizmetlerimiz</h2>
-        <p className={styles.subtitle}>Biyomedikal cihazlarınız için profesyonel bakım ve onarım hizmetleri</p>
+        <h1 className={styles.title}>Teknik Servis Hizmetlerimiz</h1>
+        <p className={styles.subtitle}>Biyomedikal cihazlarınız için profesyonel bakım, onarım ve teknik servis hizmetleri. Sertifikalı uzman ekibimizle, tüm tıbbi cihazlarınıza kapsamlı teknik destek sağlıyoruz. Yerinde servis, periyodik bakım ve kalibrasyon hizmetlerimizle cihazlarınızın optimum performansta çalışmasını garanti ediyoruz. 15 yılı aşkın sektör deneyimimiz ve geniş yedek parça stoğumuzla, kesintisiz hizmet sunuyoruz.</p>
         
         <div className={styles.grid}>
           {categories.map((category, index) => (
@@ -195,6 +195,7 @@ const ServiceCategories = () => {
 
         <div className={styles.featuresSection}>
           <h3 className={styles.featuresTitle}>Neden Bizi Seçmelisiniz?</h3>
+          <p className={styles.subtitle}>Biyomedikal cihazlarınız için profesyonel bakım, onarım ve teknik servis hizmetleri. Sertifikalı uzman ekibimizle, tüm tıbbi cihazlarınıza kapsamlı teknik destek sağlıyoruz. Yerinde servis, periyodik bakım ve kalibrasyon hizmetlerimizle cihazlarınızın optimum performansta çalışmasını garanti ediyoruz. 15 yılı aşkın sektör deneyimimiz ve geniş yedek parça stoğumuzla, kesintisiz hizmet sunuyoruz.</p>
           <div className={styles.featuresGrid}>
             {features.map((feature, index) => (
               <div key={index} className={styles.featureCard}>

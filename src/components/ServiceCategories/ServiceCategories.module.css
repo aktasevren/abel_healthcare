@@ -11,7 +11,7 @@
 
 .title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
@@ -32,9 +32,13 @@
 
 .subtitle {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: var(--text-secondary);
+  margin-top: 2rem;
   margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .grid {
@@ -94,7 +98,7 @@
 }
 
 .icon {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   color: var(--text-secondary);
 }
 
@@ -103,7 +107,7 @@
 }
 
 .categoryTitle {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--text-primary);
   margin: 0;
@@ -111,7 +115,7 @@
 }
 
 .categoryDescription {
-  font-size: 1rem;
+  font-size: 0.85rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   color: var(--text-secondary);
@@ -128,7 +132,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   border-bottom: 1px solid var(--card-border);
   color: var(--text-secondary);
 }
@@ -179,10 +183,23 @@
 
 .featuresTitle {
   text-align: center;
-  font-size: 2rem;
-  font-weight: 600;
+  font-size: 2.1rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.featuresTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--text-secondary), var(--text-primary));
+  border-radius: 2px;
 }
 
 .featuresGrid {
@@ -225,7 +242,7 @@
 }
 
 .featureIcon {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: var(--text-secondary);
 }
 
@@ -234,14 +251,14 @@
 }
 
 .featureTitle {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text-primary);
   margin-bottom: 0.8rem;
 }
 
 .featureDescription {
-  font-size: 0.95rem;
+  font-size: 0.8rem;
   line-height: 1.6;
   color: var(--text-secondary);
 }

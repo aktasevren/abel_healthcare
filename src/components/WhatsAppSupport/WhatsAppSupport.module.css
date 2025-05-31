@@ -32,7 +32,7 @@
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-  font-size: 24px;
+  font-size: 20px;
   z-index: 1002;
   width: 40px;
   height: 40px;
@@ -78,7 +78,7 @@
   padding: 12px;
   border: none;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -95,7 +95,7 @@
 }
 
 .buttonIcon {
-  font-size: 18px;
+  font-size: 15px;
 }
 
 .whatsappButton:hover {
@@ -193,7 +193,7 @@
   }
 
   .buttonIcon {
-    font-size: 16px;
+    font-size: 13px;
   }
 
   .availability,
@@ -247,7 +247,7 @@
 }
 
 .robotIcon {
-  font-size: 20px;
+  font-size: 17px;
   color: white;
 }
 
@@ -257,7 +257,7 @@
 
 .chatText {
   color: var(--text-primary);
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
   margin: 0;
 }

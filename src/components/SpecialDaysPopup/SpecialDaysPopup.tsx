@@ -27,16 +27,29 @@ const SpecialDaysPopup = () => {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
       <div className="bg-white p-4 rounded-lg shadow-lg relative">
-        <button onClick={closePopup} className="absolute top-2 right-2 text-red-500 hover:text-red-700">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-6 h-6">
+        <button 
+          onClick={closePopup} 
+          className="absolute -top-4 -right-4 bg-white rounded-full p-2 shadow-lg hover:bg-gray-100 transition-all duration-200"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            strokeWidth={3} 
+            stroke="currentColor" 
+            className="w-8 h-8 text-red-500"
+          >
             <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
         {specialDay && (
-          <>
-            <Image src={specialDay.image} alt={specialDay.message} width={400} height={300} className="rounded-md" />
-            <h2 className="text-xl font-bold mt-4">{specialDay.message}</h2>
-          </>
+          <Image 
+            src={specialDay.image} 
+            alt="Özel Gün" 
+            width={400} 
+            height={300} 
+            className="rounded-md" 
+          />
         )}
       </div>
     </div>

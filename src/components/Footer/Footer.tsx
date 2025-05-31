@@ -66,15 +66,16 @@ const Footer = () => {
             <div className={styles.footerSection}>
               <h3>Adres</h3>
               <div className={styles.map}>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.8673795097837!2d28.878252776117437!3d41.05172127134307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa53e9c6b0f2b%3A0x3c5a9d4f8d8e4b0!2sAbel%20Medikal!5e0!3m2!1str!2str!4v1710700844659!5m2!1str!2str"
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.198226477148!2d28.865462277229568!3d41.06465947134262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab16af0cd37b7%3A0xa2f96de462279997!2sAbel%20Health%20Care%20Medikal!5e0!3m2!1sen!2str!4v1732735021051!5m2!1sen!2str" 
                   width="100%"
                   height="200"
                   style={{ border: 0, borderRadius: '8px' }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                ></iframe>
+                  title="Abel Health Care Medikal Konum"
+                />
               </div>
             </div>
           </div>

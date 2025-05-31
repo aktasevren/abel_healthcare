@@ -43,7 +43,11 @@ const News = () => {
   return (
     <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">Haberler</h2>
+        <h2 className="text-3xl font-bold text-center mb-4 relative">Haberler</h2>
+        <div className="w-20 h-1 bg-gradient-to-r from-gray-400 to-gray-600 mx-auto mb-4 rounded"></div>
+        <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
+          Biyomedikal sektöründeki son gelişmeler, teknolojik yenilikler ve şirketimizden haberler. Sağlık teknolojilerindeki en güncel bilgileri ve sektördeki önemli değişimleri sizlerle paylaşıyoruz. Uzman ekibimizin deneyimleri ve sektördeki yenilikler hakkında detaylı bilgilere buradan ulaşabilirsiniz.
+        </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {newsData.map((news) => (
             <div key={news.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">

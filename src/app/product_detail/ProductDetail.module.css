@@ -51,7 +51,7 @@
 .description h2,
 .specifications h2 {
   color: #333;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -59,7 +59,7 @@
 .description p {
   color: #666;
   line-height: 1.6;
-  font-size: 16px;
+  font-size: 13px;
 }
 
 .specifications {
@@ -82,13 +82,13 @@
 
 .specLabel {
   color: #666;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
 }
 
 .specValue {
   color: #333;
-  font-size: 16px;
+  font-size: 13px;
   font-weight: 600;
 }
 
@@ -101,7 +101,7 @@
 
 .attributes h2 {
   color: #333;
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -117,7 +117,7 @@
 
 .attributeItem {
   color: #666;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   padding-left: 24px;
   position: relative;
@@ -144,7 +144,7 @@
 
   .description h2,
   .specifications h2 {
-    font-size: 20px;
+    font-size: 17px;
   }
 
   .specsGrid {

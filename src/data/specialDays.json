@@ -1,107 +1,74 @@
 [
   {
     "date": "01-01",
-    "image": "/media/special_days/yeni_yil.jpg",
-    "message": "Mutlu Yıllar! Sağlık, mutluluk ve başarı dolu bir yıl dileriz."
+    "image": "/media/special_days/yeni_yil.png"
   },
   {
     "date": "03-14",
-    "image": "/media/special_days/tip_bayrami.jpg",
-    "message": "14 Mart Tıp Bayramı Kutlu Olsun! Sağlık çalışanlarımıza minnettarız."
+    "image": "/media/special_days/tip_bayrami.png"
   },
   {
     "date": "03-26",
-    "image": "/media/special_days/kadir.jpeg",
-    "message": "Kadir Gecemiz Mübarek Olsun! Dualarınız kabul olsun."
+    "image": "/media/special_days/kadir_gecesi.png"
   },
   {
     "date": "03-29",
-    "image": "/media/special_days/ramazan_bayrami_arefe.jpg",
-    "message": "Ramazan Bayramı Arefesi: Bayram hazırlıklarınız bereketli olsun."
-  },
-  {
-    "date": "03-30",
-    "image": "/media/special_days/ramazan_bayrami_1_gun.jpg",
-    "message": "Ramazan Bayramınızın 1. Günü Kutlu Olsun! Sevdiklerinizle birlikte nice mutlu bayramlara."
-  },
-  {
-    "date": "03-31",
-    "image": "/media/special_days/ramazan_bayrami_2_gun.jpg",
-    "message": "Ramazan Bayramınızın 2. Günü Kutlu Olsun! Sağlık ve huzur dolu bir bayram dileriz."
-  },
-  {
-    "date": "04-01",
-    "image": "/media/special_days/ramazan_bayrami_3_gun.jpg",
-    "message": "Ramazan Bayramınızın 3. Günü Kutlu Olsun! Bayramınız sevdiklerinizle birlikte neşe dolu geçsin."
+    "image": "/media/special_days/ramazan_bayrami_arefe.jpg"
   },
   {
     "date": "04-07",
-    "image": "/media/special_days/dunya_saglik_gunu.jpg",
-    "message": "7 Nisan Dünya Sağlık Günü Kutlu Olsun! Sağlıklı bir dünya için el ele."
+    "image": "/media/special_days/dunya_saglik_gunu.jpg"
   },
   {
     "date": "04-23",
-    "image": "/media/special_days/23_nisan.jpg",
-    "message": "23 Nisan Ulusal Egemenlik ve Çocuk Bayramı Kutlu Olsun! Geleceğimizin teminatı çocuklarımızın bayramı."
+    "image": "/media/special_days/23_nisan.png"
   },
   {
     "date": "05-01",
-    "image": "/media/special_days/1_mayis.jpg",
-    "message": "1 Mayıs Emek ve Dayanışma Günü Kutlu Olsun! Emeğinize sağlık."
+    "image": "/media/special_days/1_mayis.png"
   },
   {
     "date": "05-12",
-    "image": "/media/special_days/dunya_hemsireler_gunu.jpg",
-    "message": "12 Mayıs Dünya Hemşireler Günü Kutlu Olsun! Sağlık hizmetlerinde emeği geçen tüm hemşirelere teşekkürler."
+    "image": "/media/special_days/hemsireler.png"
   },
   {
     "date": "05-19",
-    "image": "/media/special_days/19_mayis.jpg",
-    "message": "19 Mayıs Atatürk'ü Anma, Gençlik ve Spor Bayramı Kutlu Olsun! Geleceğimiz gençlerin elinde."
+    "image": "/media/special_days/19_mayis.jpg"
   },
   {
     "date": "06-14",
-    "image": "/media/special_days/dunya_kan_bagisi_gunu.jpg",
-    "message": "14 Haziran Dünya Kan Bağışı Günü: Bir damla kan, bir hayat kurtarır."
+    "image": "/media/special_days/kan_bagisi.png"
   },
   {
     "date": "06-16",
-    "image": "/media/special_days/kurban_bayrami.jpg",
-    "message": "Kurban Bayramınız Mübarek Olsun! Sevdiklerinizle birlikte sağlık ve huzur dolu bayramlar dileriz."
+    "image": "/media/special_days/kurban.png"
   },
   {
     "date": "07-15",
-    "image": "/media/special_days/15_temmuz.jpg",
-    "message": "15 Temmuz Demokrasi ve Milli Birlik Günü. Şehitlerimizi rahmetle anıyoruz."
+    "image": "/media/special_days/15_temmuz.jpg"
   },
   {
     "date": "08-30",
-    "image": "/media/special_days/30_agustos.jpg",
-    "message": "30 Ağustos Zafer Bayramı Kutlu Olsun! Bağımsızlığımızın simgesi."
+    "image": "/media/special_days/30_agustos.png"
   },
   {
     "date": "09-08",
-    "image": "/media/special_days/dunya_fizyoterapi_gunu.jpg",
-    "message": "8 Eylül Dünya Fizyoterapi Günü Kutlu Olsun! Hareket özgürlüğümüzü sağlayan fizyoterapistlere teşekkürler."
+    "image": "/media/special_days/fizyoterapi.png"
   },
   {
     "date": "09-17",
-    "image": "/media/special_days/dunya_hasta_guvenligi_gunu.jpg",
-    "message": "17 Eylül Dünya Hasta Güvenliği Günü: Güvenli sağlık hizmetleri için birlikte çalışalım."
+    "image": "/media/special_days/hasta_guvenligi.png"
   },
   {
     "date": "10-29",
-    "image": "/media/special_days/29_ekim.jpg",
-    "message": "29 Ekim Cumhuriyet Bayramı Kutlu Olsun! Cumhuriyetimizin 100. yılı kutlu olsun."
+    "image": "/media/special_days/29_ekim.png"
   },
   {
     "date": "11-14",
-    "image": "/media/special_days/dunya_diabetes_gunu.jpg",
-    "message": "14 Kasım Dünya Diyabet Günü: Sağlıklı yaşam için farkında olun."
+    "image": "/media/special_days/diyabet.png"
   },
   {
     "date": "12-25",
-    "image": "/media/special_days/yilbasi.jpg",
-    "message": "Mutlu Noeller! Sevdiklerinizle birlikte huzurlu günler dileriz."
+    "image": "/media/special_days/yilbasi.jpg"
   }
 ]

@@ -17,13 +17,13 @@
 }
 
 .heroTitle {
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
 
 .heroDescription {
-  font-size: 1.2rem;
+  font-size: 1rem;
   opacity: 0.9;
 }
 
@@ -89,7 +89,7 @@
 }
 
 .aboutText {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   color: #666;
   line-height: 1.6;
   margin-bottom: 2rem;
@@ -155,12 +155,12 @@
 }
 
 .valueIcon {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #1a237e;
 }
 
 .valueTitle {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #333;
   margin-bottom: 1rem;
 }
@@ -207,12 +207,12 @@
 }
 
 .serviceIcon {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #1a237e;
 }
 
 .serviceTitle {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: #333;
   margin-bottom: 1rem;
 }
@@ -330,11 +330,11 @@
   }
 
   .heroTitle {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .heroDescription {
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
 
   .statsGrid {
@@ -414,7 +414,7 @@
 }
 
 .aboutText p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 1.8;
   color: #4b5563;
   margin-bottom: 1rem;
@@ -439,7 +439,7 @@
 }
 
 .visionContent p {
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   line-height: 1.8;
   color: #4b5563;
   margin-bottom: 1.5rem;

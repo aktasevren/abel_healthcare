@@ -33,7 +33,8 @@ const ServiceBlocks = () => {
   return (
     <section className={styles.serviceBlocks}>
       <div className={styles.container}>
-        <h2 className={styles.title}>Hizmetlerimiz</h2>
+        <h1 className={styles.title}>Biyomedikal Hizmetlerimiz</h1>
+        <p className={styles.subtitle}>Biyomedikal cihazlarınız için profesyonel bakım, onarım ve satış hizmetleri. Sertifikalı uzman ekibimizle, tüm tıbbi cihazlarınıza kapsamlı teknik destek sağlıyoruz. Yerinde servis, periyodik bakım ve kalibrasyon hizmetlerimizle cihazlarınızın optimum performansta çalışmasını garanti ediyoruz.</p>
         <div className={styles.grid}>
           {services.map((service, index) => (
             <div 

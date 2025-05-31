@@ -1,26 +1,12 @@
 "use client";
 
 import React from "react";
-import { FaHandshake, FaUserMd, FaStethoscope, FaMicroscope, FaHeartbeat } from 'react-icons/fa';
-import styles from './Hakkimizda.module.css';
+import Image from 'next/image';
+import { FaHospital, FaTools, FaHandshake, FaChartLine, FaMapMarkerAlt, FaPhone, FaEnvelope, FaGlobe } from 'react-icons/fa';
+import styles from './About.module.css';
 import PageHeader from '@/components/PageHeader';
 
-const Hakkimizda = () => {
-  const urunGruplari = [
-    "Ventilatör ve Yedek Parça Aksesuarlar",
-    "Elektrokoter ve Yedek Parça Aksesuarlar",
-    "Hastabaşı Monitör ve Yedek Parça Aksesuarlar",
-    "EKG Cihazları ve Aksesuarları",
-    "Cerrahi ve Portable Aspiratörler",
-    "Yeni Doğan Grubu ve Yedek Parçaları",
-    "Oksijen Flowmetreleri ve Negatif Basınç Ölçerler",
-    "Veteriner Grubu",
-    "Paslanmaz Grubu",
-    "Medikal Taşıyıcılar",
-    "Optik ve Aleti Grubu",
-    "Poliklinik Ürünleri"
-  ];
-
+const AboutPage = () => {
   return (
     <div className={styles.aboutPage}>
       <PageHeader 
@@ -32,87 +18,85 @@ const Hakkimizda = () => {
       />
 
       {/* Hero Section */}
-      <section className={styles.heroSection}>
-        <div className={styles.heroContent}>
-          <h1>Sağlık Sektöründe Güvenilir Çözüm Ortağınız</h1>
-          <p>2022 yılından bu yana İstanbul&apos;da hizmet vermekteyiz</p>
-        </div>
-      </section>
 
-      {/* Hakkımızda Section */}
-      <section className={styles.aboutSection}>
+      {/* Main Content */}
+      <section className={styles.mainContent}>
         <div className={styles.container}>
-          <div className={styles.aboutContent}>
-            <div className={styles.aboutText}>
-              <h2>Biz Kimiz?</h2>
+          {/* Company Overview */}
+          <div className={styles.overviewSection}>
+            <div className={styles.overviewContent}>
+              <h2>Hakkımızda</h2>
               <p>
-                Abel Health Care Medikal 2022 yılında İstanbul&apos;da kurulmuştur. Şirketimizin kurucuları sağlık sektöründeki iş deneyimlerinin tamamını enerjik, yenilikçi, metamorfoza uğrayan tıp bilimi ve medikal sektörde uyumu yakalamak için sınırsız bilgi erişimi genişletmeye adamış teknik ve mühendis kadrosuyla kaliteli hizmet anlayışını benimsemiştir.
-              </p>
-              <p>
-                Her zaman gaye ve çabamız yurtiçi ve yurtdışında doğru pazarlama ve satış politikasını güvenilir ve sağlam adımlarla ilerletebilmektir.
+                Sağlık sektörünün dinamik yapısına uyum sağlayan, yenilikçi ve güvenilir çözümler sunmak amacıyla kurulan Abel Health Care Medikal, tıbbi cihazlar ve medikal ürünler alanında faaliyet göstermektedir. İstanbul merkezli firmamız, hastane, klinik, poliklinik ve veteriner kuruluşlarına yönelik geniş bir ürün yelpazesi sunmaktadır.
               </p>
             </div>
+            <div className={styles.overviewImage}>
+              <Image
+                src="/media/about/company.jpg"
+                alt="Abel Health Care Medikal"
+                width={500}
+                height={300}
+                className={styles.image}
+              />
+            </div>
           </div>
-        </div>
-      </section>
 
-      {/* Vizyon Section */}
-      <section className={styles.visionSection}>
-        <div className={styles.container}>
-          <h2>Vizyonumuz</h2>
-          <div className={styles.visionContent}>
+          {/* Services Grid */}
+          <div className={styles.servicesGrid}>
+            <div className={styles.serviceCard}>
+              <FaHospital className={styles.serviceIcon} />
+              <h3>Geniş Ürün Yelpazesi</h3>
+              <p>Ventilatör sistemleri, elektrokoter cihazları, EKG cihazları, hasta başı monitörler ve daha fazlası</p>
+            </div>
+            <div className={styles.serviceCard}>
+              <FaTools className={styles.serviceIcon} />
+              <h3>Teknik Servis</h3>
+              <p>Marka bağımsız teknik servis hizmetleri ve satış sonrası profesyonel destek</p>
+            </div>
+            <div className={styles.serviceCard}>
+              <FaHandshake className={styles.serviceIcon} />
+              <h3>Müşteri Odaklı</h3>
+              <p>Müşteri memnuniyetini en üst seviyede tutan yaklaşım ve hizmet anlayışı</p>
+            </div>
+            <div className={styles.serviceCard}>
+              <FaChartLine className={styles.serviceIcon} />
+              <h3>Yenilikçi Çözümler</h3>
+              <p>Değişen sağlık teknolojilerine hızlı adapte olan yenilikçi ürün ve hizmetler</p>
+            </div>
+          </div>
+
+          {/* Vision Section */}
+          <div className={styles.visionSection}>
+            <h2>Vizyonumuz</h2>
             <p>
-              Abel Health Care Medikal olarak yüksek kalitede cerrahi tıbbi sarf malzeme, tıbbi cihaz satışı ve marka model fark etmeksizin teknik servis hizmeti vermekteyiz.
-            </p>
-            <p>
-              Şirketimiz, mevcut ürünlerimize ek olarak yeni nesil tedavi şekillerini de takip etmekte olup kullanılabilecek yeni ürün gruplarını ülkemizdeki sağlık sisteminin içine adapte edebilmektedir.
-            </p>
-            <p>
-              Profesyonel yatırımlarla, piyasada kalite ve güven esasına dayalı hizmet vermeye her zaman tarafımızca devam edilecektir.
+              "Hayat değerlidir" mottosuyla çıktığımız bu yolda, değişen sağlık teknolojilerine hızlı adapte olarak, yeni nesil tedavi yöntemlerine uygun, kaliteli ve yenilikçi ürünleri sağlık sistemine entegre etmeyi hedefliyoruz. Etik değerlere bağlı kalarak, sürekli gelişim ve hizmette mükemmellik ilkelerimizle ilerliyoruz.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Ürün Grupları Section */}
-      <section className={styles.productsSection}>
-        <div className={styles.container}>
-          <h2>Ürün ve Hizmet Gruplarımız</h2>
-          <div className={styles.productGrid}>
-            {urunGruplari.map((urun, index) => (
-              <div key={index} className={styles.productCard}>
-                <FaStethoscope className={styles.productIcon} />
-                <h3>{urun}</h3>
+          {/* Contact Section */}
+          <div className={styles.contactSection}>
+            <h2>İletişim</h2>
+            <div className={styles.contactGrid}>
+              <div className={styles.contactCard}>
+                <FaMapMarkerAlt className={styles.contactIcon} />
+                <h3>Adres</h3>
+                <p>Oruçreis Mah. Tekstilkent Cad. Tekstilkent G2 Blok No: 10-AD İç Kapı No: 2084 Esenler / İstanbul</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Özellikler Section */}
-      <section className={styles.featuresSection}>
-        <div className={styles.container}>
-          <h2>Neden Biz?</h2>
-          <div className={styles.featureGrid}>
-            <div className={styles.featureCard}>
-              <FaUserMd className={styles.featureIcon} />
-              <h3>Uzman Kadro</h3>
-              <p>Deneyimli teknik ve mühendis kadrosu</p>
-            </div>
-            <div className={styles.featureCard}>
-              <FaHeartbeat className={styles.featureIcon} />
-              <h3>Kaliteli Hizmet</h3>
-              <p>Yüksek kalitede ürün ve servis garantisi</p>
-            </div>
-            <div className={styles.featureCard}>
-              <FaMicroscope className={styles.featureIcon} />
-              <h3>Yenilikçi Yaklaşım</h3>
-              <p>Yeni nesil tedavi şekillerini takip</p>
-            </div>
-            <div className={styles.featureCard}>
-              <FaHandshake className={styles.featureIcon} />
-              <h3>Güvenilir Ortaklık</h3>
-              <p>Sağlam ve güvenilir iş birliği</p>
+              <div className={styles.contactCard}>
+                <FaPhone className={styles.contactIcon} />
+                <h3>Telefon</h3>
+                <p>0(212) 430 08 88</p>
+              </div>
+              <div className={styles.contactCard}>
+                <FaEnvelope className={styles.contactIcon} />
+                <h3>E-posta</h3>
+                <p>info@abelmedikal.com</p>
+              </div>
+              <div className={styles.contactCard}>
+                <FaGlobe className={styles.contactIcon} />
+                <h3>Web Sitesi</h3>
+                <p>www.abelmedikal.com</p>
+              </div>
             </div>
           </div>
         </div>
@@ -121,4 +105,4 @@ const Hakkimizda = () => {
   );
 };
 
-export default Hakkimizda; 
+export default AboutPage; 
