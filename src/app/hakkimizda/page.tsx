@@ -69,7 +69,7 @@ const AboutPage = () => {
           <div className={styles.visionSection}>
             <h2>Vizyonumuz</h2>
             <p>
-              "Hayat değerlidir" mottosuyla çıktığımız bu yolda, değişen sağlık teknolojilerine hızlı adapte olarak, yeni nesil tedavi yöntemlerine uygun, kaliteli ve yenilikçi ürünleri sağlık sistemine entegre etmeyi hedefliyoruz. Etik değerlere bağlı kalarak, sürekli gelişim ve hizmette mükemmellik ilkelerimizle ilerliyoruz.
+              &ldquo;Hayat değerlidir&rdquo; mottosuyla çıktığımız bu yolda, değişen sağlık teknolojilerine hızlı adapte olarak, yeni nesil tedavi yöntemlerine uygun, kaliteli ve yenilikçi ürünleri sağlık sistemine entegre etmeyi hedefliyoruz. Etik değerlere bağlı kalarak, sürekli gelişim ve hizmette mükemmellik ilkelerimizle ilerliyoruz.
             </p>
           </div>
 
