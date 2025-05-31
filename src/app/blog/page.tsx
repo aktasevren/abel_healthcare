@@ -39,7 +39,7 @@ export default function BlogPage() {
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center text-gray-500">
-                        <span className="mr-4">{post.author}</span>
+                        {/* <span className="mr-4">{post.author}</span> */}
                         <time className="text-sm">
                           {new Date(post.date).toLocaleDateString('tr-TR')}
                         </time>
