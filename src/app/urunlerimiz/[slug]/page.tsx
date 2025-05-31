@@ -31,13 +31,7 @@ interface Group {
   slug: string;
 }
 
-interface Props {
-  params: {
-    slug: string;
-  };
-}
-
-const SubproductsContent: React.FC<Props> = ({ params }) => {
+const SubproductsContent = ({ params }) => {
   const { slug } = params;
   const group = urunGruplari.find((g: Group) => g.slug === slug);
   const products = urunDetaylari.filter((p: Product) => p.group_id === group?.id);
@@ -91,7 +85,7 @@ const SubproductsContent: React.FC<Props> = ({ params }) => {
   );
 };
 
-const Subproducts: React.FC<Props> = (props) => {
+const Subproducts = (props) => {
   return (
     <Suspense fallback={<div>Yükleniyor...</div>}>
       <SubproductsContent {...props} />
