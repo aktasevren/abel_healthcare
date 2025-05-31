@@ -13,7 +13,8 @@ const Footer = () => {
     { name: 'Teknik Servis', href: '/teknik-servis' },
     { name: 'Hakkımızda', href: '/hakkimizda' },
     { name: 'Sertifikalarımız', href: '/certificates' },
-    { name: 'İletişim', href: '/iletisim' }
+    { name: 'İletişim', href: '/iletisim' },
+    { name: 'Blog', href: '/blog' }
   ];
 
   return (

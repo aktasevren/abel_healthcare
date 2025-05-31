@@ -14,13 +14,14 @@ interface Urun {
   img_src: string;
   card_title: string;
   description: string;
+  slug: string;
 }
 
 const ProductsPage: React.FC = () => {
   const router = useRouter();
 
-  const handleProductClick = (id: string) => {
-    router.push(`/subproducts?id=${id}`);
+  const handleProductClick = (slug: string) => {
+    router.push(`/urunlerimiz/${slug}`);
   };
 
   return (
@@ -37,20 +38,22 @@ const ProductsPage: React.FC = () => {
           {urunGruplari.map((urun: Urun) => (
             <div
               key={urun.id}
-              className="product-card"
-              onClick={() => handleProductClick(urun.id)}
+              className="product-card updated-product-card"
+              onClick={() => handleProductClick(urun.slug)}
             >
-              <Image
-                src={urun.img_src}
-                alt={urun.card_title}
-                width={300}
-                height={200}
-                className="product-image"
-              />
-              <div className="product-info">
-                <h2>{urun.card_title}</h2>
-                <p>{urun.description}</p>
-                <Link href={`/urunlerimiz/${urun.id}`} className="view-products-btn">
+              <div className="product-image-wrapper">
+                <Image
+                  src={urun.img_src}
+                  alt={urun.card_title}
+                  width={320}
+                  height={220}
+                  className="product-image updated-product-image"
+                />
+              </div>
+              <div className="product-info updated-product-info">
+                <h2 className="updated-product-title">{urun.card_title}</h2>
+                <p className="updated-product-description">{urun.description}</p>
+                <Link href={`/urunlerimiz/${urun.slug}`} className="view-products-btn updated-view-products-btn">
                   Ürünleri Gör
                 </Link>
               </div>
